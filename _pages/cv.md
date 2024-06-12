@@ -45,6 +45,8 @@ Publications
 
 Teaching experience
 ======
+* Sommer Semester 2024: Teachers Assistant in the course Human-Robot Interaction at the Leibniz University Hannover.
+* Sommer Semester 2024: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.
 * Sommer Semester 2023: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.
 
 Skills
@@ -54,9 +56,10 @@ Skills
   * English
   * French
   * German
+  * Learning Spanish
 * Programming Languages: Python, C++, C, Assembler, Java, C#
 * ML Frameworks: Keras, TensorFlow, PyTorch, RLlib
-* Tools: ROS, MoveIt, MuJoCo, PyBullet, Gazebo
+* Tools: ROS, MoveIt, MuJoCo, PyBullet, Gazebo, Isaac Gym
 
 
 Hobbies

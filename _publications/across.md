@@ -58,12 +58,8 @@ ___________________________________________________________________
 
 The following video demonstrates the pipeline in action, showing the BioTac sensor’s outputs (signals) and the corresponding generated DIGIT sensor images.
 
-<!--p align="center">
-  <img src="../images/across/output_all_data_smaller_new.gif" width="960" height="320" />
-</p!-->
-
 <p align="center">
-  <a href="../videos/across/output_all_data_smaller_new.mp4">
+  <a href="../images/across/video.mp4">
     <img src="../images/across/full_new.gif" alt="Watch the full video" width="960" height="320">
   </a>
 </p>

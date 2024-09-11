@@ -12,7 +12,7 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.publications reversed %}
-    {% unless post.title == "ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception" %}
+    {% unless post.permalink == "/publication/across" %}
       {% include archive-single-cv.html %}
     {% endunless %}
 {% endfor %}

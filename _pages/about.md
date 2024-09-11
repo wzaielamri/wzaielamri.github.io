@@ -21,5 +21,7 @@ If you are intressted in discussing such topics feel free to contact me 😊 .
 ## Publications
 
   <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
+    {% unless post.title == "ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception" %}
+      {% include archive-single-cv.html %}
+    {% endunless %}
   {% endfor %}</ul>

@@ -64,7 +64,7 @@ The following video demonstrates the pipeline in action, showing the BioTac sens
 
 <p align="center">
 <video width="960" height="320" controls>
-  <source src="../videos/output_all_data_smaller_new.mp4" type="video/mp4">
+  <source src="../videos/across/output_all_data_smaller_new.mp4" type="video/mp4">
 </video>
 </p>
 

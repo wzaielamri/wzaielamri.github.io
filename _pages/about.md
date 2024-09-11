@@ -20,6 +20,6 @@ If you are intressted in discussing such topics feel free to contact me 😊 .
 
 ## Publications
 
-  <ul>{% for post in site.publications %}
+  <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

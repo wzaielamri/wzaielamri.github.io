@@ -5,7 +5,7 @@ permalink: /publication/optBioTac
 excerpt: 'Topics: BioTac, XGBoost, Transformer, Tactile Perception.'
 date: 2024-06-30
 venue: 'International Joint Conference on Neural Network (IJCNN) 2024, Yokohama, Japan.'
-paperurl: 'https://arxiv.org/abs/2404.10425'
+paperurl: 'https://ieeexplore.ieee.org/document/10650656'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2024). &quot;Optimizing BioTac Simulation for Realistic Tactile Perception.&quot; <i>arXiv:2404.10425</i>.'
 ---
 Topics: BioTac, XGBoost, Transformer, Tactile Perception.

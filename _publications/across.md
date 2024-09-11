@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/across
 excerpt: 'Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.'
 date: 2024-09-11
-venue: 'Currently under review at IEEE ICRA 25'
+venue: 'Currently under review at IEEE ICRA 2025'
 ---
 
 Submitted to 2025 IEEE Conference on Robotics and Automation (ICRA 2025)
@@ -64,7 +64,7 @@ The following video demonstrates the pipeline in action, showing the BioTac sens
 
 <p align="center">
   <a href="../videos/across/output_all_data_smaller_new.mp4">
-    <img src="../images/across/images/across/full_new.gif" alt="Watch the full video" width="960" height="320">
+    <img src="../images/across/full_new.gif" alt="Watch the full video" width="960" height="320">
   </a>
 </p>
 

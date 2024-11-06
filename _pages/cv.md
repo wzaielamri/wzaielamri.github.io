@@ -69,4 +69,4 @@ Hobbies
 * Travelling
 * Astronomy
 * Running
-* Bikeing 
+* Cycling

@@ -72,10 +72,11 @@ ___________________________________________________________________
 
 ## Preprint: 
 
-Our paper preprint will be published soon on arXiv.
+Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">]()
+[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2411.08533)
 
+[Download paper here](http://wzaielamri.github.io/files/across_zaielamri.pdf)
 
 ## Code: 
 

@@ -12,7 +12,5 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.publications reversed %}
-    {% unless post.permalink == "/publication/across" %}
-      {% include archive-single-cv.html %}
-    {% endunless %}
+    {% include archive-single-cv.html %}
 {% endfor %}

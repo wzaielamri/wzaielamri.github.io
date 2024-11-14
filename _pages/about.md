@@ -22,7 +22,5 @@ If you are interested in discussing these topics, feel free to contact me 😊.
 ## Publications
 
   <ul>{% for post in site.publications reversed %}
-    {% unless post.permalink == "/publication/across" %}
       {% include archive-single-cv.html %}
-    {% endunless %}
   {% endfor %}</ul>

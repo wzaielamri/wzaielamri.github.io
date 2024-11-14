@@ -3,7 +3,7 @@ title: "ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tacti
 collection: publications
 permalink: /publication/across
 excerpt: 'Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.'
-#date: 2025-05-19
+date: 2024-11-14
 venue: 'Currently under review at IEEE ICRA 2025'
 ---
 

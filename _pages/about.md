@@ -7,9 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-## Welcome
-
-Hey,
+## Welcome 😃
 
 My name is **Wadhah**, and I am pursuing my **PhD at the L3S Research Center** in **Germany**. As a scientific researcher, I enjoy using my skills to contribute to the exciting technological advances happening every day in the field of **artificial intelligence**. I graduated from Bielefeld University in 2022 with a Master’s degree in Intelligent Systems.
 

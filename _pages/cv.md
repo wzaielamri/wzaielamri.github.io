@@ -40,9 +40,7 @@ Work experience
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
-    {% unless post.permalink == "/publication/across" %}
       {% include archive-single-cv.html %}
-    {% endunless %}
   {% endfor %}</ul>
 
 Teaching experience

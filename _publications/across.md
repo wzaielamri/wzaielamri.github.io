@@ -90,5 +90,5 @@ Our code will be published soon, along with all necessary checkpoints and a deta
 
 Our dataset will be published soon. It includes over 155K unique 3D mesh deformation pairs from interactions involving BioTac and DIGIT sensors. The dataset covers various types of indenters, the forces applied to each sensor.
 
-[<img src="../images/hf-logo.png" width="50" height="50">]()
+[<img src="../images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/across_framework)
 

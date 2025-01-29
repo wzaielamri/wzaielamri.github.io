@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/across
 excerpt: 'Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.'
 date: 2025-05-19
-venue: 'IEEE International Conference on Robotics and Automation (ICRA) 2025, Atlanta, USA.'
+venue: 'IEEE International Conference on Robotics and Automation (ICRA) 2025, Atlanta, USA'
 paperurl: 'https://arxiv.org/abs/2411.08533'
 citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2024). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>2025 IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025.</i>.'
 ---
@@ -88,7 +88,7 @@ Our code will be published soon, along with all necessary checkpoints and a deta
 
 ## Dataset:
 
-Our dataset will be published soon. It includes over 155K unique 3D mesh deformation pairs from interactions involving BioTac and DIGIT sensors. The dataset covers various types of indenters, the forces applied to each sensor, and rendered images of the scenes.
+Our dataset will be published soon. It includes over 155K unique 3D mesh deformation pairs from interactions involving BioTac and DIGIT sensors. The dataset covers various types of indenters, the forces applied to each sensor.
 
-[<img src="../images/drive_logo.jpg" width="50" height="50">]()
+[<img src="../images/hf-logo.png" width="50" height="50">]()
 

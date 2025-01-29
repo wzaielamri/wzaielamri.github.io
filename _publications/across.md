@@ -3,11 +3,13 @@ title: "ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tacti
 collection: publications
 permalink: /publication/across
 excerpt: 'Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.'
-#date: 2024-11-14
-venue: 'Currently under review at IEEE ICRA 2025'
+date: 2025-05-19
+venue: 'IEEE International Conference on Robotics and Automation (ICRA) 2025, Atlanta, USA.'
+paperurl: 'https://arxiv.org/abs/2411.08533'
+citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2024). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>2025 IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025.</i>.'
 ---
 
-Submitted to 2025 IEEE Conference on Robotics and Automation (ICRA 2025)
+Accepted to 2025 IEEE Conference on Robotics and Automation (ICRA 2025)
 
 Authors: Wadhah Zai El Amri, Malte Kuhlmann, Nicolás Navarro-Guerrero.
 
@@ -82,7 +84,7 @@ Our paper preprint is published on arXiv.
 
 Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">]()
+[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/across)
 
 ## Dataset:
 

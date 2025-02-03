@@ -103,3 +103,4 @@ title="ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactil
 booktitle="IEEE International Conference on Robotics and Automation (ICRA)",
 year="2025",
 }
+```

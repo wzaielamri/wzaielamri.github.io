@@ -97,8 +97,8 @@ Our dataset will be published soon. It includes over 155K unique 3D mesh deforma
 ```bibtex
 @InProceedings{ZaiElAmri2025ACROSS,
   author = {Zai El Amri, Wadhah and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
-  title = {{{ACROSS}}: {{A Deformation-Based Cross-Modal Representation}} for {{Robotic Tactile Perception}}},
-  booktitle = {{{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})},
-  year={2025},
+  title = {{\{ACROSS\}}: {\{A Deformation-Based Cross-Modal Representation\}} for {\{Robotic Tactile Perception\}}},
+  booktitle = {{\{IEEE International Conference\}} on {\{Robotics\}} and {\{Automation\}} ({\{ICRA\}})},
+ year={2025},
 }
 ```

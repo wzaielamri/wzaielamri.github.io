@@ -41,7 +41,7 @@ We first predict the BioTac surface deformation based on the input signals from 
 
 Next, we translate the BioTac surface mesh deformation to the DIGIT sensor's surface mesh deformation. This is possible because the physical interaction between both sensors can be modeled through mesh deformation, regardless of their different sensor output modalities.
 
-### Step III: 
+### Step 3: 
 
 Finally, we generate the DIGIT sensor image from the transformed deformation.
 

@@ -45,6 +45,7 @@ Publications
 
 Teaching experience
 ======
+* Sommer Semester 2025: Teachers Assistant in the course Research Methods for Autonomous and Intelligent Systems at the Leibniz University Hannover.
 * Sommer Semester 2024: Teachers Assistant in the course Human-Robot Interaction at the Leibniz University Hannover.
 * Sommer Semester 2024: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.
 * Sommer Semester 2023: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.

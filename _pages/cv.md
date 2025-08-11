@@ -17,21 +17,27 @@ Education
 
 Work experience
 ======
+
+* 08/2022 – Present: Research Associate  
+  * L3S Research Center, Leibniz University Hannover – Germany  
+  * Duties include: Machine Learning, Robotics, Multi-Sensor Integration, Transfer Learning  
+  
+  
 * 06/2020 - 04/2022: Research Assistant
   * Center for Applied Data Science in Gütersloh (CfADS) - Germany
   * Duties included: Machine Learning, Robotik
-  * Supervisor: Prof. Dr.-Ing. Wolfram Schenck
-
+  
+  
 * 08/2019 - 01/2020: Intern
   * Miele & Cie. KG in Gütersloh - Germany
   * Duties included: Artificial Intelligence, Data Science
-  * Supervisor: Dr. rer. nat. Felix Reinhart
+  
   
 * 01/2019 - 07/2019: Working Student
   * Center for Applied Data Science in Gütersloh (CfADS) - Germany
   * Duties included: Machine Learning, Computer Vision
-  * Supervisor: Prof. Dr.-Ing. Wolfram Schenck
-
+  
+  
 * 12/2017 - 12/2018: Working Student
   * Ceres Vision GmbH in Bielefeld - Germany
   * Duties included: Computer Vision

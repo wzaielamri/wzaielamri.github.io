@@ -2,7 +2,7 @@
 title: "Do Robots Really Need Anthropomorphic Hands?"
 collection: publications
 permalink: /publication/robotic_hand
-excerpt: 'Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.'
+excerpt: 'Topics: Robotic Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.'
 date: 2025-08-07
 venue: 'Submitted to Autonomous Robots Springer Journal'
 paperurl: 'https://arxiv.org/abs/2508.05415'
@@ -13,7 +13,7 @@ Submitted to Autonomous Robots Springer Journal.
 
 Authors: Alexander Fabisch, Wadhah Zai El Amri, Chandandeep Singh, Nicolás Navarro-Guerrero.
 
-Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.
+Topics: Robotic Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.
 
 # Abstract: 
 

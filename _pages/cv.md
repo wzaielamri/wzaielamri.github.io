@@ -59,8 +59,8 @@ Skills
   * German
   * Learning Spanish
 * Programming Languages: Python, C++, C, Assembler, Java, C#
-* ML Frameworks: Keras, TensorFlow, PyTorch, RLlib
-* Tools: ROS, MoveIt, MuJoCo, PyBullet, Gazebo, Isaac Gym
+* ML Frameworks: PyTorch, Keras, TensorFlow, RLlib
+* Tools: ROS, MoveIt, MuJoCo, PyBullet, Gazebo, Isaac Gym/Sim
 
 
 Hobbies

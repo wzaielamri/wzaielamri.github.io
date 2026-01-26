@@ -82,7 +82,7 @@ Our paper preprint is published on arXiv.
 
 ## Code: 
 
-Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
+Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
 [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/across_framework)
 

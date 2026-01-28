@@ -23,6 +23,19 @@ Rich contact perception is crucial for robotic manipulation, yet traditional tac
 ___________________________________________________________________
 </p>
 
+## Experimental Setup:
+
+The following image illustrates our experimental setup, showcasing the robotic hand equipped with piezoelectric microphones used for the first task (impulse response localization):
+
+<p align="center">
+    <img src="../images/vibrosense/experiment_setup.jpeg" width="960" height="320">
+</p>
+
+
+<p align="center">
+___________________________________________________________________
+</p>
+
 
 ## Demonstration Video:
 

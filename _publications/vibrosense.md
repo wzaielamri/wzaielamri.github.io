@@ -63,7 +63,7 @@ Our dataset will be available soon upon request.
 ## Citation
 
 ```bibtex
-@InProceedings{ZaiElAmri2025ACROSS,
+@InProceedings{ZaiElAmri2026VibroSense,
   author = {Zai El Amri, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s},
   title = {"Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands"},
   booktitle = {"ArXiv Preprint arXiv:, Submitted to Autonomous Robots Springer Journal"},

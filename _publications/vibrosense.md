@@ -9,7 +9,7 @@ paperurl: 'https://arxiv.org/abs/'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands.&quot; <i>2026 Submitted to Springer Autonomous Robots, 2026</i>.'
 ---
 
-Submitted to Springer Autonomous Robots (ICRA 2026)
+Submitted to Springer Autonomous Robots Journal
 
 Authors: Wadhah Zai El Amri, Nicolás Navarro-Guerrero.
 

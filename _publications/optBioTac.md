@@ -13,3 +13,19 @@ Topics: BioTac, XGBoost, Transformer, Tactile Perception.
 [Download paper here](http://wzaielamri.github.io/files/optBioTac_zaielamri.pdf)
 
 Code: [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
+
+
+## Citation
+
+```bibtex
+@inproceedings{ZaiElAmri2024Optimizing,
+  title = {Optimizing {{BioTac Simulation}} for {{Realistic Tactile Perception}}},
+  booktitle = {International {{Joint Conference}} on {{Neural Networks}} ({{IJCNN}})},
+  author = {Zai El Amri, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s},
+  year = {2024},
+  publisher = {IEEE},
+  address = {Yokohama, Japan},
+  annotation = {https://github.com/wzaielamri/Optimizing\_BioTac\_Simulation}
+}
+
+```

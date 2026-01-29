@@ -12,4 +12,19 @@ Topics: Machine Learning, Deep Reinforcement Learning, Motor Control.
 
 [Download paper here](http://wzaielamri.github.io/files/hddrl_zaielamri.pdf)
 
-Code: [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/hddrl)
+## Code: 
+
+Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
+
+[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/hddrl)
+
+## Citation
+
+```bibtex
+@article{wzaielamri_HDDRL,
+  title={Hierarchical Decentralized Deep Reinforcement Learning Architecture for a Simulated Four-Legged Agent.},
+  author={Wadhah Zai El Amri and Luca Hermes and Malte Schilling},
+  journal={Proc. of 8th International Online & Onsite Conference on Machine Learning, Optimization, and Data Science.},
+  year={2022}
+}
+```

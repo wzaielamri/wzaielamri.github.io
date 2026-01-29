@@ -12,4 +12,26 @@ Topics: Machine Learning, Deep Learning, Audio Signal Processing, Transfer Learn
 
 [Download paper here](http://wzaielamri.github.io/files/unmix_zaielamri.pdf)
 
-Code: [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/unmix)
+## Code: 
+
+Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
+
+[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/unmix)
+
+
+## Citation
+
+```bibtex
+@InProceedings{zai2022unmix,
+author="Zai El Amri, Wadhah
+and Tautz, Oliver
+and Ritter, Helge
+and Melnik, Andrew",
+title="Transfer Learning with Jukebox for Music Source Separation",
+booktitle="Artificial Intelligence Applications and Innovations",
+year="2022",
+publisher="Springer International Publishing",
+pages="426--433",
+isbn="978-3-031-08337-2"
+}
+```

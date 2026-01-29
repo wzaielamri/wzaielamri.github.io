@@ -5,7 +5,7 @@ permalink: /publication/vibrosense
 excerpt: 'Topics: Tactile Sensing, Vibro-Acoustic Sensing, Contact Localization, Deep Learning.'
 date: 2026-01-25
 venue: 'Submitted to Springer Autonomous Robots'
-paperurl: 'https://arxiv.org/abs/'
+paperurl: 'https://arxiv.org/abs/2601.20555'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands.&quot; <i>2026 Submitted to Springer Autonomous Robots, 2026</i>.'
 ---
 
@@ -57,7 +57,7 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/)
+[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2601.20555)
 
 [Download paper here](http://wzaielamri.github.io/files/vibrosense_zaielamri.pdf)
 
@@ -79,7 +79,7 @@ Our dataset will be available soon upon request.
 @InProceedings{ZaiElAmri2026VibroSense,
   author = {Zai El Amri, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s},
   title = {"Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands"},
-  booktitle = {"ArXiv Preprint arXiv:, Submitted to Autonomous Robots Springer Journal"},
+  booktitle = {"ArXiv Preprint arXiv:2601.20555, Submitted to Autonomous Robots Springer Journal"},
   year={2026},
 }
 ```

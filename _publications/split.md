@@ -107,13 +107,6 @@ This video demonstrates real-time inference using the SPLIT framework. The live 
 ___________________________________________________________________
 </p>
 
-## Appendix: 
-
-You can find the paper appendix, which includes additional details and results, in the link below.
-
-[Download appendix here](http://wzaielamri.github.io/files/split_zaielamri_appendix.pdf)
-
-
 ## Preprint: 
 
 Our paper preprint is published on arXiv.

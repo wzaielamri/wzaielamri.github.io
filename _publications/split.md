@@ -19,16 +19,16 @@ Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.
 
 Training machine learning models for robotic tactile sensing requires vast amounts of data, yet obtaining realistic interaction data remains a challenge due to physical complexity and variability. Simulating tactile sensors is thus a crucial step in accelerating progress. This paper presents SPLIT, a novel method for simulating image-based tactile sensors, with a primary focus on the DIGIT sensor. Central to our approach is a latent space arithmetic strategy that explicitly disentangles contact geometry from sensor-specific optical properties. Unlike methods that require recalibration for every new unit, this disentanglement allows SPLIT to adapt to diverse DIGIT backgrounds and even transfer data to distinct sensors like the GelSight R1.5 without full model retraining. Beyond this adaptability, our approach achieves faster inference speeds than existing alternatives. Furthermore, we provide a calibrated finite element method (FEM) soft-body mesh simulation with variable resolution, offering a tunable trade-off between speed and fidelity. Additionally, our algorithm supports bidirectional simulation, allowing for both the generation of realistic images from deformation meshes and the reconstruction of meshes from tactile images. This versatility makes SPLIT a valuable tool for accelerating progress in robotic tactile sensing research.
 
----
+<p align="center">
+___________________________________________________________________
+</p>
 
 ## Overview
 Training machine learning models for robotic tactile sensing requires massive amounts of data, but collecting real-world interaction data is physically complex and time-consuming. While simulation is a crucial workaround, existing methods often require tedious recalibration for every new sensor unit. 
 
 **SPLIT** is a novel simulation framework designed primarily for image-based tactile sensors like the DIGIT. By leveraging a latent space arithmetic strategy, SPLIT explicitly disentangles the physical contact geometry of an interaction from the sensor's specific optical properties. This allows the framework to generate highly realistic tactile images, adapt to diverse sensor backgrounds, and transfer data across distinct hardware, without needing to retrain the model.
 
-<p align="center">
-___________________________________________________________________
-</p>
+---
 
 ## Key Features & Contributions
 
@@ -38,16 +38,14 @@ ___________________________________________________________________
 * **Downstream Utility:** The isolated latent representations are proven to be highly effective for real-world downstream tasks, such as robust 3-DoF force estimation on unseen sensors.
 * **Open-Source Resources:** The project provides a massive real-world dataset (>1 million contact images), a calibrated Isaac Gym soft-body FEM simulation, and the full codebase.
 
-<p align="center">
-___________________________________________________________________
-</p>
+---
 
 ## How It Works: The SPLIT Pipeline
 
 SPLIT achieves this flexibility through a combination of cross-modal projection and latent space disentanglement.
 
 <p align="center">
-  <img src="../images/split/Pipeline.png" width="800" alt="SPLIT Pipeline" />
+  <img src="../images/split/Pipeline.png" width="500" alt="SPLIT Pipeline" />
 </p>
 
 ### 1. Modality Encoding
@@ -61,9 +59,7 @@ To teach the network to separate the physical touch from the sensor's lighting a
 ### 3. Flexible Image Generation (Inference)
 During inference, a highly realistic tactile image is reconstructed by simply predicting the deformation vector ($Z_{Deform}$) and adding a chosen background vector ($Z_{Base}$). By swapping the $Z_{Base}$ vector, you can simulate different DIGIT backgrounds or entirely different sensors.
 
-<p align="center">
-___________________________________________________________________
-</p>
+---
 
 ## Evaluation & Results
 
@@ -95,9 +91,7 @@ The following video shows the UR5e robot arm equipped with a DIGIT sensor collec
 </p>
 
 
-<p align="center">
-___________________________________________________________________
-</p>
+---
 
 
 This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $beta$-VAE decoder.
@@ -109,13 +103,15 @@ This video demonstrates real-time inference using the SPLIT framework. The live 
 </p>
 
 
----
+<p align="center">
+___________________________________________________________________
+</p>
 
 ## Appendix: 
 
 You can find the paper appendix, which includes additional details and results, in the link below.
 
-[Download paper here](http://wzaielamri.github.io/files/split_zaielamri_appendix.pdf)
+[Download appendix here](http://wzaielamri.github.io/files/split_zaielamri_appendix.pdf)
 
 
 ## Preprint: 

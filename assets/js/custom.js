@@ -34,6 +34,90 @@
      ---------------------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
 
+    /* --- Masthead nav fix: keep site title visible on small screens --- */
+    if (window.jQuery) {
+      (function installGreedyNavFix($) {
+        var $nav = (window.$nav && window.$nav.length) ? window.$nav : $('#site-nav');
+        var $btn = (window.$btn && window.$btn.length) ? window.$btn : $('#site-nav button');
+        var $vlinks = (window.$vlinks && window.$vlinks.length) ? window.$vlinks : $('#site-nav .visible-links');
+        var $hlinks = (window.$hlinks && window.$hlinks.length) ? window.$hlinks : $('#site-nav .hidden-links');
+
+        if (!$nav.length || !$btn.length || !$vlinks.length || !$hlinks.length) {
+          return;
+        }
+
+        if (!Array.isArray(window.breaks)) {
+          window.breaks = [];
+        }
+
+        function keepTitleVisible() {
+          var $hiddenTitle = $hlinks.children('.masthead__menu-item--lg').first();
+          if ($hiddenTitle.length) {
+            $hiddenTitle.prependTo($vlinks);
+          }
+        }
+
+        function moveLastNonTitleToHidden() {
+          var $movable = $vlinks.children().not('.masthead__menu-item--lg');
+          if (!$movable.length) {
+            return false;
+          }
+
+          window.breaks.push($vlinks.width());
+          $movable.last().prependTo($hlinks);
+          return true;
+        }
+
+        function updateNavKeepingTitle() {
+          // Reserve room for both right controls: dark-mode button + burger button.
+          var controlsReserve = 88;
+          var availableSpace = $btn.hasClass('hidden')
+            ? $nav.width() - controlsReserve
+            : $nav.width() - $btn.outerWidth(true) - controlsReserve;
+
+          keepTitleVisible();
+
+          while ($vlinks.width() > availableSpace && $vlinks.children().length > 1) {
+            if (!moveLastNonTitleToHidden()) {
+              break;
+            }
+
+            if ($btn.hasClass('hidden')) {
+              $btn.removeClass('hidden');
+            }
+          }
+
+          while (window.breaks.length > 0 && availableSpace > window.breaks[window.breaks.length - 1]) {
+            var $nextVisible = $hlinks.children().not('.masthead__menu-item--lg').first();
+            if (!$nextVisible.length) {
+              break;
+            }
+
+            $nextVisible.appendTo($vlinks);
+            window.breaks.pop();
+          }
+
+          keepTitleVisible();
+
+          if ($hlinks.children().length < 1) {
+            $btn.addClass('hidden');
+            $hlinks.addClass('hidden');
+          } else {
+            $btn.removeClass('hidden');
+          }
+
+          $btn.attr('count', $hlinks.children().length);
+
+          if ($vlinks.width() > availableSpace && $vlinks.children().length > 1) {
+            updateNavKeepingTitle();
+          }
+        }
+
+        window.updateNav = updateNavKeepingTitle;
+        updateNavKeepingTitle();
+      })(window.jQuery);
+    }
+
     /* --- Dark mode toggle button --- */
     var toggleBtn = document.getElementById('dark-mode-toggle');
     if (toggleBtn) {

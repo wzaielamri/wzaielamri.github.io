@@ -254,7 +254,7 @@ video,
 .dark-mode-toggle {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 3.2rem;
   transform: translateY(-50%);
   z-index: 30;
 
@@ -298,7 +298,43 @@ video,
 
 /* Give the nav a bit of right padding so links don't slide under the toggle */
 .masthead__inner-wrap .greedy-nav {
-  padding-right: 2.5rem;
+  padding-right: 5.8rem;
+}
+
+/* Keep nav controls readable and pinned right in both themes */
+.greedy-nav button {
+  right: 0;
+  background-color: transparent;
+  color: var(--text, #3d4144);
+  padding: 0 0.35rem;
+  z-index: 31;
+}
+
+.navicon,
+.navicon::before,
+.navicon::after {
+  background: currentColor;
+}
+
+/* Small screens: shrink author/site title instead of letting it disappear into menu */
+@media (max-width: 600px) {
+  .masthead__menu-item--lg a {
+    font-size: 0.88rem;
+    max-width: 58vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dark-mode-toggle {
+    right: 2.8rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .masthead__inner-wrap .greedy-nav {
+    padding-right: 5.2rem;
+  }
 }
 
 
@@ -459,7 +495,7 @@ a {
 }
 
 .masthead__inner-wrap  {
-  padding-right: 4rem;
+  padding-right: 3.2rem;
 }
 
 /* Slightly bolder headings */

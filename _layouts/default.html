@@ -11,7 +11,10 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="{{ page.body_class }}">
+
+    <!-- Skip-to-content (accessibility) -->
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Reading progress bar -->
     <div id="reading-progress" aria-hidden="true"></div>
@@ -39,4 +42,5 @@ layout: compress
 
   </body>
 </html>
+
 

@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Custom JS: Dark Mode, Progress Bar, Scroll-to-Top, Copy Code
+   Custom JS: Dark Mode, Progress Bar, Scroll-to-Top, Copy Code,
+              Active Nav, Scroll Reveal, Topic Badges
    ========================================================================== */
 
 (function () {
@@ -8,15 +9,8 @@
   var html = document.documentElement;
 
   /* -------------------------------------------------------------------------
-     1. DARK MODE — apply saved/system theme immediately (FOUC prevention
-        already handled by inline script in <head>, but double-check here)
+     1. DARK MODE
      ---------------------------------------------------------------------- */
-  function getPreferredTheme() {
-    var stored = localStorage.getItem('wz-theme');
-    if (stored === 'dark' || stored === 'light') return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     localStorage.setItem('wz-theme', theme);
@@ -42,14 +36,12 @@
         applyTheme(current === 'dark' ? 'light' : 'dark');
       });
 
-      // Keyboard: Space / Enter already fire click on <button>, no extra handling needed
       toggleBtn.setAttribute('aria-pressed', html.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
 
-      // Keep aria-pressed in sync
-      var observer = new MutationObserver(function () {
+      var dmObserver = new MutationObserver(function () {
         toggleBtn.setAttribute('aria-pressed', html.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
       });
-      observer.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+      dmObserver.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
     }
 
     /* --- Reading progress bar --- */
@@ -59,8 +51,8 @@
       window.addEventListener('scroll', function () {
         if (!ticking) {
           window.requestAnimationFrame(function () {
-            var docH  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var pct   = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+            var docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var pct  = docH > 0 ? (window.scrollY / docH) * 100 : 0;
             progressBar.style.width = Math.min(pct, 100) + '%';
             ticking = false;
           });
@@ -73,11 +65,7 @@
     var scrollBtn = document.getElementById('scroll-to-top');
     if (scrollBtn) {
       window.addEventListener('scroll', function () {
-        if (window.scrollY > 320) {
-          scrollBtn.classList.add('visible');
-        } else {
-          scrollBtn.classList.remove('visible');
-        }
+        scrollBtn.classList.toggle('visible', window.scrollY > 320);
       }, { passive: true });
 
       scrollBtn.addEventListener('click', function () {
@@ -85,10 +73,55 @@
       });
     }
 
+    /* --- Active nav link --- */
+    var navLinks = document.querySelectorAll('.greedy-nav .visible-links .masthead__menu-item a');
+    var currentPath = window.location.pathname.replace(/\/$/, '');
+    navLinks.forEach(function (link) {
+      var linkPath = (link.getAttribute('href') || '').replace(/\/$/, '');
+      if (linkPath && linkPath !== '' && currentPath === linkPath) {
+        link.classList.add('nav-active');
+      }
+    });
+
+    /* --- Scroll-reveal animations (IntersectionObserver) --- */
+    if ('IntersectionObserver' in window) {
+      var revealTargets = document.querySelectorAll(
+        '.list__item, .page__content > h2, .page__content > p, .page__content > ul, .page__content > hr'
+      );
+
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wz-revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+      revealTargets.forEach(function (el, i) {
+        el.classList.add('wz-reveal');
+        // Stagger: cap at 5 items × 80 ms each
+        el.style.transitionDelay = Math.min(i * 0.06, 0.3) + 's';
+        revealObserver.observe(el);
+      });
+    }
+
+    /* --- Publication topic badges --- */
+    var topicEls = document.querySelectorAll('.pub__topics');
+    topicEls.forEach(function (el) {
+      var raw = el.textContent.trim();
+      if (!raw) return;
+      var topics = raw.split(',').map(function (t) {
+        return t.trim().replace(/\.$/, '');
+      }).filter(Boolean);
+      el.innerHTML = topics.map(function (t) {
+        return '<span class="topic-badge">' + t + '</span>';
+      }).join('');
+    });
+
     /* --- Copy-code buttons (auto-inject onto every <pre> block) --- */
     var preBlocks = document.querySelectorAll('pre');
     preBlocks.forEach(function (pre) {
-      // Wrap pre in a relative container
       var wrapper = document.createElement('div');
       wrapper.className = 'code-copy-wrapper';
       pre.parentNode.insertBefore(wrapper, pre);
@@ -141,3 +174,4 @@
   }
 
 })();
+

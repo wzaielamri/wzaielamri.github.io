@@ -35,6 +35,11 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
+    {% if post.venue %}
+      <p class="archive__item-excerpt pub__citation" itemprop="description">{{ post.citation }}</p>
+      {% if post.excerpt %}
+        <div class="pub__topics">{{ post.excerpt | remove: "Topics: " | remove: "Topics:" }}</div>
+      {% endif %}
+    {% endif %}
  </article>
 </div>

@@ -5,7 +5,7 @@ permalink: /publication/split
 excerpt: 'Topics: Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.'
 date: 2026-04-27
 venue: 'Elsevier Robotics and Autonomous Systems Journal'
-paperurl: 'https://arxiv.org/abs/todo'
+paperurl: 'https://arxiv.org/abs/2604.24449'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Elsevier Robotics and Autonomous Systems Journal</i>.'
 ---
 
@@ -111,7 +111,7 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/todo)
+[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2604.24449)
 
 [Download paper here](http://wzaielamri.github.io/files/split_zaielamri.pdf)
 

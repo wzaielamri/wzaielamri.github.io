@@ -458,6 +458,10 @@ a {
   letter-spacing: 0.3px;
 }
 
+.masthead__inner-wrap  {
+  padding-right: 4rem;
+}
+
 /* Slightly bolder headings */
 h1, h2, h3 {
   letter-spacing: -0.2px;

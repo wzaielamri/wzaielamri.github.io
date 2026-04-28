@@ -247,9 +247,22 @@ video,
 }
 
 /* --------------------------------------------------------------------------
-   Dark Mode Toggle Button
+   Masthead layout – flex so the toggle sits at the far right
+   -------------------------------------------------------------------------- */
+.masthead__inner-wrap {
+  display: flex !important;
+  align-items: center;
+}
+
+.masthead__menu {
+  flex: 1 1 auto;
+  min-width: 0; /* allow greedy-nav to shrink */
+}
+
+/* Dark Mode Toggle Button
    -------------------------------------------------------------------------- */
 .dark-mode-toggle {
+  flex: 0 0 auto;
   background: none;
   border: none;
   cursor: pointer;
@@ -258,15 +271,18 @@ video,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: inherit;
+  color: var(--text, #3d4144);
   line-height: 1;
-  vertical-align: middle;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
+  margin-left: 0.75rem;
+  /* Reset any .greedy-nav button overrides (position, background, etc.) */
+  position: static !important;
+  background-color: transparent !important;
 }
 
 .dark-mode-toggle:hover {
-  background-color: rgba(128, 128, 128, 0.15);
+  background-color: rgba(128, 128, 128, 0.15) !important;
   transform: scale(1.1);
 }
 
@@ -275,17 +291,23 @@ video,
   outline-offset: 2px;
 }
 
-/* Show/hide sun vs moon icon */
-.dark-mode-toggle .dm-icon-sun  { display: block; }
-.dark-mode-toggle .dm-icon-moon { display: none;  }
-
-[data-theme="dark"] .dark-mode-toggle .dm-icon-sun  { display: none;  }
-[data-theme="dark"] .dark-mode-toggle .dm-icon-moon { display: block; }
-
-/* Inline-list item wrapper for the toggle in the nav */
-.masthead__menu-item--dm-toggle {
-  vertical-align: middle;
+.dark-mode-toggle svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
 }
+
+/* Show moon in light mode, sun in dark mode */
+.dark-mode-toggle .dm-icon-moon { display: block; }
+.dark-mode-toggle .dm-icon-sun  { display: none;  }
+
+[data-theme="dark"] .dark-mode-toggle .dm-icon-moon { display: none;  }
+[data-theme="dark"] .dark-mode-toggle .dm-icon-sun  { display: block; }
+
+/* Remove any old masthead__menu-item--dm-toggle references */
+.masthead__menu-item--dm-toggle { display: none; }
+
 
 /* --------------------------------------------------------------------------
    Reading Progress Bar

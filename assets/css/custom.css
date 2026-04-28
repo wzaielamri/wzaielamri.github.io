@@ -247,22 +247,17 @@ video,
 }
 
 /* --------------------------------------------------------------------------
-   Masthead layout – flex so the toggle sits at the far right
-   -------------------------------------------------------------------------- */
-.masthead__inner-wrap {
-  display: flex !important;
-  align-items: center;
-}
-
-.masthead__menu {
-  flex: 1 1 auto;
-  min-width: 0; /* allow greedy-nav to shrink */
-}
-
-/* Dark Mode Toggle Button
+   Dark Mode Toggle Button
+   — Absolutely positioned inside .masthead (which has position:relative in
+     the theme SCSS), so it works identically on every page.
    -------------------------------------------------------------------------- */
 .dark-mode-toggle {
-  flex: 0 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 30;
+
   background: none;
   border: none;
   cursor: pointer;
@@ -275,15 +270,11 @@ video,
   line-height: 1;
   width: 34px;
   height: 34px;
-  margin-left: 0.75rem;
-  /* Reset any .greedy-nav button overrides (position, background, etc.) */
-  position: static !important;
-  background-color: transparent !important;
 }
 
 .dark-mode-toggle:hover {
-  background-color: rgba(128, 128, 128, 0.15) !important;
-  transform: scale(1.1);
+  background-color: rgba(128, 128, 128, 0.15);
+  transform: translateY(-50%) scale(1.12);
 }
 
 .dark-mode-toggle:focus {
@@ -305,8 +296,10 @@ video,
 [data-theme="dark"] .dark-mode-toggle .dm-icon-moon { display: none;  }
 [data-theme="dark"] .dark-mode-toggle .dm-icon-sun  { display: block; }
 
-/* Remove any old masthead__menu-item--dm-toggle references */
-.masthead__menu-item--dm-toggle { display: none; }
+/* Give the nav a bit of right padding so links don't slide under the toggle */
+.masthead__inner-wrap .greedy-nav {
+  padding-right: 2.5rem;
+}
 
 
 /* --------------------------------------------------------------------------

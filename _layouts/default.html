@@ -13,6 +13,9 @@ layout: compress
 
   <body>
 
+    <!-- Reading progress bar -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
@@ -25,7 +28,15 @@ layout: compress
       </footer>
     </div>
 
+    <!-- Scroll-to-top button -->
+    <button id="scroll-to-top" aria-label="Scroll to top" title="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+      </svg>
+    </button>
+
     {% include scripts.html %}
 
   </body>
 </html>
+

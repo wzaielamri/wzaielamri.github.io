@@ -1,0 +1,468 @@
+/* ==========================================================================
+   Custom Enhancements: Dark Mode, Accent Colors, UI Extras
+   ========================================================================== */
+
+/* Inter font override (loaded via <head>) */
+body,
+.masthead,
+.page__content,
+.author__bio,
+.author__name,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties (light mode defaults)
+   -------------------------------------------------------------------------- */
+:root {
+  --accent:           #2980b9;
+  --accent-hover:     #1a5276;
+  --bg:               #ffffff;
+  --bg-alt:           #f8f9fa;
+  --text:             #3d4144;
+  --text-muted:       #7a8288;
+  --border:           #e9eaeb;
+  --masthead-bg:      #ffffff;
+  --sidebar-bg:       #ffffff;
+  --code-bg:          #f6f8fa;
+  --link:             #2980b9;
+  --link-hover:       #1a5276;
+  --card-shadow:      rgba(0, 0, 0, 0.07);
+  --transition-speed: 0.25s;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode Overrides
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  --accent:           #5dade2;
+  --accent-hover:     #85c1e9;
+  --bg:               #1a1d23;
+  --bg-alt:           #1e2229;
+  --text:             #cdd6df;
+  --text-muted:       #8899aa;
+  --border:           #2e333d;
+  --masthead-bg:      #13161b;
+  --sidebar-bg:       #1e2229;
+  --code-bg:          #22262e;
+  --link:             #5dade2;
+  --link-hover:       #85c1e9;
+  --card-shadow:      rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Global transitions (smooth theme switching)
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  transition:
+    background-color var(--transition-speed) ease,
+    border-color     var(--transition-speed) ease,
+    color            var(--transition-speed) ease,
+    box-shadow       var(--transition-speed) ease;
+}
+
+/* Disable transitions on elements where they'd look bad */
+img,
+svg,
+video,
+.navicon,
+.navicon::before,
+.navicon::after {
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode – Structural Elements
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .masthead {
+  background-color: var(--masthead-bg);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .greedy-nav {
+  background: var(--masthead-bg);
+}
+
+[data-theme="dark"] .greedy-nav a {
+  color: var(--text);
+}
+
+[data-theme="dark"] .greedy-nav a:hover {
+  color: var(--link);
+}
+
+[data-theme="dark"] .greedy-nav .hidden-links {
+  background: var(--bg-alt);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .greedy-nav .hidden-links a:hover {
+  background: var(--bg);
+  color: var(--link);
+}
+
+[data-theme="dark"] .greedy-nav button {
+  background-color: #2e3440;
+}
+
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .author__urls-wrapper {
+  background-color: var(--sidebar-bg);
+}
+
+[data-theme="dark"] .author__name,
+[data-theme="dark"] .author__bio {
+  color: var(--text);
+}
+
+[data-theme="dark"] .author__urls a,
+[data-theme="dark"] .author__urls li {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .author__urls a:hover {
+  color: var(--link);
+}
+
+[data-theme="dark"] .author__urls-wrapper .btn--inverse {
+  background-color: var(--bg-alt);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode – Page Content
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .page__title,
+[data-theme="dark"] .page__lead,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] .page__content {
+  color: var(--text);
+}
+
+[data-theme="dark"] a {
+  color: var(--link);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--link-hover);
+}
+
+[data-theme="dark"] hr {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] blockquote {
+  border-left-color: var(--accent);
+  color: var(--text-muted);
+  background-color: var(--bg-alt);
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: var(--code-bg) !important;
+  color: #abb2bf;
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .highlight {
+  background-color: var(--code-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode – Archive / Publication Lists
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .archive__item-title a {
+  color: var(--link);
+}
+
+[data-theme="dark"] .archive__item-excerpt {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .archive__item-teaser {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .list__item .archive__item {
+  border-color: var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode – Tables
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] table {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] th {
+  background-color: var(--bg-alt);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] td {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+  background-color: var(--bg-alt);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode – Footer
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .page__footer {
+  background-color: var(--masthead-bg);
+  color: var(--text-muted);
+  border-top-color: var(--border);
+}
+
+[data-theme="dark"] .page__footer a {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .page__footer a:hover {
+  color: var(--link);
+}
+
+[data-theme="dark"] .page__footer-copyright {
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode Toggle Button
+   -------------------------------------------------------------------------- */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  line-height: 1;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid var(--accent, #2980b9);
+  outline-offset: 2px;
+}
+
+/* Show/hide sun vs moon icon */
+.dark-mode-toggle .dm-icon-sun  { display: block; }
+.dark-mode-toggle .dm-icon-moon { display: none;  }
+
+[data-theme="dark"] .dark-mode-toggle .dm-icon-sun  { display: none;  }
+[data-theme="dark"] .dark-mode-toggle .dm-icon-moon { display: block; }
+
+/* Inline-list item wrapper for the toggle in the nav */
+.masthead__menu-item--dm-toggle {
+  vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   Reading Progress Bar
+   -------------------------------------------------------------------------- */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent, #2980b9) 0%, #85c1e9 100%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.08s linear !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-to-Top Button
+   -------------------------------------------------------------------------- */
+#scroll-to-top {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  width: 42px;
+  height: 42px;
+  background-color: var(--accent, #2980b9);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity  0.3s ease  !important,
+    transform 0.3s ease !important,
+    background-color 0.2s ease !important;
+  z-index: 998;
+}
+
+#scroll-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scroll-to-top:hover {
+  background-color: var(--accent-hover, #1a5276);
+}
+
+#scroll-to-top svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Copy-Code Button (auto-injected by JS onto <pre> blocks)
+   -------------------------------------------------------------------------- */
+.code-copy-wrapper {
+  position: relative;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  padding: 3px 9px;
+  font-size: 0.72em;
+  cursor: pointer;
+  color: #abb2bf;
+  letter-spacing: 0.03em;
+  transition: background 0.15s ease !important, color 0.15s ease !important;
+  opacity: 0;
+}
+
+.code-copy-wrapper:hover .copy-code-btn,
+.copy-code-btn:focus {
+  opacity: 1;
+}
+
+.copy-code-btn:hover {
+  background: var(--accent, #2980b9);
+  color: #fff;
+  border-color: var(--accent, #2980b9);
+}
+
+.copy-code-btn.copied {
+  background: #27ae60;
+  color: #fff;
+  border-color: #27ae60;
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   General UI Improvements
+   -------------------------------------------------------------------------- */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better accent color for links */
+a {
+  color: var(--link, #2980b9);
+}
+
+/* Underline animation on content links */
+.page__content a:not(.btn):not([class*="archive__"]) {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.page__content a:not(.btn):not([class*="archive__"]):hover {
+  border-bottom-color: var(--accent, #2980b9);
+}
+
+/* Publication / archive item card hover */
+.list__item .archive__item {
+  padding: 0.85em 0.85em 0.85em 0;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.list__item .archive__item:hover {
+  box-shadow: 0 3px 18px var(--card-shadow, rgba(0, 0, 0, 0.07));
+}
+
+/* Author avatar – subtle zoom on hover */
+.author__avatar img {
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav link underline hover indicator */
+.greedy-nav .visible-links a:not(.masthead__menu-item--lg a)::before {
+  background: var(--accent, #2980b9);
+}
+
+/* Masthead title */
+.masthead__menu-item--lg a {
+  letter-spacing: 0.3px;
+}
+
+/* Slightly bolder headings */
+h1, h2, h3 {
+  letter-spacing: -0.2px;
+}
+
+/* Better blockquote */
+blockquote {
+  border-left: 4px solid var(--accent, #2980b9);
+  background-color: rgba(41, 128, 185, 0.05);
+  padding: 0.8em 1.2em;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Keyboard-accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent, #2980b9);
+  outline-offset: 2px;
+}
+
+/* Prevent FOUC flash on initial load */
+html[data-theme="dark"] {
+  background-color: #1a1d23;
+}

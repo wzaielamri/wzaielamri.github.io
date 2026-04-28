@@ -6,7 +6,7 @@ excerpt: 'Topics: Tactile Sensing, Vibro-Acoustic Sensing, Contact Localization,
 date: 2026-01-25
 venue: 'Submitted to Springer Autonomous Robots'
 paperurl: 'https://arxiv.org/abs/2601.20555'
-citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands.&quot; <i>2026 Submitted to Springer Autonomous Robots, 2026</i>.'
+citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands.&quot; <i>2026 Submitted to Springer Autonomous Robots Journal, 2026</i>.'
 ---
 
 Submitted to Springer Autonomous Robots Journal

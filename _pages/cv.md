@@ -25,7 +25,7 @@ Work experience
   
 * 06/2020 - 04/2022: Research Assistant
   * Center for Applied Data Science in Gütersloh (CfADS) - Germany
-  * Duties included: Machine Learning, Robotik
+  * Duties included: Machine Learning, Robotics
   
   
 * 08/2019 - 01/2020: Intern

@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Zai El Amri, Wadhah"
 title_separator          : "-"
 name                     : &name "Wadhah Zai El Amri"
-description              : &description "Personal Website"
+description              : &description "PhD Researcher in Tactile Sensing, Robotics, and Machine Learning"
 url                      : https://wzaielamri.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wzaielamri/wzaielamri.github.io"
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 

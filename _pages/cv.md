@@ -75,3 +75,4 @@ Hobbies
 * Astronomy
 * Running
 * Cycling
+* Chess

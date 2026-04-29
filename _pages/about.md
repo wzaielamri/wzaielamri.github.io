@@ -11,19 +11,30 @@ redirect_from:
 ## About Me
 
 <div style="text-align: justify;">
-I am <strong>Wadhah Zai El Amri</strong>, a PhD researcher at the <strong>[L3S Research Center](https://www.l3s.de/)</strong>, Leibniz University Hannover, Germany. My work lies at the intersection of <strong>robotic perception</strong>, <strong>tactile sensing</strong>, and <strong>machine learning</strong>, with a particular focus on enabling robots to perceive and understand physical contact with the world.
+
+I am **Wadhah Zai El Amri**, a PhD researcher at the **[L3S Research Center](https://www.l3s.de/)**, Leibniz University Hannover, Germany. My work lies at the intersection of **robotic perception**, **tactile sensing**, and **machine learning**, with a particular focus on enabling robots to perceive and understand physical contact with the world.
+
 </div>
 
+
 <div style="text-align: justify;">
+
 I received my M.Sc. in Intelligent Systems from Bielefeld University in 2022, and my B.Eng. in Computer Engineering from Bielefeld University of Applied Sciences in 2020.
+
 </div>
 
-<div style="text-align: justify;">
-<strong>Research Interests:</strong> Tactile sensing for robotics, transfer learning across sensor modalities, vibro-acoustic perception, deep reinforcement learning, and sim-to-real transfer.
-</div>
 
 <div style="text-align: justify;">
+
+**Research Interests:** Tactile sensing for robotics, transfer learning across sensor modalities, vibro-acoustic perception, deep reinforcement learning, and sim-to-real transfer.
+
+</div>
+
+
+<div style="text-align: justify;">
+
 Feel free to reach out if you are interested in collaborating or discussing any of these topics.
+
 </div>
 
 ---

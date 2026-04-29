@@ -327,13 +327,18 @@ video,
   }
 
   .dark-mode-toggle {
-    right: 2.8rem;
+    right: 0.55rem;
     width: 32px;
     height: 32px;
   }
 
+  .greedy-nav button {
+    right: 2.9rem;
+    padding: 0 0.4rem;
+  }
+
   .masthead__inner-wrap .greedy-nav {
-    padding-right: 5.2rem;
+    padding-right: 6.1rem;
   }
 }
 

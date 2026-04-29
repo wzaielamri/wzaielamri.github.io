@@ -316,8 +316,9 @@ video,
   background: currentColor;
 }
 
+
 /* Small screens: shrink author/site title instead of letting it disappear into menu */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .masthead__menu-item--lg a {
     font-size: 0.88rem;
     max-width: 58vw;
@@ -327,7 +328,7 @@ video,
   }
 
   .dark-mode-toggle {
-    right: 0.55rem;
+    right: 2.55rem;
     width: 32px;
     height: 32px;
   }

@@ -10,13 +10,13 @@ citation: '<b>Wadhah Zai El Amri</b>, Luca Hermes, Malte Schilling (2022). &quot
 ---
 Topics: Machine Learning, Deep Reinforcement Learning, Motor Control.
 
-[Download paper here](http://wzaielamri.github.io/files/hddrl_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/hddrl_zaielamri.pdf)
 
 ## Code: 
 
 Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/hddrl)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/hddrl)
 
 ## Citation
 

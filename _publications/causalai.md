@@ -10,6 +10,6 @@ citation: 'Niloy Ganguly, Dren Fazlija, Maryam Badar, Marco Fisichella, Sandipan
 ---
 Topics: Causality, Artificial Intelligence, Counterfactual, Interpretability, Explainability, Robustness, Bias, Discrimination, Fairness, Privacy, Safety, Healthcare.
 
-[Download paper here](http://wzaielamri.github.io/files/causalai_ganguly.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/causalai_ganguly.pdf)
 
-Code: [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/L3S/causality-for-trustworthy-ai/tree/main)
+Code: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/L3S/causality-for-trustworthy-ai/tree/main)

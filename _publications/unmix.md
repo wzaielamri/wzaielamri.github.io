@@ -10,13 +10,13 @@ citation: '<b>Wadhah Zai El Amri</b>, Oliver Tautz, Helge Ritter, Andrew Melnik 
 ---
 Topics: Machine Learning, Deep Learning, Audio Signal Processing, Transfer Learning.
 
-[Download paper here](http://wzaielamri.github.io/files/unmix_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/unmix_zaielamri.pdf)
 
 ## Code: 
 
 Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/unmix)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/unmix)
 
 
 ## Citation

@@ -10,9 +10,9 @@ citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2024). &quot;Op
 ---
 Topics: BioTac, XGBoost, Transformer, Tactile Perception.
 
-[Download paper here](http://wzaielamri.github.io/files/optBioTac_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/optBioTac_zaielamri.pdf)
 
-Code: [<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
+Code: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
 
 
 ## Citation

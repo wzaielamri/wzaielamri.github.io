@@ -28,7 +28,7 @@ ___________________________________________________________________
 
 
 <p align="center">
-  <img src="../images/across/Pipeline.jpg" width="316" height="602" />
+  <img src="../assets/images/across/Pipeline.jpg" width="316" height="602" />
 </p>
 
 The figure above outlines the three steps of our pipeline:
@@ -49,7 +49,7 @@ Finally, we generate the DIGIT sensor image from the transformed deformation.
 The pipeline delivers results similar to the image below (Further results from the test set can be checked in the video below):
 
 <p align="center">
-  <img src="../images/across/figure_results_all_data.jpg" width="550" height="550" />
+  <img src="../assets/images/across/figure_results_all_data.jpg" width="550" height="550" />
 </p>
 
 <p align="center">
@@ -61,8 +61,8 @@ ___________________________________________________________________
 The following video demonstrates the pipeline in action, showing the BioTac sensor’s outputs (signals) and the corresponding generated DIGIT sensor images.
 
 <p align="center">
-  <a href="../images/across/video.mp4">
-    <img src="../images/across/full_new.gif" alt="Watch the full video" width="960" height="320">
+  <a href="../assets/images/across/video.mp4">
+    <img src="../assets/images/across/full_new.gif" alt="Watch the full video" width="960" height="320">
   </a>
 </p>
 
@@ -76,21 +76,21 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2411.08533)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2411.08533)
 
-[Download paper here](http://wzaielamri.github.io/files/across_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/across_zaielamri.pdf)
 
 ## Code: 
 
 Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/across_framework)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/across_framework)
 
 ## Dataset:
 
 Our dataset will be available soon upon request.
 
-[<img src="../images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/across_framework)
+[<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/across_framework)
 
 ## Citation
 

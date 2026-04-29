@@ -28,7 +28,7 @@ ___________________________________________________________________
 The following image illustrates our experimental setup, showcasing the robotic hand equipped with piezoelectric microphones used for the first task (impulse response localization):
 
 <p align="center">
-    <img src="../images/vibrosense/experiment_setup.jpeg" width="960" height="320">
+    <img src="../assets/images/vibrosense/experiment_setup.jpeg" width="960" height="320">
 </p>
 
 
@@ -42,8 +42,8 @@ ___________________________________________________________________
 The following video demonstrates the pipeline in action, showing the data collection procedure for the second task (trajectory tracking):
 
 <p align="center">
-  <a href="../images/vibrosense/video.mp4">
-    <img src="../images/vibrosense/video.gif" alt="Watch the full video" width="960" height="320">
+  <a href="../assets/images/vibrosense/video.mp4">
+    <img src="../assets/images/vibrosense/video.gif" alt="Watch the full video" width="960" height="320">
   </a>
 </p>
 
@@ -57,21 +57,21 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2601.20555)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2601.20555)
 
-[Download paper here](http://wzaielamri.github.io/files/vibrosense_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/vibrosense_zaielamri.pdf)
 
 ## Code: 
 
 Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/vibrosense)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/vibrosense)
 
 ## Dataset:
 
 Our dataset will be available soon upon request.
 
-[<img src="../images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/vibrosense)
+[<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/vibrosense)
 
 ## Citation
 

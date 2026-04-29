@@ -10,4 +10,4 @@ citation: '<b>Wadhah Zai El Amri</b>, Felix Reinhart, Wolfram Schenck (2022). &q
 ---
 Topics: Machine Learning, Deep Learning, Image Processing.
 
-[Download paper here](http://wzaielamri.github.io/files/osta_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/osta_zaielamri.pdf)

@@ -10,4 +10,4 @@ citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, and Nicolás Navarro-Guerr
 ---
 Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.
 
-[Download paper here](http://wzaielamri.github.io/files/transferTactileExtAbstract_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/transferTactileExtAbstract_zaielamri.pdf)

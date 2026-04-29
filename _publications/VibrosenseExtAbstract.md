@@ -10,7 +10,7 @@ citation: '<b>Wadhah Zai El Amri</b>, Nicolas Faundes, and Nicolás Navarro-Guer
 ---
 Topics: Tactile Sensing, Vibro-Acoustic Sensing, Contact Localization, Deep Learning.
 
-[Download paper here](http://wzaielamri.github.io/files/vibrosense_extended_abstract_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/vibrosense_extended_abstract_zaielamri.pdf)
 
 
 ## Citation

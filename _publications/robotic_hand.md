@@ -31,9 +31,9 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2508.05415)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2508.05415)
 
-[Download paper here](http://wzaielamri.github.io/files/robotic_hands.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/robotic_hands.pdf)
 
 ## Citation
 

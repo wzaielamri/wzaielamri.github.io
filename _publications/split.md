@@ -45,7 +45,7 @@ Training machine learning models for robotic tactile sensing requires massive am
 SPLIT achieves this flexibility through a combination of cross-modal projection and latent space disentanglement.
 
 <p align="center">
-  <img src="../images/split/Pipeline.png" width="500" alt="SPLIT Pipeline" />
+  <img src="../assets/images/split/Pipeline.png" width="500" alt="SPLIT Pipeline" />
 </p>
 
 ### 1. Modality Encoding
@@ -72,7 +72,7 @@ SPLIT was rigorously benchmarked against other state-of-the-art baselines (Taxim
 
 
 <p align="center">
-  <img src="../images/split/results.png" width="500" alt="SPLIT Results" />
+  <img src="../assets/images/split/results.png" width="500" alt="SPLIT Results" />
 </p>
 
 
@@ -85,8 +85,8 @@ ___________________________________________________________________
 The following video shows the UR5e robot arm equipped with a DIGIT sensor collecting real-time tactile data. 
 
 <p align="center">
-  <a href="../images/split/data_collection.mp4">
-    <img src="../images/split/data_collection.gif" alt="Watch the full video" width="320" height="960">
+  <a href="../assets/images/split/data_collection.mp4">
+    <img src="../assets/images/split/data_collection.gif" alt="Watch the full video" width="320" height="960">
   </a>
 </p>
 
@@ -97,8 +97,8 @@ The following video shows the UR5e robot arm equipped with a DIGIT sensor collec
 This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $beta$-VAE decoder.
 
 <p align="center">
-  <a href="../images/split/touch.mp4">
-    <img src="../images/split/touch.gif" alt="Watch the full video" width="960" height="320">
+  <a href="../assets/images/split/touch.mp4">
+    <img src="../assets/images/split/touch.gif" alt="Watch the full video" width="960" height="320">
   </a>
 </p>
 
@@ -111,21 +111,21 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2604.24449)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2604.24449)
 
-[Download paper here](http://wzaielamri.github.io/files/split_zaielamri.pdf)
+[Download paper here](http://wzaielamri.github.io/assets/paper_files/split_zaielamri.pdf)
 
 ## Code: 
 
 Our code will be published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/split_framework)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/split_framework)
 
 ## Dataset:
 
 Our dataset will be available soon upon request.
 
-[<img src="../images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/split_framework)
+[<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/split_framework)
 
 ## Citation
 

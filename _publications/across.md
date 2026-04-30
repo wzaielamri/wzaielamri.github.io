@@ -88,7 +88,7 @@ Our code is published online, along with all necessary checkpoints and a detaile
 
 ## Dataset:
 
-Our dataset will be available soon upon request.
+Our dataset is available on Hugging Face, along with detailed documentation.
 
 [<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/across_framework)
 

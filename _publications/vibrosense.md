@@ -63,13 +63,13 @@ Our paper preprint is published on arXiv.
 
 ## Code: 
 
-Our code will be published soon, along with all necessary checkpoints and a detailed installation guide.
+Our code is available on GitHub, including data processing scripts, model training code, and evaluation pipelines.
 
 [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/vibrosense)
 
 ## Dataset:
 
-Our dataset will be available soon upon request.
+Our dataset is available on Hugging Face, along with detailed documentation.
 
 [<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/vibrosense)
 

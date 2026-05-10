@@ -248,7 +248,7 @@ video,
 
 /* --------------------------------------------------------------------------
    Dark Mode Toggle Button
-   — Absolutely positioned inside .masthead (which has position:relative in
+   - Absolutely positioned inside .masthead (which has position:relative in
      the theme SCSS), so it works identically on every page.
    -------------------------------------------------------------------------- */
 .dark-mode-toggle {

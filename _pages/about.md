@@ -31,6 +31,20 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
 ## Publications
 
-  <ul>{% for post in site.publications reversed %}
+  <ul>{% assign pubs = site.publications | reverse %}{% for post in pubs limit:4 %}
       {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+  <p><a href="/publications/">See all publications →</a></p>
+
+---
+
+## Projects
+
+  <ul>{% for post in site.projects %}
+    <li>
+      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> — {{ post.excerpt | strip_html | truncatewords: 20 }}
+    </li>
+  {% endfor %}</ul>
+
+  <p><a href="/projects/">See all projects →</a></p>

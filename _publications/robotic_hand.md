@@ -17,7 +17,7 @@ Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.
 
 # Abstract: 
 
-Human manipulation skills represent a pinnacle of their voluntary motor functions, requiring the coordination of many  degrees of freedom and processing of high-dimensional sensor input to achieve such a high level of dexterity. Thus, we set out to answer whether the human hand, with its associated biomechanical properties, sensors, and control mechanisms, is an ideal that we should strive for in robotics—do we really need anthropomorphic robotic hands? 
+Human manipulation skills represent a pinnacle of their voluntary motor functions, requiring the coordination of many  degrees of freedom and processing of high-dimensional sensor input to achieve such a high level of dexterity. Thus, we set out to answer whether the human hand, with its associated biomechanical properties, sensors, and control mechanisms, is an ideal that we should strive for in robotics-do we really need anthropomorphic robotic hands? 
 
 This survey can help practitioners to make the trade-off between hand complexity and potential manipulation skills. We provide an overview of the human hand, a comparison of commercially available robotic and prosthetic hands, and a systematic review of hand mechanisms and skills that they are capable of. This leads to follow-up questions. What is the minimum requirement for mechanisms and sensors to implement most skills that a robot needs? What is missing to reach human-level dexterity? Can we improve upon human dexterity?
 

@@ -8,7 +8,7 @@
   var html = document.documentElement;
 
   /* -------------------------------------------------------------------------
-     1. DARK MODE — apply saved/system theme immediately (FOUC prevention
+     1. DARK MODE - apply saved/system theme immediately (FOUC prevention
         already handled by inline script in <head>, but double-check here)
      ---------------------------------------------------------------------- */
   function getPreferredTheme() {

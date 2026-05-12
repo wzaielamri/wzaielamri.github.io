@@ -4,9 +4,9 @@ collection: publications
 permalink: /publication/split
 excerpt: 'Topics: Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.'
 date: 2026-04-27
-venue: 'Elsevier Robotics and Autonomous Systems Journal'
+venue: 'Robotics and Autonomous Systems Journal'
 paperurl: 'https://arxiv.org/abs/2604.24449'
-citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Elsevier Robotics and Autonomous Systems Journal</i>.'
+citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Robotics and Autonomous Systems, Volume 203, 2026,ISSN 0921-8890, 10.1016/j.robot.2026.105498</i>.'
 ---
 
 Accepted to Elsevier Robotics and Autonomous Systems Journal
@@ -131,9 +131,14 @@ Our dataset will be available soon upon request.
 
 ```bibtex
 @article{ZaiElAmri2026SPLIT,
-  author = {Zai El Amri, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s},
-  title = {"SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors"},
-  journal = {Robotics and Autonomous Systems},
-  year={2026},
+title = {SPLIT: Separating physical-contact via latent arithmetic in image-based tactile sensors},
+journal = {Robotics and Autonomous Systems},
+volume = {203},
+pages = {105498},
+year = {2026},
+issn = {0921-8890},
+doi = {https://doi.org/10.1016/j.robot.2026.105498},
+url = {https://www.sciencedirect.com/science/article/pii/S0921889026001715},
+author = {Wadhah {Zai El Amri} and Nicolás Navarro-Guerrero}
 }
 ```

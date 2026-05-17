@@ -33,7 +33,7 @@
     {% elsif post.pub_type == 'preprint' %}
       <span style='background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Preprint</span>
     {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
+    <h3 class="archive__item-title" itemprop="headline" style="margin-top: 0.3em;">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}

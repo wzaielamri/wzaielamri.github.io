@@ -43,7 +43,7 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
   <ul>{% for post in site.projects %}
     <li>
-      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> — {{ post.excerpt | strip_html | truncatewords: 20 }}
+      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> — {{ post.excerpt }}
     </li>
   {% endfor %}</ul>
 

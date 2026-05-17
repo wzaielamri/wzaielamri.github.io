@@ -6,6 +6,7 @@ excerpt: 'Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.'
 date: 2024-03-14
 venue: '1st German Robotics Conference (GRC)'
 paperurl: 'https://www.researchgate.net/profile/Nicolas-Navarro-Guerrero/publication/389964298_Vibro-Sense_A_Bio-Inspired_Vibration-Based_Tactile_Sensor_for_Robotics/links/67da8c5935f7044c9232e70a/Vibro-Sense-A-Bio-Inspired-Vibration-Based-Tactile-Sensor-for-Robotics.pdf'
+pub_type: 'extended_abstract'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolas Faundes, and Nicolás Navarro-Guerrero (2025). &quot;Vibro-Sense: A Bio-Inspired Vibration-Based Tactile Sensor for Robotics.&quot; <i>in 1st German Robotics Conference (GRC), Nuremberg, Germany, March. 2025, pp. 1–3</i>.'
 ---
 Topics: Tactile Sensing, Vibro-Acoustic Sensing, Contact Localization, Deep Learning.

@@ -6,6 +6,7 @@ excerpt: 'Topics: Machine Learning, Deep Learning, Audio Signal Processing, Tran
 date: 2022-06-10
 venue: 'Part of the IFIP Advances in Information and Communication Technology book series (IFIPAICT,volume 647)'
 paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-08337-2_35'
+pub_type: 'full_paper'
 citation: '<b>Wadhah Zai El Amri</b>, Oliver Tautz, Helge Ritter, Andrew Melnik (2022). &quot;Transfer Learning with Jukebox for Music Source Separation.&quot; <i>Part of the IFIP Advances in Information and Communication Technology book series (IFIPAICT,volume 647)</i>.'
 ---
 Topics: Machine Learning, Deep Learning, Audio Signal Processing, Transfer Learning.

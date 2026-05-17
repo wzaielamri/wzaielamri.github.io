@@ -31,9 +31,9 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
 ## Publications
 
-  <ul>{% assign pubs = site.publications | reverse %}{% for post in pubs limit:4 %}
+  <div>{% assign pubs = site.publications | reverse %}{% for post in pubs limit:4 %}
       {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</div>
 
   <p><a href="/publications/">See all publications →</a></p>
 
@@ -43,7 +43,7 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
   <ul style="padding-left:0; list-style:none;">{% for post in site.projects %}
     <li style="border-bottom:1px solid #e8e8e8; padding-bottom:1.2em; margin-bottom:0.8em;">
-      {% if post.project_type == 'side_project' %}<span style='background:#e8f0fe;color:#1a73e8;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;'>Side Project</span>{% elsif post.project_type == 'research_project' %}<span style='background:#e0f2f1;color:#00695c;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;'>Research Project</span>{% endif %}
+      {% if post.project_type == 'side_project' %}<span style='background:#e8f0fe;color:#1a73e8;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Side Project</span>{% elsif post.project_type == 'research_project' %}<span style='background:#e0f2f1;color:#00695c;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Research Project</span>{% endif %}
       <h3 class="archive__item-title" style="margin-top:0.3em;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
       <p class="archive__item-excerpt">{{ post.excerpt | truncatewords: 20 }}</p>
     </li>

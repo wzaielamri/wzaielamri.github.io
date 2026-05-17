@@ -47,5 +47,4 @@ Code: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](http
   address = {Yokohama, Japan},
   annotation = {https://github.com/wzaielamri/Optimizing\_BioTac\_Simulation}
 }
-
 ```

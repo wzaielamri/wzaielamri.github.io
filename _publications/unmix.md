@@ -38,6 +38,7 @@ Our code is published online, along with all necessary checkpoints and a detaile
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @InProceedings{zai2022unmix,
 author="{Zai El Amri}, {Wadhah}
@@ -52,3 +53,4 @@ pages="426--433",
 isbn="978-3-031-08337-2"
 }
 ```
+{% endraw %}

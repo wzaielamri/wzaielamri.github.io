@@ -39,6 +39,7 @@ In our repository, we curated a list of datasets used for recent Causal Machine 
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @misc{ganguly2023reviewrolecausalitydeveloping,
       title={A Review of the Role of Causality in Developing Trustworthy AI Systems}, 
@@ -49,3 +50,4 @@ In our repository, we curated a list of datasets used for recent Causal Machine 
       url={https://arxiv.org/abs/2302.06975}, 
 }
 ```
+{% endraw %}

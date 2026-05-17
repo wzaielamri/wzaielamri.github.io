@@ -38,6 +38,7 @@ Our paper preprint is published on arXiv.
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @Article{Faboisch2025DoRobots,
   author = {Alexander Fabisch and {Wadhah} {Zai El Amri} and Chandandeep Singh and {Navarro-Guerrero}, Nicol{\'a}s},
@@ -46,3 +47,4 @@ Our paper preprint is published on arXiv.
   year={2025},
 }
 ```
+{% endraw %}

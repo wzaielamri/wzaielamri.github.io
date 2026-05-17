@@ -140,6 +140,6 @@ year = {2026},
 issn = {0921-8890},
 doi = {https://doi.org/10.1016/j.robot.2026.105498},
 url = {https://www.sciencedirect.com/science/article/pii/S0921889026001715},
-author = {Wadhah {Zai El Amri} and Nicolás Navarro-Guerrero}
+author = {{Wadhah} {Zai El Amri} and Nicolás Navarro-Guerrero}
 }
 ```

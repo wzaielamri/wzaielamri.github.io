@@ -78,7 +78,7 @@ Our dataset is available on Hugging Face, along with detailed documentation.
 
 ```bibtex
 @InProceedings{ZaiElAmri2026VibroSense,
-  author = {Zai El Amri, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s},
+  author = {{Zai El Amri}, {Wadhah} and {Navarro-Guerrero}, Nicol{\'a}s},
   title = {"Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands"},
   booktitle = {"ArXiv Preprint arXiv:2601.20555, Submitted to Autonomous Robots Springer Journal"},
   year={2026},

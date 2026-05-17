@@ -40,7 +40,7 @@ Our paper preprint is published on arXiv.
 
 ```bibtex
 @Article{Faboisch2025DoRobots,
-  author = {Alexander Fabisch and Wadhah Zai El Amri and Chandandeep Singh and {Navarro-Guerrero}, Nicol{\'a}s},
+  author = {Alexander Fabisch and {Wadhah} {Zai El Amri} and Chandandeep Singh and {Navarro-Guerrero}, Nicol{\'a}s},
   title = {"Do Robots Really Need Anthropomorphic Hands?"},
   booktitle = {"ArXiv Preprint arXiv:2508.05415, Submitted to Autonomous Robots Springer Journal"},
   year={2025},

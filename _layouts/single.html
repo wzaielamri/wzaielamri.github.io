@@ -26,10 +26,16 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.pub_type %}
-            <p class="page__taxonomy"><span class="page__taxonomy-item">{{ page.pub_type | replace: "_", " " | capitalize }}</span></p>
-          {% elsif page.project_type %}
-            <p class="page__taxonomy"><span class="page__taxonomy-item">{{ page.project_type | replace: "_", " " | capitalize }}</span></p>
+          {% if page.pub_type == 'full_paper' %}
+            <span style='background:#e6f4ea;color:#1e8e3e;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Full Paper</span>
+          {% elsif page.pub_type == 'extended_abstract' %}
+            <span style='background:#fef3c7;color:#b45309;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Extended Abstract</span>
+          {% elsif page.pub_type == 'preprint' %}
+            <span style='background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Preprint</span>
+          {% elsif page.project_type == 'side_project' %}
+            <span style='background:#e8f0fe;color:#1a73e8;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Side Project</span>
+          {% elsif page.project_type == 'research_project' %}
+            <span style='background:#e0f2f1;color:#00695c;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Research Project</span>
           {% endif %}
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}

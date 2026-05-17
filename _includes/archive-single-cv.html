@@ -26,6 +26,13 @@
           alt="">
       </div>
     {% endif %}
+    {% if post.pub_type == 'full_paper' %}
+      <span style='background:#e6f4ea;color:#1e8e3e;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Full Paper</span>
+    {% elsif post.pub_type == 'extended_abstract' %}
+      <span style='background:#fef3c7;color:#b45309;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Extended Abstract</span>
+    {% elsif post.pub_type == 'preprint' %}
+      <span style='background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Preprint</span>
+    {% endif %}
     <h3 class="archive__item-title" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>

@@ -9,14 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## Education
 * Ph.D. in Computer Science, Leibniz University Hannover, 08/2022 - present
 * M.S. in Intelligent Systems, Bielefeld University, 04/2020 - 04/2022
 * B.Eng. in Computer Engineering, Bielefeld University of Applied Sciences, 09/2016 - 01/2020
 
-Work experience
-======
+## Work experience
 
 * 08/2022 – Present: Research Associate  
   * L3S Research Center, Leibniz University Hannover – Germany  
@@ -43,21 +41,18 @@ Work experience
   * Duties included: Computer Vision
 
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
+## Publications
+  <div>{% for post in site.publications reversed %}
       {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</div>
 
-Teaching experience
-======
+## Teaching experience
 * Sommer Semester 2025: Teachers Assistant in the course Research Methods for Autonomous and Intelligent Systems at the Leibniz University Hannover.
 * Sommer Semester 2024: Teachers Assistant in the course Human-Robot Interaction at the Leibniz University Hannover.
 * Sommer Semester 2024: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.
 * Sommer Semester 2023: Teachers Assistant in the course Foundations of Information Retrieval at the Leibniz University Hannover.
 
-Skills
-======
+## Skills
 * Polyglot
   * Arabic
   * English
@@ -69,8 +64,7 @@ Skills
 * Tools: ROS, MoveIt, MuJoCo, PyBullet, Gazebo, Isaac Gym/Sim
 
 
-Hobbies
-======
+## Hobbies
 * Travelling
 * Astronomy
 * Running

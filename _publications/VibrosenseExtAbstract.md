@@ -31,6 +31,7 @@ ___________________________________________________________________
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @inproceedings{ZaiElAmri2025VibroSense,
   title = {Vibro-{{Sense}}: {{A Bio-Inspired Vibration-Based Tactile Sensor}} for {{Robotics}}},
@@ -44,3 +45,4 @@ ___________________________________________________________________
   annotation = {https://www.robotics-institute-germany.de/conference/}
 }
 ```
+{% endraw %}

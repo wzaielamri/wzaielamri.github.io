@@ -95,6 +95,7 @@ Our dataset is available on Hugging Face, along with detailed documentation.
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @InProceedings{ZaiElAmri2025ACROSS,
   author = {{Zai El Amri}, {Wadhah} and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
@@ -103,3 +104,4 @@ Our dataset is available on Hugging Face, along with detailed documentation.
   year={2025},
 }
 ```
+{% endraw %}

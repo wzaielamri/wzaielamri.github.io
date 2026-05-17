@@ -130,6 +130,7 @@ Our dataset will be available soon upon request.
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @article{ZaiElAmri2026SPLIT,
 title = {SPLIT: Separating physical-contact via latent arithmetic in image-based tactile sensors},
@@ -143,3 +144,4 @@ url = {https://www.sciencedirect.com/science/article/pii/S0921889026001715},
 author = {{Wadhah} {Zai El Amri} and Nicolás Navarro-Guerrero}
 }
 ```
+{% endraw %}

@@ -43,7 +43,8 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
   <ul>{% for post in site.projects %}
     <li>
-      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> — {{ post.excerpt }}
+      {% if post.project_type == 'side_project' %}<span style='background:#e8f0fe;color:#1a73e8;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Side Project</span><br>{% elsif post.project_type == 'research_project' %}<span style='background:#e0f2f1;color:#00695c;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Research Project</span><br>{% endif %}
+      <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> — {{ post.excerpt | truncatewords: 20 }}
     </li>
   {% endfor %}</ul>
 

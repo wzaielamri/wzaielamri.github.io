@@ -30,6 +30,7 @@ ___________________________________________________________________
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @article{ZaiElAmri2021OSTA,
   author  = {{Zai El Amri}, {Wadhah} and Reinhart, Felix and Schenck, Wolfram},
@@ -41,3 +42,4 @@ ___________________________________________________________________
   doi     = {10.1007/s00521-021-06753-6}
 }
 ```
+{% endraw %}

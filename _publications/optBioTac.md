@@ -37,6 +37,7 @@ Code: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](http
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @inproceedings{ZaiElAmri2024Optimizing,
   title = {Optimizing {{BioTac Simulation}} for {{Realistic Tactile Perception}}},
@@ -48,3 +49,4 @@ Code: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](http
   annotation = {https://github.com/wzaielamri/Optimizing\_BioTac\_Simulation}
 }
 ```
+{% endraw %}

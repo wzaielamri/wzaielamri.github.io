@@ -38,6 +38,7 @@ Our code is published online, along with all necessary checkpoints and a detaile
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @article{wzaielamri_HDDRL,
   title={Hierarchical Decentralized Deep Reinforcement Learning Architecture for a Simulated Four-Legged Agent.},
@@ -46,3 +47,4 @@ Our code is published online, along with all necessary checkpoints and a detaile
   year={2022}
 }
 ```
+{% endraw %}

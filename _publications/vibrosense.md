@@ -76,6 +76,7 @@ Our dataset is available on Hugging Face, along with detailed documentation.
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @InProceedings{ZaiElAmri2026VibroSense,
   author = {{Zai El Amri}, {Wadhah} and {Navarro-Guerrero}, Nicol{\'a}s},
@@ -84,3 +85,4 @@ Our dataset is available on Hugging Face, along with detailed documentation.
   year={2026},
 }
 ```
+{% endraw %}

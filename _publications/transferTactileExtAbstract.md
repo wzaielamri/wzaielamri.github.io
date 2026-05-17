@@ -30,6 +30,7 @@ ___________________________________________________________________
 
 ## Citation
 
+{% raw %}
 ```bibtex
 @inproceedings{ZaiElAmri2024Transferring,
   title = {Transferring Tactile Data Across Sensors},
@@ -41,3 +42,4 @@ ___________________________________________________________________
   address = {Rotterdam, The Netherlands},
 }
 ```
+{% endraw %}

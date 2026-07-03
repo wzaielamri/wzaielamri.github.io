@@ -3,14 +3,14 @@ title: "Do Robots Really Need Anthropomorphic Hands?"
 collection: publications
 permalink: /publication/robotic_hand
 excerpt: 'Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.'
-date: 2025-08-07
-venue: 'Submitted to Autonomous Robots Springer Journal'
+date: 2026-30-31
+venue: 'Springer Journal of Intelligent and Robotic Systems'
 paperurl: 'https://arxiv.org/abs/2508.05415'
 pub_type: 'preprint'
-citation: 'Alexander Fabisch, <b>Wadhah Zai El Amri</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2025). &quot;Do Robots Really Need Anthropomorphic Hands?&quot; <i>2026 Submitted to Springer Autonomous Robots Journal, 2026</i>.'
+citation: 'Alexander Fabisch, <b>Wadhah Zai El Amri</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2025). &quot;Do Robots Really Need Anthropomorphic Hands?&quot; <i>2026 Springer Journal of Intelligent and Robotic Systems, 2026</i>.'
 ---
 
-Submitted to Springer Autonomous Robots Journal
+Accepted to Springer Journal of Intelligent and Robotic Systems
 
 Authors: Alexander Fabisch, Wadhah Zai El Amri, Chandandeep Singh, Nicolás Navarro-Guerrero.
 
@@ -43,8 +43,8 @@ Our paper preprint is published on arXiv.
 @Article{Faboisch2025DoRobots,
   author = {Alexander Fabisch and {Wadhah} {Zai El Amri} and Chandandeep Singh and {Navarro-Guerrero}, Nicol{\'a}s},
   title = {"Do Robots Really Need Anthropomorphic Hands?"},
-  booktitle = {"ArXiv Preprint arXiv:2508.05415, Submitted to Autonomous Robots Springer Journal"},
-  year={2025},
+  booktitle = {"ArXiv Preprint arXiv:2508.05415, Accepted to Springer Journal of Intelligent and Robotic Systems"},
+  year={2026},
 }
 ```
 {% endraw %}

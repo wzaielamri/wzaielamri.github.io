@@ -22,10 +22,10 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
 ## News
 
-- **Apr 2026** &mdash; Paper accepted to *Elsevier Robotics and Autonomous Systems*: [SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors](/publication/split)
+- **Jun 2026** &mdash; Paper accepted to *Springer Journal of Intelligent and Robotic Systems (Q1)*: [Do Robots Really Need Anthropomorphic Hands?](/publication/robotic_hand)
+- **Apr 2026** &mdash; Paper accepted to *Elsevier Robotics and Autonomous Systems (Q1)*: [SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors](/publication/split)
 - **Jan 2026** &mdash; Preprint submitted: [Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands](/publication/vibrosense)
-- **Aug 2025** &mdash; Preprint submitted: [Do Robots Really Need Anthropomorphic Hands?](/publication/robotic_hand)
-- **May 2025** &mdash; Paper accepted to *ICRA 2025*: [ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception](/publication/across)
+- **May 2025** &mdash; Paper accepted to *ICRA 2025 (A\*)*: [ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception](/publication/across)
 
 ---
 

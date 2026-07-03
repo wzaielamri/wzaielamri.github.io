@@ -3,7 +3,7 @@ title: "Do Robots Really Need Anthropomorphic Hands?"
 collection: publications
 permalink: /publication/robotic_hand
 excerpt: 'Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.'
-date: 2026-30-31
+date: 2026-06-30
 venue: 'Springer Journal of Intelligent and Robotic Systems'
 paperurl: 'https://arxiv.org/abs/2508.05415'
 pub_type: 'preprint'

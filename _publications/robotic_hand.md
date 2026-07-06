@@ -6,7 +6,7 @@ excerpt: 'Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Gra
 date: 2026-06-30
 venue: 'Springer Journal of Intelligent and Robotic Systems'
 paperurl: 'https://arxiv.org/abs/2508.05415'
-pub_type: 'preprint'
+pub_type: 'full_paper'
 citation: 'Alexander Fabisch, <b>Wadhah Zai El Amri</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2025). &quot;Do Robots Really Need Anthropomorphic Hands?&quot; <i>2026 Springer Journal of Intelligent and Robotic Systems, 2026</i>.'
 ---
 

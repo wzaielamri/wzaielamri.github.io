@@ -48,7 +48,7 @@ The following video demonstrates the pipeline in action, showing the data collec
   </a>
 </p>
 
-The following video presents the results of the first task (impulse response localization):
+Impulse localisation. The network predicts the contact location on the hand from the vibro-acoustic signal. Here the hand is stationary but the its motor is running, so the prediction is made under continuous environmental noise.
 
 <p align="center">
   <a href="../assets/images/vibrosense/localisation.mp4">
@@ -57,9 +57,7 @@ The following video presents the results of the first task (impulse response loc
 </p>
 
 
-The following video presents the results of the second task (trajectory tracking):
-
-The contact head detects contact versus no-contact, while the position head tracks the trajectory of the contact point (X, Y position).
+Trajectory tracking under motion. Two heads run together: a contact head detects contact vs. no-contact, and a position head tracks the (X, Y) location of the moving contact point. This runs while the hand itself is in motion.
 
 <p align="center">
   <a href="../assets/images/vibrosense/trajectory_target.mp4">

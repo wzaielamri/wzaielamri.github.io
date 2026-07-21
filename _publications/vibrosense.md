@@ -48,6 +48,26 @@ The following video demonstrates the pipeline in action, showing the data collec
   </a>
 </p>
 
+The following video presents the results of the first task (impulse response localization):
+
+<p align="center">
+  <a href="../assets/images/vibrosense/localisation.mp4">
+    <img src="../assets/images/vibrosense/localisation.gif" alt="Watch the full video" width="320" height="960">
+  </a>
+</p>
+
+
+The following video presents the results of the second task (trajectory tracking):
+
+The contact head detects contact versus no-contact, while the position head tracks the trajectory of the contact point (X, Y position).
+
+<p align="center">
+  <a href="../assets/images/vibrosense/trajectory_target.mp4">
+    <img src="../assets/images/vibrosense/trajectory_target.gif" alt="Watch the full video" width="320" height="960">
+  </a>
+</p>
+
+
 
 <p align="center">
 ___________________________________________________________________

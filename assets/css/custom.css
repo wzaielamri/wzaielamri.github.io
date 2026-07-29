@@ -556,19 +556,3 @@ html[data-theme="dark"] {
 [data-theme="dark"] .pub-badge--preprint          { background: rgba(57, 73, 171, 0.28);  color: #a5b0f7; }
 [data-theme="dark"] .pub-badge--side-project      { background: rgba(26, 115, 232, 0.22); color: #8ec0f9; }
 [data-theme="dark"] .pub-badge--research-project  { background: rgba(0, 105, 92, 0.26);   color: #6ed6c6; }
-
-/* Homepage project list (mirrors the archive list divider) */
-.home-project-list {
-  padding-left: 0;
-  list-style: none;
-}
-
-.home-project-list > li {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.2em;
-  margin-bottom: 0.8em;
-}
-
-.home-project-list .archive__item-title {
-  margin-top: 0.3em;
-}

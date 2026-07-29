@@ -40,12 +40,14 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
 ## Projects
 
-  <ul class="home-project-list">{% for post in site.projects %}
-    <li>
-      {% if post.project_type == 'side_project' %}<span class="pub-badge pub-badge--side-project">Side Project</span>{% elsif post.project_type == 'research_project' %}<span class="pub-badge pub-badge--research-project">Research Project</span>{% endif %}
-      <h3 class="archive__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p class="archive__item-excerpt">{{ post.excerpt | truncatewords: 20 }}</p>
-    </li>
-  {% endfor %}</ul>
+  <div>{% for post in site.projects %}
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if post.project_type == 'side_project' %}<span class="pub-badge pub-badge--side-project">Side Project</span>{% elsif post.project_type == 'research_project' %}<span class="pub-badge pub-badge--research-project">Research Project</span>{% endif %}
+        <h3 class="archive__item-title" itemprop="headline" style="margin-top: 0.3em;"><a href="{{ post.url }}" rel="permalink">{{ post.title }}</a></h3>
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | truncatewords: 20 }}</p>
+      </article>
+    </div>
+  {% endfor %}</div>
 
   <p><a href="/projects/">See all projects →</a></p>

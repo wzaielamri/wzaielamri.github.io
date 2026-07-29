@@ -7,7 +7,7 @@ date: 2026-07-20
 venue: 'Springer Journal of Intelligent &amp; Robotic Systems, 112, 73'
 paperurl: 'https://doi.org/10.1007/s10846-026-02431-8'
 pub_type: 'full_paper'
-citation: 'Alexander Fabisch*, <b>Wadhah Zai El Amri*</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2026). &quot;Do Robots Really Need Anthropomorphic Hands? A Comparison of Human and Robotic Hands.&quot; <i>Springer Journal of Intelligent &amp; Robotic Systems, 112, 73</i>. (*Equal contribution)'
+citation: 'Alexander Fabisch, <b>Wadhah Zai El Amri</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2026). &quot;Do Robots Really Need Anthropomorphic Hands? A Comparison of Human and Robotic Hands.&quot; <i>Springer Journal of Intelligent &amp; Robotic Systems, 112, 73</i>.'
 ---
 
 Published in Springer Journal of Intelligent &amp; Robotic Systems (Open Access, CC BY 4.0)

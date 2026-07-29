@@ -30,8 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   --link-hover:       #1a5276;
   --card-shadow:      rgba(0, 0, 0, 0.07);
   --transition-speed: 0.25s;
-  /* Measured at runtime in custom.js; this is the one-row fallback. */
-  --masthead-height:  62px;
+  /* Measured at runtime in custom.js; this is the one-row no-JS fallback
+     (1em wrapper padding + 0.5rem link padding + line-height, at 18px root). */
+  --masthead-height:  82px;
 }
 
 /* --------------------------------------------------------------------------
@@ -354,7 +355,7 @@ video,
    -------------------------------------------------------------------------- */
 @media (min-width: 57.8125em) {
   .sidebar.sticky {
-    top: calc(var(--masthead-height, 62px) + 1em);
+    top: calc(var(--masthead-height, 82px) + 1em);
   }
 }
 

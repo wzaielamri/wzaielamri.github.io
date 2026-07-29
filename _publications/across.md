@@ -29,7 +29,7 @@ ___________________________________________________________________
 
 
 <p align="center">
-  <img src="../assets/images/across/Pipeline.jpg" width="316" height="602" alt="ACROSS pipeline overview" />
+  <img src="/assets/images/across/Pipeline.jpg" width="316" height="602" alt="ACROSS pipeline overview" />
 </p>
 
 The figure above outlines the three steps of our pipeline:
@@ -50,7 +50,7 @@ Finally, we generate the DIGIT sensor image from the transformed deformation.
 The pipeline delivers results similar to the image below (Further results from the test set can be checked in the video below):
 
 <p align="center">
-  <img src="../assets/images/across/figure_results_all_data.jpg" width="550" height="550" alt="ACROSS results across all data" />
+  <img src="/assets/images/across/figure_results_all_data.jpg" width="550" height="550" alt="ACROSS results across all data" />
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ ___________________________________________________________________
 The following video demonstrates the pipeline in action, showing the BioTac sensor’s outputs (signals) and the corresponding generated DIGIT sensor images.
 
 <p align="center">
-  <video src="../assets/images/across/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
+  <video src="/assets/images/across/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
@@ -75,7 +75,7 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2411.08533)
+[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2411.08533)
 
 [Download paper here](/assets/paper_files/across_zaielamri.pdf)
 
@@ -83,13 +83,13 @@ Our paper preprint is published on arXiv.
 
 Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/across_framework)
+[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/across_framework)
 
 ## Dataset:
 
 Our dataset is available on Hugging Face, along with detailed documentation.
 
-[<img src="../assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/across_framework)
+[<img src="/assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/across_framework)
 
 ## Citation
 

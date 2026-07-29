@@ -28,14 +28,14 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2302.06975)
+[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2302.06975)
 
 [Download paper here](/assets/paper_files/causalai_ganguly.pdf)
 
 
 ## Repository: 
 
-In our repository, we curated a list of datasets used for recent Causal Machine Learning (ML) publications: [<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/L3S/causality-for-trustworthy-ai/tree/main)
+In our repository, we curated a list of datasets used for recent Causal Machine Learning (ML) publications: [<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/L3S/causality-for-trustworthy-ai/tree/main)
 
 ## Citation
 

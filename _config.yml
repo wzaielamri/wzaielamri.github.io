@@ -186,8 +186,9 @@ collections:
   publications:
     output: true
     # Singular and without a trailing slash, matching the explicit permalink in
-    # every _publications/*.md. A trailing slash would emit <slug>/index.html and
-    # silently break the "../assets/..." references used throughout those pages.
+    # every _publications/*.md. Changing it would break the published URLs that
+    # are already indexed and cited (asset references are all site-absolute, so
+    # they no longer depend on this form).
     permalink: /publication/:path
   projects:
     output: true
@@ -199,6 +200,12 @@ collections:
 
 # Defaults
 defaults:
+  # Google Search Console verification file. It must stay published verbatim,
+  # but it is not a page, so keep it out of the generated sitemap.
+  - scope:
+      path: "google980a92bd5c4e3405.html"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""

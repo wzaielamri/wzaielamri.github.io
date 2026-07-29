@@ -32,7 +32,7 @@ ___________________________________________________________________
 
 Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
+[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
 
 
 ## Citation

@@ -29,7 +29,7 @@ ___________________________________________________________________
 The following image illustrates our experimental setup, showcasing the robotic hand equipped with piezoelectric microphones used for the first task (impulse response localization):
 
 <p align="center">
-    <img src="../assets/images/vibrosense/experiment_setup.jpeg" width="960" height="869" alt="Robotic hand instrumented with seven piezoelectric microphones" />
+    <img src="/assets/images/vibrosense/experiment_setup.jpeg" width="960" height="869" alt="Robotic hand instrumented with seven piezoelectric microphones" />
 </p>
 
 
@@ -43,21 +43,21 @@ ___________________________________________________________________
 Impulse localisation. The network predicts the contact location on the hand from the vibro-acoustic signal. Here the hand is stationary but its motor is running, so the prediction is made under continuous environmental noise.
 
 <p align="center">
-  <video src="../assets/images/vibrosense/localisation.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
+  <video src="/assets/images/vibrosense/localisation.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
 Trajectory tracking under motion. Two heads run together: a contact head detects contact vs. no-contact, and a position head tracks the (X, Y) location of the moving contact point. This runs while the hand itself is in motion.
 
 <p align="center">
-  <video src="../assets/images/vibrosense/trajectory_target.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
+  <video src="/assets/images/vibrosense/trajectory_target.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
 Data collection. The automated procedure used to record the trajectory-tracking dataset.
 
 <p align="center">
-  <video src="../assets/images/vibrosense/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
+  <video src="/assets/images/vibrosense/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 <p align="center">
@@ -69,7 +69,7 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2601.20555)
+[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2601.20555)
 
 [Download paper here](/assets/paper_files/vibrosense_zaielamri.pdf)
 
@@ -77,13 +77,13 @@ Our paper preprint is published on arXiv.
 
 Our code is available on GitHub, including data processing scripts, model training code, and evaluation pipelines.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/vibrosense)
+[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/vibrosense)
 
 ## Dataset:
 
 Our dataset is available on Hugging Face, along with detailed documentation.
 
-[<img src="../assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/vibrosense)
+[<img src="/assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/vibrosense)
 
 ## Citation
 

@@ -40,9 +40,9 @@ The article is open access (CC BY 4.0) in the Journal of Intelligent &amp; Robot
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2508.05415)
+[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2508.05415)
 
-[Download paper here](/assets/paper_files/robotic_hands.pdf)
+[Download paper here](/assets/paper_files/robotic_hand_fabisch.pdf)
 
 ## Citation
 

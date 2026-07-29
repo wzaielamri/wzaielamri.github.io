@@ -22,7 +22,7 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 
 - **Jul 2026** &mdash; Paper published in *Springer Journal of Intelligent &amp; Robotic Systems (Q1)*: [Do Robots Really Need Anthropomorphic Hands? A Comparison of Human and Robotic Hands](/publication/robotic_hand)
 - **Jun 2026** &mdash; Two Extended Abstracts accepted to *the International Joint Conference on Artificial Intelligence (IJCAI)* Workshop: [AI-Based Humanoid Robot Design and Control Through the Lens of HRI, Evolution, and Biomechanics](https://hominoid-robot.dfki-bremen.de)
-- **Apr 2026** &mdash; Paper accepted to *Elsevier Robotics and Autonomous Systems (Q1)*: [SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors](/publication/split)
+- **Apr 2026** &mdash; Paper published in *Elsevier Robotics and Autonomous Systems (Q1)*: [SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors](/publication/split)
 - **Jan 2026** &mdash; Preprint submitted: [Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands](/publication/vibrosense)
 - **May 2025** &mdash; Paper accepted to *ICRA 2025 (A\*)*: [ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception](/publication/across)
 

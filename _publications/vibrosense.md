@@ -18,7 +18,7 @@ Topics: Tactile Sensing, Vibro-Acoustic Sensing, Contact Localization, Deep Lear
 
 # Abstract: 
 
-Rich contact perception is crucial for robotic manipulation, yet traditional tactile skins remain expensive and complex to integrate. This paper presents a scalable alternative: high-accuracy whole-body touch localization via vibro-acoustic sensing. By equipping a robotic hand with seven low-cost piezoelectric microphones and leveraging an Audio Spectrogram Transformer, we decode the vibrational signatures generated during physical interaction. Extensive evaluation across stationary and dynamic tasks reveals a localization error of under 5 mm in static conditions. Furthermore, our analysis highlights the distinct influence of material properties: stiff materials (e.g., metal) excel in impulse response localization due to sharp, high-bandwidth responses, whereas textured materials (e.g., wood) provide superior friction-based features for trajectory tracking. The system demonstrates robustness to the robot's own motion, maintaining effective tracking even during active operation. Our primary contribution is demonstrating that complex physical contact dynamics can be effectively decoded from simple vibrational signals, offering a viable pathway to widespread, affordable contact perception in robotics. To accelerate research, we provide our full datasets, models, and experimental setups as open-source resources.
+Rich contact perception is crucial for robotic manipulation, yet traditional tactile skins remain expensive and complex to integrate. This paper presents a scalable alternative: high-accuracy whole-hand touch localization via vibro-acoustic sensing. By equipping a robotic hand with seven low-cost piezoelectric microphones and leveraging an Audio Spectrogram Transformer, we decode the vibrational signatures generated during physical interaction. Extensive evaluation across stationary and dynamic tasks reveals an average localization error below 5 mm in static conditions. Furthermore, our analysis highlights the distinct influence of material properties: stiff materials (e.g., metal) excel in impulse response localization due to sharp, high-bandwidth responses, whereas textured materials (e.g., wood) provide superior friction-based features for trajectory tracking. The system demonstrates robustness to the robot's own motion, maintaining effective tracking even during active operation. Trained with additional no-contact recordings of the moving hand, the model further distinguishes genuine external contacts from internal motor and structural vibrations, reaching a detection accuracy of 99.0% with a false-positive rate of 0.2%. Our focus is on contact perception, enabling a robot to sense interactions with its surroundings. Our primary contribution is demonstrating that complex physical contact dynamics can be effectively decoded from simple vibrational signals, offering a viable pathway to widespread, affordable contact perception in robotics. To accelerate research, we provide our full datasets, models, and experimental setups as open-source resources.
 
 <p align="center">
 ___________________________________________________________________
@@ -40,14 +40,6 @@ ___________________________________________________________________
 
 ## Demonstration Video:
 
-The following video demonstrates the pipeline in action, showing the data collection procedure for the second task (trajectory tracking):
-
-<p align="center">
-  <a href="../assets/images/vibrosense/video.mp4">
-    <img src="../assets/images/vibrosense/video.gif" alt="Watch the full video" width="960" height="320">
-  </a>
-</p>
-
 Impulse localisation. The network predicts the contact location on the hand from the vibro-acoustic signal. Here the hand is stationary but the its motor is running, so the prediction is made under continuous environmental noise.
 
 <p align="center">
@@ -66,6 +58,13 @@ Trajectory tracking under motion. Two heads run together: a contact head detects
 </p>
 
 
+Data collection. The automated procedure used to record the trajectory-tracking dataset.
+
+<p align="center">
+  <a href="../assets/images/vibrosense/video.mp4">
+    <img src="../assets/images/vibrosense/video.gif" alt="Watch the full video" width="960" height="320">
+  </a>
+</p>
 
 <p align="center">
 ___________________________________________________________________

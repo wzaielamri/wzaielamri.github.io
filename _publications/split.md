@@ -86,9 +86,7 @@ ___________________________________________________________________
 The following video shows the UR5e robot arm equipped with a DIGIT sensor collecting real-time tactile data. 
 
 <p align="center">
-  <a href="../assets/images/split/data_collection.mp4">
-    <img src="../assets/images/split/data_collection.gif" alt="Watch the full video" width="320" height="960">
-  </a>
+  <video src="../assets/images/split/data_collection.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
@@ -98,9 +96,7 @@ The following video shows the UR5e robot arm equipped with a DIGIT sensor collec
 This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $beta$-VAE decoder.
 
 <p align="center">
-  <a href="../assets/images/split/touch.mp4">
-    <img src="../assets/images/split/touch.gif" alt="Watch the full video" width="960" height="320">
-  </a>
+  <video src="../assets/images/split/touch.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 

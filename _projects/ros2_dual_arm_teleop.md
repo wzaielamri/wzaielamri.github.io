@@ -7,7 +7,7 @@ project_type: 'side_project'
 
 A ROS 2 Humble workspace for markerless, real-time teleoperation of dual 6-DOF robotic arms (UR5e) equipped with Robotiq 2F-85 grippers, controlled entirely via a standard webcam and RViz. Built just for fun.
 
-<p align="center"><img src="/assets/images/projects/ros2_dual_arm_teleop/demo.gif" alt="ROS 2 Dual Arm Teleop Demo" width="600"/></p>
+<p align="center"><video src="/assets/images/projects/ros2_dual_arm_teleop/demo.mp4" width="600" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video></p>
 
 
 **GitHub:** [wzaielamri/ros2_dual_arm_teleop](https://github.com/wzaielamri/ros2_dual_arm_teleop)

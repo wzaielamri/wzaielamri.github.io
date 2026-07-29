@@ -43,27 +43,21 @@ ___________________________________________________________________
 Impulse localisation. The network predicts the contact location on the hand from the vibro-acoustic signal. Here the hand is stationary but the its motor is running, so the prediction is made under continuous environmental noise.
 
 <p align="center">
-  <a href="../assets/images/vibrosense/localisation.mp4">
-    <img src="../assets/images/vibrosense/localisation.gif" alt="Watch the full video" width="320" height="960">
-  </a>
+  <video src="../assets/images/vibrosense/localisation.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
 Trajectory tracking under motion. Two heads run together: a contact head detects contact vs. no-contact, and a position head tracks the (X, Y) location of the moving contact point. This runs while the hand itself is in motion.
 
 <p align="center">
-  <a href="../assets/images/vibrosense/trajectory_target.mp4">
-    <img src="../assets/images/vibrosense/trajectory_target.gif" alt="Watch the full video" width="320" height="960">
-  </a>
+  <video src="../assets/images/vibrosense/trajectory_target.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 
 Data collection. The automated procedure used to record the trajectory-tracking dataset.
 
 <p align="center">
-  <a href="../assets/images/vibrosense/video.mp4">
-    <img src="../assets/images/vibrosense/video.gif" alt="Watch the full video" width="960" height="320">
-  </a>
+  <video src="../assets/images/vibrosense/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
 <p align="center">

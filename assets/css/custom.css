@@ -30,6 +30,8 @@ h1, h2, h3, h4, h5, h6 {
   --link-hover:       #1a5276;
   --card-shadow:      rgba(0, 0, 0, 0.07);
   --transition-speed: 0.25s;
+  /* Measured at runtime in custom.js; this is the one-row fallback. */
+  --masthead-height:  62px;
 }
 
 /* --------------------------------------------------------------------------
@@ -343,6 +345,18 @@ video,
   }
 }
 
+
+/* --------------------------------------------------------------------------
+   Sticky author sidebar
+   The theme pins it at `top: 2em`, which predates the masthead being
+   position:sticky — so while scrolling the avatar slid underneath the header
+   bar. Pin it below the masthead instead. Breakpoint matches $large (925px).
+   -------------------------------------------------------------------------- */
+@media (min-width: 57.8125em) {
+  .sidebar.sticky {
+    top: calc(var(--masthead-height, 62px) + 1em);
+  }
+}
 
 /* --------------------------------------------------------------------------
    Reading Progress Bar

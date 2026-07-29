@@ -30,7 +30,36 @@
   });
 
   /* -------------------------------------------------------------------------
-     2. DOM-READY SETUP
+     2. MASTHEAD HEIGHT
+        The masthead is position:sticky at top:0 and the author sidebar is
+        sticky too, so the sidebar needs to pin *below* the header bar rather
+        than at the theme's flat `top: 2em` (which slid it underneath).
+        Publish the measured height as --masthead-height for custom.css.
+        This file is loaded at the end of <body>, so .masthead already exists;
+        measure right away to avoid a first-paint jump.
+     ---------------------------------------------------------------------- */
+  var masthead = document.querySelector('.masthead');
+
+  function syncMastheadHeight() {
+    if (masthead) {
+      html.style.setProperty('--masthead-height', masthead.offsetHeight + 'px');
+    }
+  }
+
+  if (masthead) {
+    syncMastheadHeight();
+    // Fonts finish loading and the greedy nav reflows -> height can change.
+    window.addEventListener('load', syncMastheadHeight);
+
+    if (window.ResizeObserver) {
+      new ResizeObserver(syncMastheadHeight).observe(masthead);
+    } else {
+      window.addEventListener('resize', syncMastheadHeight);
+    }
+  }
+
+  /* -------------------------------------------------------------------------
+     3. DOM-READY SETUP
      ---------------------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -117,6 +146,9 @@
         updateNavKeepingTitle();
       })(window.jQuery);
     }
+
+    // The greedy nav may have just changed the masthead height.
+    syncMastheadHeight();
 
     /* --- Dark mode toggle button --- */
     var toggleBtn = document.getElementById('dark-mode-toggle');
@@ -210,7 +242,7 @@
   }); // end DOMContentLoaded
 
   /* -------------------------------------------------------------------------
-     3. HELPERS
+     4. HELPERS
      ---------------------------------------------------------------------- */
   function fallbackCopy(text, cb) {
     var ta = document.createElement('textarea');

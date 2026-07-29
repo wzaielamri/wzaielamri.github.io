@@ -7,12 +7,14 @@ date: 2026-07-20
 venue: 'Springer Journal of Intelligent &amp; Robotic Systems, 112, 73'
 paperurl: 'https://doi.org/10.1007/s10846-026-02431-8'
 pub_type: 'full_paper'
-citation: 'Alexander Fabisch, <b>Wadhah Zai El Amri</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2026). &quot;Do Robots Really Need Anthropomorphic Hands? A Comparison of Human and Robotic Hands.&quot; <i>Springer Journal of Intelligent &amp; Robotic Systems, 112, 73</i>.'
+citation: 'Alexander Fabisch*, <b>Wadhah Zai El Amri*</b>, Chandandeep Singh, Nicolás Navarro-Guerrero (2026). &quot;Do Robots Really Need Anthropomorphic Hands? A Comparison of Human and Robotic Hands.&quot; <i>Springer Journal of Intelligent &amp; Robotic Systems, 112, 73</i>. (*Equal contribution)'
 ---
 
 Published in Springer Journal of Intelligent &amp; Robotic Systems (Open Access, CC BY 4.0)
 
-Authors: Alexander Fabisch, Wadhah Zai El Amri, Chandandeep Singh, Nicolás Navarro-Guerrero.
+Authors: Alexander Fabisch\*, Wadhah Zai El Amri\*, Chandandeep Singh, Nicolás Navarro-Guerrero.
+
+\*Alexander Fabisch and Wadhah Zai El Amri contributed equally to this work. Wadhah Zai El Amri is the corresponding author.
 
 Topics: Robotics Hands, Grippers, Smart Prosthetics, Manipulation, Grasping.
 

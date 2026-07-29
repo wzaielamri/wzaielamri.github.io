@@ -281,6 +281,13 @@ whitelist:
   - jekyll-feed
   - jekyll-redirect-from
 
+# GitHub Pages force-enables jekyll-titles-from-headings, which promotes a page's
+# first heading into page.title without removing it from the body. On _pages/about.md
+# (the only page with no front matter title) that rendered "About Me" twice and made
+# the browser tab read "About Me - Zai El Amri, Wadhah" instead of the site title.
+titles_from_headings:
+  enabled: false
+
 
 # Archives
 #  Type

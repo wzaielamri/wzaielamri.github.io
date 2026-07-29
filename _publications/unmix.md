@@ -16,7 +16,7 @@ Authors: Wadhah Zai El Amri, Oliver Tautz, Helge Ritter, Andrew Melnik.
 
 Topics: Machine Learning, Deep Learning, Audio Signal Processing, Transfer Learning.
 
-# Abstract:
+## Abstract:
 
 In this work, we demonstrate how a publicly available, pretrained Jukebox model can be adapted for the problem of audio source separation from a single mixed audio channel. Our neural network architecture, which is using transfer learning, is quick to train and the results demonstrate performance comparable to other state-of-the-art approaches that require a lot more compute resources, training data, and time. We provide an open-source code implementation of our architecture (https://github.com/wzaielamri/unmix)
 
@@ -27,13 +27,13 @@ ___________________________________________________________________
 
 ## Preprint:
 
-[Download paper here](http://wzaielamri.github.io/assets/paper_files/unmix_zaielamri.pdf)
+[Download paper here](/assets/paper_files/unmix_zaielamri.pdf)
 
 ## Code: 
 
 Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/unmix)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/unmix)
 
 
 ## Citation
@@ -41,7 +41,7 @@ Our code is published online, along with all necessary checkpoints and a detaile
 {% raw %}
 ```bibtex
 @InProceedings{zai2022unmix,
-author="{Zai El Amri}, {Wadhah}
+author="{Zai El Amri}, Wadhah
 and Tautz, Oliver
 and Ritter, Helge
 and Melnik, Andrew",

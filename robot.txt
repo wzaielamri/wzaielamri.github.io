@@ -1,3 +1,0 @@
-# robot.txt
-
-User-agent: *

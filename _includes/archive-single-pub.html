@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork" style="border-bottom: 1px solid #e8e8e8; padding-bottom: 1.2em; margin-bottom: 0.8em;">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -26,11 +26,11 @@
       </div>
     {% endif %}
     {% if post.pub_type == 'full_paper' %}
-      <span style='background:#e6f4ea;color:#1e8e3e;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Full Paper</span>
+      <span class="pub-badge pub-badge--full-paper">Full Paper</span>
     {% elsif post.pub_type == 'extended_abstract' %}
-      <span style='background:#fef3c7;color:#b45309;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Extended Abstract</span>
+      <span class="pub-badge pub-badge--extended-abstract">Extended Abstract</span>
     {% elsif post.pub_type == 'preprint' %}
-      <span style='background:#e8eaf6;color:#3949ab;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Preprint</span>
+      <span class="pub-badge pub-badge--preprint">Preprint</span>
     {% endif %}
     <h3 class="archive__item-title" itemprop="headline" style="margin-top: 0.3em;">
       {% if post.link %}

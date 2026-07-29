@@ -7,7 +7,7 @@ date: 2025-05-19
 venue: 'IEEE International Conference on Robotics and Automation (ICRA) 2025, Atlanta, USA'
 paperurl: 'https://arxiv.org/abs/2411.08533'
 pub_type: 'full_paper'
-citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2025). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>2025 IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025</i>.'
+citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2025). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025</i>.'
 ---
 
 Accepted to 2025 IEEE Conference on Robotics and Automation (ICRA 2025)
@@ -16,7 +16,7 @@ Authors: Wadhah Zai El Amri, Malte Kuhlmann, Nicolás Navarro-Guerrero.
 
 Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.
 
-# Abstract: 
+## Abstract: 
 
 Tactile perception is essential for human interaction with the environment and is becoming increasingly crucial in robotics. Tactile sensors like the BioTac mimic human fingertips and provide detailed interaction data. Despite its utility in applications like slip detection and object identification, this sensor is now deprecated, making many valuable datasets obsolete. However, recreating similar datasets with newer sensor technologies is both tedious and time-consuming. Therefore, adapting these existing datasets for use with new setups and modalities is crucial. In response, we introduce ACROSS, a novel framework for translating data between tactile sensors by exploiting sensor deformation information. We demonstrate the approach by translating BioTac signals into the DIGIT sensor. Our framework consists of first converting the input signals into 3D deformation meshes. We then transition from the 3D deformation mesh of one sensor to the mesh of another, and finally convert the generated 3D deformation mesh into the corresponding output space. We demonstrate our approach to the most challenging problem of going from a low-dimensional tactile representation to a high-dimensional one. In particular, we transfer the tactile signals of a BioTac sensor to DIGIT tactile images. Our approach enables the continued use of valuable datasets and data exchange between groups with different setups.
 
@@ -25,11 +25,11 @@ ___________________________________________________________________
 </p>
 
 
-# Pipeline:
+## Pipeline:
 
 
 <p align="center">
-  <img src="../assets/images/across/Pipeline.jpg" width="316" height="602" />
+  <img src="../assets/images/across/Pipeline.jpg" width="316" height="602" alt="ACROSS pipeline overview" />
 </p>
 
 The figure above outlines the three steps of our pipeline:
@@ -50,7 +50,7 @@ Finally, we generate the DIGIT sensor image from the transformed deformation.
 The pipeline delivers results similar to the image below (Further results from the test set can be checked in the video below):
 
 <p align="center">
-  <img src="../assets/images/across/figure_results_all_data.jpg" width="550" height="550" />
+  <img src="../assets/images/across/figure_results_all_data.jpg" width="550" height="550" alt="ACROSS results across all data" />
 </p>
 
 <p align="center">
@@ -75,30 +75,30 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2411.08533)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2411.08533)
 
-[Download paper here](http://wzaielamri.github.io/assets/paper_files/across_zaielamri.pdf)
+[Download paper here](/assets/paper_files/across_zaielamri.pdf)
 
 ## Code: 
 
 Our code is published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/across_framework)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/across_framework)
 
 ## Dataset:
 
 Our dataset is available on Hugging Face, along with detailed documentation.
 
-[<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/across_framework)
+[<img src="../assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/across_framework)
 
 ## Citation
 
 {% raw %}
 ```bibtex
 @InProceedings{ZaiElAmri2025ACROSS,
-  author = {{Zai El Amri}, {Wadhah} and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
-  title = {"ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception"},
-  booktitle = {"IEEE International Conference on Robotics and Automation (ICRA)"},
+  author = {{Zai El Amri}, Wadhah and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
+  title = {ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
   year={2025},
 }
 ```

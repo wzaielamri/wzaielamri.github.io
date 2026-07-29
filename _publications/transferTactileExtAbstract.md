@@ -15,7 +15,7 @@ Authors: Wadhah Zai El Amri, Malte Kuhlmann, and Nicolás Navarro-Guerrero.
 
 Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.
 
-# Abstract:
+## Abstract:
 
 Tactile perception is essential for human interaction with the environment and is becoming increasingly crucial in robotics. Tactile sensors like the BioTac mimic human fingertips and provide detailed interaction data. Despite its utility in applications like slip detection and object identification, this sensor is now deprecated, making many existing datasets obsolete. This article introduces a novel method for translating data between tactile sensors by exploiting sensor deformation information rather than output signals. We demonstrate the approach by translating BioTac signals into the DIGIT sensor. Our framework consists of three Steps: first, converting signal data into corresponding 3D deformation meshes; second, translating these 3D deformation meshes from one sensor to another; and third, generating output images using the converted meshes. Our approach enables the continued use of valuable datasets.
 
@@ -26,7 +26,7 @@ ___________________________________________________________________
 
 ## Preprint:
 
-[Download paper here](http://wzaielamri.github.io/assets/paper_files/transferTactileExtAbstract_zaielamri.pdf)
+[Download paper here](/assets/paper_files/transferTactileExtAbstract_zaielamri.pdf)
 
 ## Citation
 
@@ -35,7 +35,7 @@ ___________________________________________________________________
 @inproceedings{ZaiElAmri2024Transferring,
   title = {Transferring Tactile Data Across Sensors},
   booktitle = {40th Anniversary of the IEEE Conference on Robotics and Automation (ICRA@40)},
-  author = {{Zai El Amri}, {Wadhah} and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
+  author = {{Zai El Amri}, Wadhah and Kuhlmann, Malte and {Navarro-Guerrero}, Nicol{\'a}s},
   year = {2024},
   month = sep,
   pages = {1540--1542},

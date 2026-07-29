@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork" style="border-bottom: 1px solid #e8e8e8; padding-bottom: 1.2em; margin-bottom: 0.8em;">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -27,9 +27,9 @@
     {% endif %}
 
     {% if post.project_type == 'side_project' %}
-      <span style='background:#e8f0fe;color:#1a73e8;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Side Project</span>
+      <span class="pub-badge pub-badge--side-project">Side Project</span>
     {% elsif post.project_type == 'research_project' %}
-      <span style='background:#e0f2f1;color:#00695c;border-radius:4px;padding:2px 8px;font-size:0.8em;font-weight:600;margin-right:6px;'>Research Project</span>
+      <span class="pub-badge pub-badge--research-project">Research Project</span>
     {% endif %}
     <h3 class="archive__item-title" itemprop="headline" style="margin-top: 0.3em;">
       {% if post.link %}

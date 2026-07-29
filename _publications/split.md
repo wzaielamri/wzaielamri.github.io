@@ -7,16 +7,16 @@ date: 2026-04-27
 venue: 'Robotics and Autonomous Systems Journal'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0921889026001715'
 pub_type: 'full_paper'
-citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Robotics and Autonomous Systems, Volume 203, 2026,ISSN 0921-8890, 10.1016/j.robot.2026.105498</i>.'
+citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Robotics and Autonomous Systems, Volume 203, 2026, ISSN 0921-8890, 10.1016/j.robot.2026.105498</i>.'
 ---
 
 Accepted to Elsevier Robotics and Autonomous Systems Journal
 
 Authors: Wadhah Zai El Amri, Nicolás Navarro-Guerrero.
 
-Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.
+Topics: Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.
 
-# Abstract: 
+## Abstract: 
 
 Training machine learning models for robotic tactile sensing requires vast amounts of data, yet obtaining realistic interaction data remains a challenge due to physical complexity and variability. Simulating tactile sensors is thus a crucial step in accelerating progress. This paper presents SPLIT, a novel method for simulating image-based tactile sensors, with a primary focus on the DIGIT sensor. Central to our approach is a latent space arithmetic strategy that explicitly disentangles contact geometry from sensor-specific optical properties. Unlike methods that require recalibration for every new unit, this disentanglement allows SPLIT to adapt to diverse DIGIT backgrounds and even transfer data to distinct sensors like the GelSight R1.5 without full model retraining. Beyond this adaptability, our approach achieves faster inference speeds than existing alternatives. Furthermore, we provide a calibrated finite element method (FEM) soft-body mesh simulation with variable resolution, offering a tunable trade-off between speed and fidelity. Additionally, our algorithm supports bidirectional simulation, allowing for both the generation of realistic images from deformation meshes and the reconstruction of meshes from tactile images. This versatility makes SPLIT a valuable tool for accelerating progress in robotic tactile sensing research.
 
@@ -93,7 +93,7 @@ The following video shows the UR5e robot arm equipped with a DIGIT sensor collec
 ---
 
 
-This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $beta$-VAE decoder.
+This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $\beta$-VAE decoder.
 
 <p align="center">
   <video src="../assets/images/split/touch.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
@@ -108,21 +108,21 @@ ___________________________________________________________________
 
 Our paper preprint is published on arXiv.
 
-[<img src="../assets/images/ArXiv_logo.png" width="50" height="50">](https://arxiv.org/abs/2604.24449)
+[<img src="../assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2604.24449)
 
-[Download paper here](http://wzaielamri.github.io/assets/paper_files/split_zaielamri.pdf)
+[Download paper here](/assets/paper_files/split_zaielamri.pdf)
 
 ## Code: 
 
 Our code will be published online, along with all necessary checkpoints and a detailed installation guide.
 
-[<img src="../assets/images/GitHub-Mark.png" width="50" height="50">](https://github.com/wzaielamri/split_framework)
+[<img src="../assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/split_framework)
 
 ## Dataset:
 
 Our dataset will be available soon upon request.
 
-[<img src="../assets/images/hf-logo.png" width="50" height="50">](https://huggingface.co/datasets/wzaielamri/split_framework)
+[<img src="../assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/split_framework)
 
 ## Citation
 
@@ -135,9 +135,9 @@ volume = {203},
 pages = {105498},
 year = {2026},
 issn = {0921-8890},
-doi = {https://doi.org/10.1016/j.robot.2026.105498},
+doi = {10.1016/j.robot.2026.105498},
 url = {https://www.sciencedirect.com/science/article/pii/S0921889026001715},
-author = {{Wadhah} {Zai El Amri} and Nicolás Navarro-Guerrero}
+author = {{Zai El Amri}, Wadhah and {Navarro-Guerrero}, Nicol{\'a}s}
 }
 ```
 {% endraw %}

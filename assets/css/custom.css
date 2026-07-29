@@ -468,9 +468,12 @@ a {
   border-bottom-color: var(--accent, #2980b9);
 }
 
-/* Publication / archive item card hover */
+/* Publication / archive item card hover.
+   The divider lives here rather than as an inline style so it follows the theme. */
 .list__item .archive__item {
-  padding: 0.85em 0.85em 0.85em 0;
+  padding: 0.85em 0.85em 1.2em 0;
+  margin-bottom: 0.8em;
+  border-bottom: 1px solid var(--border);
   border-radius: 6px;
   transition: box-shadow 0.2s ease, background-color 0.2s ease !important;
 }
@@ -526,4 +529,46 @@ blockquote {
 /* Prevent FOUC flash on initial load */
 html[data-theme="dark"] {
   background-color: #1a1d23;
+}
+
+/* --------------------------------------------------------------------------
+   Publication / project type badges
+   Themed via classes so dark mode can override them; inline styles could not.
+   -------------------------------------------------------------------------- */
+.pub-badge {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.pub-badge--full-paper       { background: #e6f4ea; color: #1e8e3e; }
+.pub-badge--extended-abstract { background: #fef3c7; color: #b45309; }
+.pub-badge--preprint         { background: #e8eaf6; color: #3949ab; }
+.pub-badge--side-project     { background: #e8f0fe; color: #1a73e8; }
+.pub-badge--research-project { background: #e0f2f1; color: #00695c; }
+
+[data-theme="dark"] .pub-badge--full-paper        { background: rgba(30, 142, 62, 0.20);  color: #7ee2a8; }
+[data-theme="dark"] .pub-badge--extended-abstract { background: rgba(180, 83, 9, 0.22);   color: #fbbf24; }
+[data-theme="dark"] .pub-badge--preprint          { background: rgba(57, 73, 171, 0.28);  color: #a5b0f7; }
+[data-theme="dark"] .pub-badge--side-project      { background: rgba(26, 115, 232, 0.22); color: #8ec0f9; }
+[data-theme="dark"] .pub-badge--research-project  { background: rgba(0, 105, 92, 0.26);   color: #6ed6c6; }
+
+/* Homepage project list (mirrors the archive list divider) */
+.home-project-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.home-project-list > li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+.home-project-list .archive__item-title {
+  margin-top: 0.3em;
 }

@@ -44,6 +44,13 @@ Our paper preprint is published on arXiv.
 
 [Download paper here](/assets/paper_files/robotic_hand_fabisch.pdf)
 
+## Supplementary Material:
+
+Overviews of the analyzed robotic hands and the papers considered for the systematic review as well as the code are available on GitHub.
+
+[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/AlexanderFabisch/JIRS-HandsSurvey)
+
+
 ## Citation
 
 {% raw %}

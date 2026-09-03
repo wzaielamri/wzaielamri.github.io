@@ -41,6 +41,14 @@ redirect_from:
   * Duties included: Computer Vision
 
 
+## Research visits
+
+* 08/2026: Visiting Researcher
+  * Robot Perception Lab, King's College London, London – United Kingdom
+  * Host: [Prof. Dr. Shan Luo](https://www.kcl.ac.uk/people/shan-luo)
+  * Topic: Robotic Tactile Sensing
+
+
 ## Publications
   <div>{% for post in site.publications reversed %}
       {% include archive-single-cv.html %}

@@ -8,7 +8,9 @@ author_profile: true
 {% include base_path %}
 
 
-{% for post in site.projects reversed %}
+{% comment %}Each project's `order:` front matter sets its place, lowest first.{% endcomment %}
+{% assign projects = site.projects | sort: "order" %}
+{% for post in projects %}
   {% include archive-single.html %}
 {% endfor %}
 

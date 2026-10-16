@@ -3,6 +3,7 @@ title: "ROS 2 Dual Arm Teleoperation"
 excerpt: "Markerless real-time teleoperation of dual UR5e robotic arms using a standard webcam and MediaPipe hand tracking. Built for fun with ROS 2 Humble, MoveIt, and MoveIt Servo."
 collection: projects
 project_type: 'side_project'
+order: 3
 ---
 
 A ROS 2 Humble workspace for markerless, real-time teleoperation of dual 6-DOF robotic arms (UR5e) equipped with Robotiq 2F-85 grippers, controlled entirely via a standard webcam and RViz. Built just for fun.

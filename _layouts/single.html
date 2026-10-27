@@ -26,17 +26,7 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.pub_type == 'full_paper' %}
-            <span class="pub-badge pub-badge--full-paper">Full Paper</span>
-          {% elsif page.pub_type == 'extended_abstract' %}
-            <span class="pub-badge pub-badge--extended-abstract">Extended Abstract</span>
-          {% elsif page.pub_type == 'preprint' %}
-            <span class="pub-badge pub-badge--preprint">Preprint</span>
-          {% elsif page.project_type == 'side_project' %}
-            <span class="pub-badge pub-badge--side-project">Side Project</span>
-          {% elsif page.project_type == 'research_project' %}
-            <span class="pub-badge pub-badge--research-project">Research Project</span>
-          {% endif %}
+          {% include type-badge.html item=page %}
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>

@@ -1,0 +1,21 @@
+{% include base_path %}
+{% comment %}
+  One CV section as a timeline: {% include cv-timeline.html entries=page.work %}
+  Each entry has dates and title, and optionally org, note (Markdown), topics
+  and logo (a file in /assets/images/logos/, shown on the line instead of the dot).
+{% endcomment %}
+{% assign logo_entries = include.entries | where_exp: "entry", "entry.logo" %}
+<ul class="timeline{% if logo_entries.size > 0 %} timeline--logos{% endif %}">
+{% for entry in include.entries %}
+  <li{% if entry.logo %} class="has-logo"{% endif %}>
+    {% if entry.logo %}<span class="timeline__logo"><img src="{{ base_path }}/assets/images/logos/{{ entry.logo }}" alt="" loading="lazy"></span>{% endif %}
+    <span class="timeline__date">{{ entry.dates }}</span>
+    <div class="timeline__body">
+      <h3 class="timeline__title">{{ entry.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h3>
+      {% if entry.org %}<p class="timeline__org">{{ entry.org | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+      {% if entry.note %}<p class="timeline__note">{{ entry.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+      {% if entry.topics %}<ul class="chips chips--small">{% for topic in entry.topics %}<li>{{ topic }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </li>
+{% endfor %}
+</ul>

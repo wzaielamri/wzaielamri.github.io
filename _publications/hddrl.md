@@ -7,6 +7,10 @@ date: 2022-09-21
 venue: 'The 8th International Conference on Machine Learning, Optimization, and Data Science'
 paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-25891-6_20'
 pub_type: 'full_paper'
+venue_short: 'LOD 2022'
+code: 'https://github.com/wzaielamri/hddrl'
+header:
+  teaser: 'teasers/hddrl.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Luca Hermes, Malte Schilling (2022). &quot;Hierarchical Decentralized Deep Reinforcement Learning Architecture for a Simulated Four-Legged Agent.&quot; <i>In: Nicosia, G., et al. Machine Learning, Optimization, and Data Science. LOD 2022. Lecture Notes in Computer Science, vol 13811. Springer, Cham. https://doi.org/10.1007/978-3-031-25891-6_20</i>.'
 ---
 

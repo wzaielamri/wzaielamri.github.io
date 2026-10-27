@@ -1,0 +1,5 @@
+{% comment %}
+  A publication's authors, taken from its citation up to " (<year>)":
+  {% include pub-authors.html item=post %}. With short=true, lists of more
+  than six keep the first two, me (the <b> entry) and the last.
+{% endcomment %}{% capture year_mark %} ({{ include.item.date | date: "%Y" }}){% endcapture %}{% assign names = include.item.citation | split: year_mark | first | split: ", " %}{% assign gap = false %}{% for name in names %}{% if include.short != true or names.size <= 6 or forloop.index <= 2 or forloop.last or name contains "<b>" %}{% if gap %}&hellip;, {% assign gap = false %}{% endif %}{{ name }}{% unless forloop.last %}, {% endunless %}{% else %}{% assign gap = true %}{% endif %}{% endfor %}

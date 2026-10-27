@@ -10,9 +10,10 @@ author_profile: true
 
 {% comment %}Each project's `order:` front matter sets its place, lowest first.{% endcomment %}
 {% assign projects = site.projects | sort: "order" %}
+<div class="card-grid card-grid--wide">
 {% for post in projects %}
-  {% include archive-single.html %}
+  {% include archive-card.html %}
 {% endfor %}
+</div>
 
-<p style="color: #888; font-style: italic; margin-top: 2em;">More projects will be updated soon.</p>
-
+<p class="archive__note">More projects will be updated soon.</p>

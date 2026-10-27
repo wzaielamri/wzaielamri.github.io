@@ -4,6 +4,10 @@ excerpt: "Markerless real-time teleoperation of dual UR5e robotic arms using a s
 collection: projects
 project_type: 'side_project'
 order: 3
+code: 'https://github.com/wzaielamri/ros2_dual_arm_teleop'
+stack: ['ROS 2', 'MoveIt', 'MediaPipe', 'OpenCV']
+header:
+  teaser: 'teasers/ros2_dual_arm_teleop.jpg'
 ---
 
 A ROS 2 Humble workspace for markerless, real-time teleoperation of dual 6-DOF robotic arms (UR5e) equipped with Robotiq 2F-85 grippers, controlled entirely via a standard webcam and RViz. Built just for fun.

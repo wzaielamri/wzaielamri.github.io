@@ -7,6 +7,11 @@ date: 2025-05-19
 venue: 'IEEE International Conference on Robotics and Automation (ICRA) 2025, Atlanta, USA'
 paperurl: 'https://arxiv.org/abs/2411.08533'
 pub_type: 'full_paper'
+venue_short: 'ICRA 2025'
+code: 'https://github.com/wzaielamri/across_framework'
+dataset: 'https://huggingface.co/datasets/wzaielamri/across_framework'
+header:
+  teaser: 'teasers/across.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2025). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025</i>.'
 ---
 

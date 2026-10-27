@@ -1,0 +1,50 @@
+{% include base_path %}
+{% comment %}
+  One card in a .card-grid, for a publication or a project.
+  Front matter it reads: header.teaser (path under /assets/images/), venue_short,
+  paperurl, code, dataset, stack. The title's link is stretched over the whole
+  card; the small links below sit above it so they stay clickable.
+{% endcomment %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+
+<article class="card" itemscope itemtype="http://schema.org/CreativeWork"{% if post.pub_type %} data-type="{{ post.pub_type }}"{% endif %}>
+  <div class="card__media">
+    {% if post.header.teaser %}
+      <img src="{{ base_path }}/assets/images/{{ post.header.teaser }}" alt="" width="800" height="500" loading="lazy" decoding="async">
+    {% elsif post.venue_short %}
+      <span class="card__media-label">{{ post.venue_short }}</span>
+    {% endif %}
+  </div>
+
+  <div class="card__body">
+    <div class="card__meta">
+      {% include type-badge.html item=post %}
+      {% if post.venue_short %}
+        <span class="card__venue">{{ post.venue_short }}</span>
+      {% elsif post.collection == 'publications' %}
+        <span class="card__venue">{{ post.date | date: "%Y" }}</span>
+      {% endif %}
+    </div>
+
+    <h3 class="card__title" itemprop="headline"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></h3>
+
+    {% if post.collection == 'publications' and post.citation %}
+      <p class="card__authors">{% include pub-authors.html item=post short=true %}</p>
+    {% elsif post.excerpt %}
+      <p class="card__excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | strip }}</p>
+    {% endif %}
+
+    {% if post.stack %}
+      <ul class="chips chips--small">{% for item in post.stack %}<li>{{ item }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    {% if post.paperurl or post.code or post.dataset %}
+      <div class="card__links">
+        {% if post.paperurl %}<a href="{{ post.paperurl }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+        {% if post.code %}<a href="{{ post.code }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
+        {% if post.dataset %}<a href="{{ post.dataset }}"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
+      </div>
+    {% endif %}
+  </div>
+</article>

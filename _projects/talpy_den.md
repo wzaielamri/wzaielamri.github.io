@@ -4,6 +4,10 @@ excerpt: "A KDE Plasma widget, a GNOME Shell extension and a VS Code extension t
 collection: projects
 project_type: 'side_project'
 order: 1
+code: 'https://github.com/wzaielamri/talpy-den'
+stack: ['KDE Plasma', 'GNOME Shell', 'VS Code', 'Python']
+header:
+  teaser: 'teasers/talpy_den.jpg'
 redirect_from:
   - /projects/claude_status_widget/
   - /projects/claude_status_vscode/

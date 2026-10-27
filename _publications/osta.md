@@ -7,6 +7,9 @@ date: 2022-04-01
 venue: 'Neural Computing and Applications, 34, 6067–6083'
 paperurl: 'https://link.springer.com/article/10.1007/s00521-021-06753-6'
 pub_type: 'full_paper'
+venue_short: 'Neural Comput. Appl. 2022'
+header:
+  teaser: 'teasers/osta.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Felix Reinhart, Wolfram Schenck (2022). &quot;Open Set Task Augmentation Facilitates Generalization of Deep Neural Networks Trained on Small Data Sets.&quot; <i>Neural Computing and Applications, 34, 6067–6083</i>.'
 ---
 Accepted to Springer Neural Computing and Applications Journal

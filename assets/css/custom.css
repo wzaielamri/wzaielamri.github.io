@@ -29,6 +29,9 @@ h1, h2, h3, h4, h5, h6 {
   --link:             #2980b9;
   --link-hover:       #1a5276;
   --card-shadow:      rgba(0, 0, 0, 0.07);
+  --card-bg:          #ffffff;
+  --chip-bg:          #eef4fa;
+  --chip-text:        #1a5276;
   --transition-speed: 0.25s;
   /* Measured at runtime in custom.js; this is the one-row no-JS fallback
      (1em wrapper padding + 0.5rem link padding + line-height, at 18px root). */
@@ -52,6 +55,9 @@ h1, h2, h3, h4, h5, h6 {
   --link:             #5dade2;
   --link-hover:       #85c1e9;
   --card-shadow:      rgba(0, 0, 0, 0.35);
+  --card-bg:          #20252d;
+  --chip-bg:          rgba(93, 173, 226, 0.12);
+  --chip-text:        #a9d3f0;
 }
 
 /* --------------------------------------------------------------------------
@@ -133,6 +139,12 @@ video,
 
 [data-theme="dark"] .author__urls a:hover {
   color: var(--link);
+}
+
+/* The theme paints these icons (near-)black, which vanishes on the dark sidebar */
+[data-theme="dark"] .social-icons .fa,
+[data-theme="dark"] .social-icons .fa-github {
+  color: var(--text);
 }
 
 [data-theme="dark"] .author__urls-wrapper .btn--inverse {
@@ -472,14 +484,17 @@ a {
   color: var(--link, #2980b9);
 }
 
-/* Underline animation on content links */
-.page__content a:not(.btn):not([class*="archive__"]) {
+/* Underline animation on content links.
+   :where() keeps the specificity low so component styles (cards, chips)
+   can opt out without !important. */
+.page__content a:where(:not(.btn):not([class*="archive__"])) {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 1px;
 }
 
-.page__content a:not(.btn):not([class*="archive__"]):hover {
+.page__content a:where(:not(.btn):not([class*="archive__"])):hover {
+  text-decoration: none; /* ties the theme's a:hover underline; this file loads later */
   border-bottom-color: var(--accent, #2980b9);
 }
 
@@ -571,3 +586,554 @@ html[data-theme="dark"] {
 [data-theme="dark"] .pub-badge--preprint          { background: rgba(57, 73, 171, 0.28);  color: #a5b0f7; }
 [data-theme="dark"] .pub-badge--side-project      { background: rgba(26, 115, 232, 0.22); color: #8ec0f9; }
 [data-theme="dark"] .pub-badge--research-project  { background: rgba(0, 105, 92, 0.26);   color: #6ed6c6; }
+
+/* --------------------------------------------------------------------------
+   Card grid: publications and projects (_includes/archive-card.html)
+   -------------------------------------------------------------------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 1.25rem;
+  margin: 1.25em 0 1.5em;
+}
+
+/* Fewer, larger cards: projects, and two per row on the home page */
+.card-grid--wide {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 10px 28px var(--card-shadow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thumbnails are mostly white paper figures: tone them down on a dark page */
+[data-theme="dark"] .card__media img {
+  filter: brightness(0.88);
+}
+
+[data-theme="dark"] .card:hover .card__media img {
+  filter: none;
+}
+
+.card__media-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  font-size: 0.7rem;
+}
+
+.card__meta .pub-badge {
+  margin: 0;
+  font-size: 1em;
+}
+
+.card__venue {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.card .card__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.card .card__title a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+/* Stretch the title link over the whole card */
+.card .card__title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover .card__title a,
+.card .card__title a:focus-visible {
+  color: var(--accent);
+}
+
+.card .card__title a:focus-visible {
+  outline: none;
+}
+
+.card .card__title a:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.card .card__authors,
+.card .card__excerpt {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.card .card__authors b {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.card .card__excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card ul.chips {
+  margin: 0;
+}
+
+/* Above the stretched title link, so these stay separately clickable */
+.card__links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+.card .card__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.22rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--card-bg);
+  text-decoration: none;
+}
+
+.card .card__links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Publication type filters (shown by custom.js)
+   -------------------------------------------------------------------------- */
+.card-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25em 0 0;
+}
+
+.card-filters[hidden] {
+  display: none;
+}
+
+.card-filter {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--card-bg);
+  cursor: pointer;
+}
+
+.card-filter span {
+  margin-left: 0.3em;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.card-filter:hover {
+  border-color: var(--accent);
+}
+
+.card-filter[aria-pressed="true"] {
+  border-color: var(--text);
+  color: var(--bg);
+  background: var(--text);
+}
+
+.card-filter[aria-pressed="true"] span {
+  color: inherit;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Archive page text around the grids
+   -------------------------------------------------------------------------- */
+.archive__lead {
+  color: var(--text-muted);
+}
+
+.archive__note {
+  margin-top: 2em;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.page__content a.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.see-all span {
+  transition: transform 0.2s ease;
+}
+
+.see-all:hover span {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Chips: research interests, project stacks, CV topics, skills, hobbies
+   -------------------------------------------------------------------------- */
+ul.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.3em;
+  padding: 0;
+  list-style: none;
+}
+
+ul.chips li {
+  margin: 0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--chip-text);
+  background: var(--chip-bg);
+}
+
+ul.chips--small {
+  gap: 0.3rem;
+}
+
+ul.chips--small li {
+  padding: 0.1rem 0.55rem;
+  font-size: 0.7rem;
+}
+
+/* --------------------------------------------------------------------------
+   Home page: news timeline
+   -------------------------------------------------------------------------- */
+
+.news ul {
+  margin: 1em 0 1.5em;
+  padding: 0 0 0 1.25rem;
+  list-style: none;
+  border-left: 2px solid var(--border);
+}
+
+.news li {
+  position: relative;
+  margin: 0 0 1.1em;
+  line-height: 1.55;
+}
+
+.news li:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot centred on the line: 1.25rem padding + half the 2px border + half the dot */
+.news li::before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: calc(-1.25rem - 6px);
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.news li:first-child::before {
+  background: var(--accent);
+}
+
+/* The leading **date** of each item becomes its label */
+.news li > strong:first-child {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   CV timeline (_includes/cv-timeline.html): dates | line and dot | entry
+   -------------------------------------------------------------------------- */
+.timeline {
+  --tl-date: 9.5rem;  /* date column */
+  --tl-gap: 4rem;     /* the line runs down the middle of this gap */
+  --tl-dot: 12px;
+  --tl-logo: 48px;    /* logo tile, drawn on the line instead of the dot */
+  --tl-axis: calc(var(--tl-date) + var(--tl-gap) / 2);  /* x of the line */
+  margin: 1.25em 0 1.75em;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--tl-date) 1fr;
+  column-gap: var(--tl-gap);
+  margin: 0;
+  padding-bottom: 1.5em;
+}
+
+.timeline > li:last-child {
+  padding-bottom: 0;
+}
+
+/* Dot, level with the title's first line; the newest entry's is filled */
+.timeline > li::before {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  left: calc(var(--tl-axis) - var(--tl-dot) / 2);
+  z-index: 1;
+  width: var(--tl-dot);
+  height: var(--tl-dot);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.timeline > li:first-child::before {
+  background: var(--accent);
+}
+
+/* Line from this dot down to the next one */
+.timeline > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(0.4em + var(--tl-dot) / 2);
+  bottom: calc(-0.4em - var(--tl-dot) / 2);
+  left: calc(var(--tl-axis) - 1px);
+  width: 2px;
+  background: var(--border);
+}
+
+/* Logo tile, centred where the dot would be. White in both themes, since
+   logos are made for light backgrounds; colours are left as published. */
+.timeline > li.has-logo::before {
+  display: none;
+}
+
+.timeline__logo {
+  position: absolute;
+  top: calc(0.4em + var(--tl-dot) / 2 - var(--tl-logo) / 2);
+  left: calc(var(--tl-axis) - var(--tl-logo) / 2);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tl-logo);
+  height: var(--tl-logo);
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 1px 4px var(--card-shadow);
+}
+
+.timeline__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.timeline__date {
+  padding-top: 0.2em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: right;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline .timeline__title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.timeline .timeline__org,
+.timeline .timeline__note {
+  margin: 0.2em 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.timeline .timeline__note {
+  color: var(--text);
+}
+
+.timeline ul.chips {
+  margin: 0.6em 0 0;
+}
+
+/* Publication entries (_includes/cv-publication.html) */
+.timeline .pub-badge + .timeline__title {
+  margin-top: 0.35em;
+}
+
+.timeline .timeline__title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.timeline .timeline__title a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.timeline .timeline__org b {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline .timeline__venue {
+  margin: 0.15em 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Skills: a label column as wide as the timeline's dates, so content lines up */
+.skill-groups {
+  margin: 1em 0 1.75em;
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  column-gap: 4rem;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-group:last-child {
+  border-bottom: 0;
+}
+
+.skill-group__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-muted);
+}
+
+.skill-group ul.chips {
+  margin: 0;
+}
+
+/* Phones: dates and labels move above their entry, the line to the left edge */
+@media (max-width: 600px) {
+  .timeline {
+    --tl-axis: calc(var(--tl-dot) / 2);
+  }
+
+  .timeline--logos {
+    --tl-axis: calc(var(--tl-logo) / 2);
+  }
+
+  .timeline > li {
+    grid-template-columns: 1fr;
+    padding-left: calc(2 * var(--tl-axis) + 0.9rem);
+  }
+
+  .timeline__date {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .skill-group {
+    grid-template-columns: 1fr;
+    row-gap: 0.35rem;
+  }
+
+  .skill-group__label {
+    text-align: left;
+  }
+}

@@ -201,6 +201,27 @@
       });
     }
 
+    /* --- Publication type filters (the bar ships hidden for no-JS visitors) --- */
+    var filterBar = document.querySelector('.card-filters');
+    if (filterBar) {
+      var filterButtons = filterBar.querySelectorAll('.card-filter');
+      var filterCards = document.querySelectorAll('.card-grid .card');
+      filterBar.hidden = false;
+
+      filterBar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.card-filter');
+        if (!btn) return;
+        var type = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        filterCards.forEach(function (card) {
+          card.hidden = type !== 'all' && card.getAttribute('data-type') !== type;
+        });
+      });
+    }
+
     /* --- Copy-code buttons (auto-inject onto every <pre> block) --- */
     var preBlocks = document.querySelectorAll('pre');
     preBlocks.forEach(function (pre) {

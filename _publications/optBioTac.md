@@ -7,6 +7,10 @@ date: 2024-06-30
 venue: 'International Joint Conference on Neural Network (IJCNN) 2024, Yokohama, Japan.'
 paperurl: 'https://ieeexplore.ieee.org/document/10650656'
 pub_type: 'full_paper'
+venue_short: 'IJCNN 2024'
+code: 'https://github.com/wzaielamri/Optimizing_BioTac_Simulation'
+header:
+  teaser: 'teasers/optBioTac.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2024). &quot;Optimizing BioTac Simulation for Realistic Tactile Perception.&quot; <i>International Joint Conference on Neural Networks (IJCNN), Yokohama, Japan, 2024, pp. 1-8, doi: 10.1109/IJCNN60899.2024.10650656</i>.'
 ---
 Accepted to the International Joint Conference on Neural Networks 2024 (IJCNN 2024)

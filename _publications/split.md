@@ -7,6 +7,11 @@ date: 2026-04-27
 venue: 'Robotics and Autonomous Systems Journal'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0921889026001715'
 pub_type: 'full_paper'
+venue_short: 'RAS 2026'
+code: 'https://github.com/wzaielamri/split_framework'
+dataset: 'https://huggingface.co/datasets/wzaielamri/split_framework'
+header:
+  teaser: 'teasers/split.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Robotics and Autonomous Systems, Volume 203, 2026, ISSN 0921-8890, 10.1016/j.robot.2026.105498</i>.'
 ---
 

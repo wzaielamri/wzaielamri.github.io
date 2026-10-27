@@ -1,0 +1,14 @@
+{% include base_path %}
+{% comment %}A publication as one entry of a CV <ul class="timeline">.{% endcomment %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+
+<li itemscope itemtype="http://schema.org/CreativeWork">
+  <span class="timeline__date">{% if post.venue_short %}{{ post.venue_short }}{% else %}{{ post.date | date: "%Y" }}{% endif %}</span>
+  <div class="timeline__body">
+    {% include type-badge.html item=post %}
+    <h3 class="timeline__title" itemprop="headline"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></h3>
+    {% if post.citation %}<p class="timeline__org">{% include pub-authors.html item=post %}</p>{% endif %}
+    {% if post.venue %}<p class="timeline__venue">{{ post.venue }}</p>{% endif %}
+  </div>
+</li>

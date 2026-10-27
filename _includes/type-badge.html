@@ -1,0 +1,12 @@
+{% comment %}Type badge for a publication or project: {% include type-badge.html item=post %}{% endcomment %}
+{% if include.item.pub_type == 'full_paper' %}
+  <span class="pub-badge pub-badge--full-paper">Full Paper</span>
+{% elsif include.item.pub_type == 'extended_abstract' %}
+  <span class="pub-badge pub-badge--extended-abstract">Extended Abstract</span>
+{% elsif include.item.pub_type == 'preprint' %}
+  <span class="pub-badge pub-badge--preprint">Preprint</span>
+{% elsif include.item.project_type == 'side_project' %}
+  <span class="pub-badge pub-badge--side-project">Side Project</span>
+{% elsif include.item.project_type == 'research_project' %}
+  <span class="pub-badge pub-badge--research-project">Research Project</span>
+{% endif %}

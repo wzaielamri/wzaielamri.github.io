@@ -7,6 +7,11 @@ date: 2026-01-25
 venue: 'Submitted to Elsevier Robotics and Autonomous Systems'
 paperurl: 'https://arxiv.org/abs/2601.20555'
 pub_type: 'preprint'
+venue_short: 'arXiv 2026'
+code: 'https://github.com/wzaielamri/vibrosense'
+dataset: 'https://huggingface.co/datasets/wzaielamri/vibrosense'
+header:
+  teaser: 'teasers/vibrosense.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;Vibro-Sense: Robust Vibration-based Impulse Response Localization and Trajectory Tracking for Robotic Hands.&quot; <i>Submitted to Robotics and Autonomous Systems, 2026</i>.'
 ---
 

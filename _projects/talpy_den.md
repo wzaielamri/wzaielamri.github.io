@@ -9,7 +9,7 @@ redirect_from:
   - /projects/claude_status_vscode/
 ---
 
-I usually have a handful of Claude Code chats running, on different accounts and a few machines, and I kept losing track of which one was waiting for me. So I built Talpy Den (formerly Claude Status): a panel widget for KDE Plasma 6, a GNOME Shell extension and a VS Code extension that tell me at a glance. Made for my own day to day.
+I usually have a handful of Claude Code chats running, on different accounts and a few machines, and I kept losing track of which one was waiting for me. So I built Talpy Den: a panel widget for KDE Plasma 6, a GNOME Shell extension and a VS Code extension that tell me at a glance. Made for my own day to day.
 
 <p align="center"><img src="/assets/images/projects/talpy_den/popup-light.png" alt="The Talpy Den popup: the big Talpy says one chat needs you; below, each account shows its chats as pets, plan usage bars, token totals and its sessions" width="48%">&nbsp;<img src="/assets/images/projects/talpy_den/popup-dark.png" alt="The same popup in a dark theme" width="48%"></p>
 

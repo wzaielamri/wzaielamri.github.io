@@ -60,18 +60,18 @@ visits:
     topics: [Robotic Tactile Sensing]
 
 teaching:
-  - dates: Sommer Semester 2025
+  - dates: Summer Semester 2025
     title: Research Methods for Autonomous and Intelligent Systems
-    org: Teachers Assistant, Leibniz University Hannover
-  - dates: Sommer Semester 2024
+    org: Teaching Assistant, Leibniz University Hannover
+  - dates: Summer Semester 2024
     title: Human-Robot Interaction
-    org: Teachers Assistant, Leibniz University Hannover
-  - dates: Sommer Semester 2024
+    org: Teaching Assistant, Leibniz University Hannover
+  - dates: Summer Semester 2024
     title: Foundations of Information Retrieval
-    org: Teachers Assistant, Leibniz University Hannover
-  - dates: Sommer Semester 2023
+    org: Teaching Assistant, Leibniz University Hannover
+  - dates: Summer Semester 2023
     title: Foundations of Information Retrieval
-    org: Teachers Assistant, Leibniz University Hannover
+    org: Teaching Assistant, Leibniz University Hannover
 
 skills:
   - group: Polyglot

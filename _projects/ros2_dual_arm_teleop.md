@@ -2,7 +2,7 @@
 title: "ROS 2 Dual Arm Teleoperation"
 excerpt: "Markerless real-time teleoperation of dual UR5e robotic arms using a standard webcam and MediaPipe hand tracking. Built for fun with ROS 2 Humble, MoveIt, and MoveIt Servo."
 collection: projects
-project_type: 'side_project'
+project_type: 'personal_project'
 order: 3
 code: 'https://github.com/wzaielamri/ros2_dual_arm_teleop'
 stack: ['ROS 2', 'MoveIt', 'MediaPipe', 'OpenCV']

@@ -2,7 +2,7 @@
 title: "Talpy Den"
 excerpt: "A KDE Plasma widget, a GNOME Shell extension and a VS Code extension that show which of my Claude Code chats are working, which need me and how much of my plan is left, across accounts and SSH hosts. With Talpy, a pet that acts out each chat."
 collection: projects
-project_type: 'side_project'
+project_type: 'personal_project'
 order: 1
 code: 'https://github.com/wzaielamri/talpy-den'
 stack: ['KDE Plasma', 'GNOME Shell', 'VS Code', 'Python']

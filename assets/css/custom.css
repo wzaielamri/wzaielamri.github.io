@@ -651,13 +651,13 @@ html[data-theme="dark"] {
 .pub-badge--full-paper       { background: #e6f4ea; color: #1e8e3e; }
 .pub-badge--extended-abstract { background: #fef3c7; color: #b45309; }
 .pub-badge--preprint         { background: #e8eaf6; color: #3949ab; }
-.pub-badge--side-project     { background: #e8f0fe; color: #1a73e8; }
+.pub-badge--personal-project { background: #e8f0fe; color: #1a73e8; }
 .pub-badge--research-project { background: #e0f2f1; color: #00695c; }
 
 [data-theme="dark"] .pub-badge--full-paper        { background: rgba(30, 142, 62, 0.20);  color: #7ee2a8; }
 [data-theme="dark"] .pub-badge--extended-abstract { background: rgba(180, 83, 9, 0.22);   color: #fbbf24; }
 [data-theme="dark"] .pub-badge--preprint          { background: rgba(57, 73, 171, 0.28);  color: #a5b0f7; }
-[data-theme="dark"] .pub-badge--side-project      { background: rgba(26, 115, 232, 0.22); color: #8ec0f9; }
+[data-theme="dark"] .pub-badge--personal-project  { background: rgba(26, 115, 232, 0.22); color: #8ec0f9; }
 [data-theme="dark"] .pub-badge--research-project  { background: rgba(0, 105, 92, 0.26);   color: #6ed6c6; }
 
 /* --------------------------------------------------------------------------

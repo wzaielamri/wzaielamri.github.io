@@ -9,7 +9,7 @@
 {% assign seq = nil %}
 {% if page.collection == 'projects' %}
   {% assign by_order = site.projects | sort: "order" %}
-  {% assign personal = by_order | where: "project_type", "side_project" %}
+  {% assign personal = by_order | where: "project_type", "personal_project" %}
   {% assign research = by_order | where: "project_type", "research_project" %}
   {% assign seq = personal | concat: research %}
 {% elsif page.collection == 'publications' %}

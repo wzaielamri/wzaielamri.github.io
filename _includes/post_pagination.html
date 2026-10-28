@@ -1,23 +1,48 @@
 {% include base_path %}
 {% comment %}
-  Links to the neighbouring documents of the same collection, by date,
-  each showing its title. An empty cell keeps "Next" in the right column.
+  Links to the neighbouring documents, each showing its title, in the order
+  their list page shows them: projects as on /projects/ (personal, then
+  research, each by `order:`), publications newest first. Other collections
+  keep Jekyll's date order. An empty cell keeps "Next" in the right column.
 {% endcomment %}
 
-{% if page.previous or page.next %}
+{% assign seq = nil %}
+{% if page.collection == 'projects' %}
+  {% assign by_order = site.projects | sort: "order" %}
+  {% assign personal = by_order | where: "project_type", "side_project" %}
+  {% assign research = by_order | where: "project_type", "research_project" %}
+  {% assign seq = personal | concat: research %}
+{% elsif page.collection == 'publications' %}
+  {% assign seq = site.publications | reverse %}
+{% endif %}
+
+{% assign prev_doc = page.previous %}
+{% assign next_doc = page.next %}
+{% if seq %}
+  {% assign prev_doc = nil %}
+  {% assign next_doc = nil %}
+  {% for doc in seq %}
+    {% if doc.url == page.url %}
+      {% if forloop.index0 > 0 %}{% assign i = forloop.index0 | minus: 1 %}{% assign prev_doc = seq[i] %}{% endif %}
+      {% assign i = forloop.index0 | plus: 1 %}{% assign next_doc = seq[i] %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if prev_doc or next_doc %}
   <nav class="page-nav" aria-label="More {{ page.collection | default: 'pages' }}">
-    {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="page-nav__link page-nav__link--prev" rel="prev">
+    {% if prev_doc %}
+      <a href="{{ base_path }}{{ prev_doc.url }}" class="page-nav__link page-nav__link--prev" rel="prev">
         <span class="page-nav__label"><span aria-hidden="true">←</span> {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
-        <span class="page-nav__title">{{ page.previous.title | markdownify | strip_html | strip }}</span>
+        <span class="page-nav__title">{{ prev_doc.title | markdownify | strip_html | strip }}</span>
       </a>
     {% else %}
       <span class="page-nav__link page-nav__link--empty"></span>
     {% endif %}
-    {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="page-nav__link page-nav__link--next" rel="next">
+    {% if next_doc %}
+      <a href="{{ base_path }}{{ next_doc.url }}" class="page-nav__link page-nav__link--next" rel="next">
         <span class="page-nav__label">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} <span aria-hidden="true">→</span></span>
-        <span class="page-nav__title">{{ page.next.title | markdownify | strip_html | strip }}</span>
+        <span class="page-nav__title">{{ next_doc.title | markdownify | strip_html | strip }}</span>
       </a>
     {% endif %}
   </nav>

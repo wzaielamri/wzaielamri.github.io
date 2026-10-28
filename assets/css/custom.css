@@ -670,7 +670,7 @@ html[data-theme="dark"] {
   margin: 1.25em 0 1.5em;
 }
 
-/* Fewer, larger cards: projects, and two per row on the home page */
+/* Fewer, larger cards: two per row on the home page, and a project's papers */
 .card-grid--wide {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
 }
@@ -1686,4 +1686,13 @@ a.page-nav__link:hover .page-nav__title {
   .author__urls-wrapper .btn--inverse {
     border-radius: 999px;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Project pages: the "Sources" line under the text
+   -------------------------------------------------------------------------- */
+.page__content .page__sources {
+  margin-top: 2em;
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }

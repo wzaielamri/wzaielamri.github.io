@@ -8,10 +8,25 @@ author_profile: true
 {% include base_path %}
 
 
-{% comment %}Each project's `order:` front matter sets its place, lowest first.{% endcomment %}
+{% comment %}Personal projects (project_type side_project) first, then research projects; each project's `order:` front matter sets its place in its group, lowest first.{% endcomment %}
 {% assign projects = site.projects | sort: "order" %}
-<div class="card-grid card-grid--wide">
-{% for post in projects %}
+{% assign personal = projects | where: "project_type", "side_project" %}
+{% assign research = projects | where: "project_type", "research_project" %}
+
+<div class="archive__toolbar">
+  {% comment %}Shown by custom.js; without JS every card stays visible.{% endcomment %}
+  <div class="card-filters" role="group" aria-label="Filter by type" hidden>
+    <button type="button" class="card-filter" data-filter="all" aria-pressed="true">All <span>{{ projects.size }}</span></button>
+    <button type="button" class="card-filter" data-filter="side_project" aria-pressed="false">Personal Projects <span>{{ personal.size }}</span></button>
+    <button type="button" class="card-filter" data-filter="research_project" aria-pressed="false">Research Projects <span>{{ research.size }}</span></button>
+  </div>
+</div>
+
+<div class="card-grid">
+{% for post in personal %}
+  {% include archive-card.html %}
+{% endfor %}
+{% for post in research %}
   {% include archive-card.html %}
 {% endfor %}
 </div>

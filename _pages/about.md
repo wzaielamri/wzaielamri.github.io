@@ -49,7 +49,9 @@ Feel free to reach out if you are interested in collaborating or discussing any 
 ## Projects
 
 <div class="card-grid card-grid--wide">
-{% assign projects = site.projects | sort: "order" %}{% for post in projects %}
+{% assign projects = site.projects | sort: "order" %}{% assign research = projects | where: "project_type", "research_project" %}{% assign side = projects | where: "project_type", "side_project" %}{% for post in side %}
+  {% include archive-card.html %}
+{% endfor %}{% for post in research %}
   {% include archive-card.html %}
 {% endfor %}
 </div>

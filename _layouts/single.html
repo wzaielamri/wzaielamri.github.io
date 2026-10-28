@@ -28,11 +28,12 @@ layout: default
         <header class="page__header">
           {% capture badge %}{% include type-badge.html item=page %}{% endcapture %}
           {% assign badge = badge | strip %}
-          {% if badge != "" or page.open_access or page.venue_short %}
+          {% if badge != "" or page.open_access or page.venue_short or page.period %}
             <div class="page__kicker">
               {{ badge }}
               {% if page.open_access %}<span class="pub-badge pub-badge--open-access"><i class="fas fa-lock-open" aria-hidden="true"></i> Open Access{% if page.open_access != true %} · {{ page.open_access }}{% endif %}</span>{% endif %}
               {% if page.venue_short %}<span class="page__kicker-venue">{{ page.venue_short }}</span>{% endif %}
+              {% if page.period %}<span class="page__kicker-venue">{{ page.period }}</span>{% endif %}
             </div>
           {% endif %}
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
@@ -66,6 +67,7 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+        {% if page.publications %}{% include related-publications.html %}{% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

@@ -1,12 +1,14 @@
 {% include base_path %}
 {% comment %}
   Link buttons for a publication or project, without a wrapper:
-  {% include item-links.html item=post %}. Front matter it reads: paperurl,
-  code, dataset, and with full=true (the page header) also pdf (a site path),
+  {% include item-links.html item=post %}. Front matter it reads: website
+  (a project's official page), paperurl, code, dataset, and with full=true
+  (the page header) also pdf (a site path),
   arxiv and checkpoints. dataset_pending: true shows the dataset muted and
   unlinked until it is public.
 {% endcomment %}
 {% assign item = include.item %}
+{% if item.website %}<a href="{{ item.website }}"><i class="fas fa-globe" aria-hidden="true"></i> Project page</a>{% endif %}
 {% if item.paperurl %}<a href="{{ item.paperurl }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
 {% if include.full and item.pdf %}<a href="{{ base_path }}{{ item.pdf }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>{% endif %}
 {% if include.full and item.arxiv %}<a href="{{ item.arxiv }}"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>{% endif %}

@@ -1,14 +1,15 @@
 {% include base_path %}
 {% comment %}
   One card in a .card-grid, for a publication or a project.
-  Front matter it reads: header.teaser (path under /assets/images/), venue_short,
-  paperurl, code, dataset, stack. The title's link is stretched over the whole
+  Front matter it reads: header.teaser (path under /assets/images/), venue_short
+  or period, the links item-links.html reads, stack. The title's link is stretched over the whole
   card; the small links below sit above it so they stay clickable.
 {% endcomment %}
 
 {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
 
-<article class="card" itemscope itemtype="http://schema.org/CreativeWork"{% if post.pub_type %} data-type="{{ post.pub_type }}"{% endif %}>
+{% assign card_type = post.pub_type | default: post.project_type %}
+<article class="card" itemscope itemtype="http://schema.org/CreativeWork"{% if card_type %} data-type="{{ card_type }}"{% endif %}>
   <div class="card__media">
     {% if post.header.teaser %}
       <img src="{{ base_path }}/assets/images/{{ post.header.teaser }}" alt="" width="800" height="500" loading="lazy" decoding="async">
@@ -22,6 +23,8 @@
       {% include type-badge.html item=post %}
       {% if post.venue_short %}
         <span class="card__venue">{{ post.venue_short }}</span>
+      {% elsif post.period %}
+        <span class="card__venue">{{ post.period }}</span>
       {% elsif post.collection == 'publications' %}
         <span class="card__venue">{{ post.date | date: "%Y" }}</span>
       {% endif %}
@@ -39,7 +42,7 @@
       <ul class="chips chips--small">{% for item in post.stack %}<li>{{ item }}</li>{% endfor %}</ul>
     {% endif %}
 
-    {% if post.paperurl or post.code or post.dataset %}
+    {% if post.website or post.paperurl or post.code or post.dataset %}
       <div class="card__links">
         {% include item-links.html item=post %}
       </div>

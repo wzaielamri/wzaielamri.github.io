@@ -1,0 +1,13 @@
+{% comment %}
+  A project's papers as cards, newest first, after its content. The project
+  lists them by file name in its front matter: publications: [vibrosense, ...]
+{% endcomment %}
+{% assign related = site.publications | where_exp: "p", "page.publications contains p.slug" | sort: "date" | reverse %}
+{% if related.size > 0 %}
+<h2 id="publications">Publications</h2>
+<div class="card-grid card-grid--wide">
+{% for post in related %}
+  {% include archive-card.html %}
+{% endfor %}
+</div>
+{% endif %}

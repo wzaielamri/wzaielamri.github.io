@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   --text-muted:       #7a8288;
   --border:           #e9eaeb;
   --masthead-bg:      #ffffff;
-  --sidebar-bg:       #ffffff;
   --code-bg:          #f6f8fa;
   --link:             #2980b9;
   --link-hover:       #1a5276;
@@ -33,10 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   --chip-bg:          #eef4fa;
   --chip-text:        #1a5276;
   --on-accent:        #ffffff;  /* text on an accent-filled button */
+  --nav-hover:        rgba(128, 128, 128, 0.12);
   --transition-speed: 0.25s;
   /* Measured at runtime in custom.js; this is the one-row no-JS fallback
-     (1em wrapper padding + 0.5rem link padding + line-height, at 18px root). */
-  --masthead-height:  82px;
+     (0.6em wrapper padding around the 2rem monogram and the nav pills, at
+     18px root). */
+  --masthead-height:  77px;
 }
 
 /* --------------------------------------------------------------------------
@@ -51,7 +52,6 @@ h1, h2, h3, h4, h5, h6 {
   --text-muted:       #8899aa;
   --border:           #2e333d;
   --masthead-bg:      #13161b;
-  --sidebar-bg:       #1e2229;
   --code-bg:          #22262e;
   --link:             #5dade2;
   --link-hover:       #85c1e9;
@@ -91,56 +91,6 @@ video,
 [data-theme="dark"] body {
   background-color: var(--bg);
   color: var(--text);
-}
-
-[data-theme="dark"] .masthead {
-  background-color: var(--masthead-bg);
-  border-bottom-color: var(--border);
-}
-
-[data-theme="dark"] .greedy-nav {
-  background: var(--masthead-bg);
-}
-
-[data-theme="dark"] .greedy-nav a {
-  color: var(--text);
-}
-
-[data-theme="dark"] .greedy-nav a:hover {
-  color: var(--link);
-}
-
-[data-theme="dark"] .greedy-nav .hidden-links {
-  background: var(--bg-alt);
-  border-color: var(--border);
-}
-
-[data-theme="dark"] .greedy-nav .hidden-links a:hover {
-  background: var(--bg);
-  color: var(--link);
-}
-
-[data-theme="dark"] .greedy-nav button {
-  background-color: #2e3440;
-}
-
-[data-theme="dark"] .sidebar,
-[data-theme="dark"] .author__urls-wrapper {
-  background-color: var(--sidebar-bg);
-}
-
-[data-theme="dark"] .author__name,
-[data-theme="dark"] .author__bio {
-  color: var(--text);
-}
-
-[data-theme="dark"] .author__urls a,
-[data-theme="dark"] .author__urls li {
-  color: var(--text-muted);
-}
-
-[data-theme="dark"] .author__urls a:hover {
-  color: var(--link);
 }
 
 /* The theme paints these icons (near-)black, which vanishes on the dark sidebar */
@@ -276,33 +226,33 @@ video,
   z-index: 30;
 
   background: none;
-  border: none;
+  border: 1px solid var(--border);
   cursor: pointer;
-  padding: 5px;
+  padding: 0;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--text, #3d4144);
+  color: var(--text-muted);
   line-height: 1;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
 }
 
 .dark-mode-toggle:hover {
-  background-color: rgba(128, 128, 128, 0.15);
-  transform: translateY(-50%) scale(1.12);
+  background-color: var(--nav-hover);
+  color: var(--text);
 }
 
-.dark-mode-toggle:focus {
+.dark-mode-toggle:focus-visible {
   outline: 2px solid var(--accent, #2980b9);
   outline-offset: 2px;
 }
 
 .dark-mode-toggle svg {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   pointer-events: none;
 }
 
@@ -318,13 +268,34 @@ video,
   padding-right: 5.8rem;
 }
 
-/* Keep nav controls readable and pinned right in both themes */
+/* Burger button: the same round button as the theme toggle, pinned right */
 .greedy-nav button {
+  top: 50%;
   right: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
   background-color: transparent;
-  color: var(--text, #3d4144);
-  padding: 0 0.35rem;
+  color: var(--text-muted);
+  transform: translateY(-50%);
   z-index: 31;
+}
+
+.greedy-nav button:hover {
+  background-color: var(--nav-hover);
+  color: var(--text);
+}
+
+.navicon,
+.navicon::before,
+.navicon::after,
+.close .navicon::before,
+.close .navicon::after {
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
 }
 
 .navicon,
@@ -333,12 +304,18 @@ video,
   background: currentColor;
 }
 
+.navicon::before { top: -5px; }
+.navicon::after  { bottom: -5px; }
+
 
 /* Small screens: shrink author/site title instead of letting it disappear into menu */
 @media (max-width: 650px) {
-  .masthead__menu-item--lg a {
-    font-size: 0.88rem;
+  .greedy-nav .visible-links .masthead__brand {
     max-width: 58vw;
+    font-size: 0.9rem;
+  }
+
+  .masthead__name {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -346,13 +323,14 @@ video,
 
   .dark-mode-toggle {
     right: 2.55rem;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
 
   .greedy-nav button {
     right: 2.9rem;
-    padding: 0 0.4rem;
+    width: 34px;
+    height: 34px;
   }
 
   .masthead__inner-wrap .greedy-nav {
@@ -369,7 +347,7 @@ video,
    -------------------------------------------------------------------------- */
 @media (min-width: 57.8125em) {
   .sidebar.sticky {
-    top: calc(var(--masthead-height, 82px) + 1em);
+    top: calc(var(--masthead-height, 77px) + 1em);
   }
 }
 
@@ -522,34 +500,124 @@ a {
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15);
 }
 
-/* Nav links: muted, with the current section (aria-current, set in
-   masthead.html) in full text colour and underlined like a hover. */
-.greedy-nav .visible-links a {
+/* --------------------------------------------------------------------------
+   Masthead: monogram and name, nav links as pills with the current section
+   (aria-current, set in masthead.html) filled, on a translucent sticky bar
+   -------------------------------------------------------------------------- */
+.masthead {
+  background-color: var(--masthead-bg);
+  border-bottom-color: var(--border);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .masthead {
+    background-color: color-mix(in srgb, var(--masthead-bg) 88%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    backdrop-filter: saturate(180%) blur(12px);
+  }
+}
+
+.masthead__inner-wrap {
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  padding-right: 3.2rem;  /* room for the theme toggle */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.masthead .greedy-nav {
+  background: transparent;
+}
+
+.masthead__menu-item--lg {
+  padding-right: 1.5rem;
+}
+
+/* The theme's sliding underline gives way to the pills */
+.greedy-nav .visible-links a::before {
+  display: none;
+}
+
+.greedy-nav .visible-links .masthead__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.masthead__mark {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: var(--on-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.greedy-nav .visible-links a:not(.masthead__brand) {
+  margin: 0 0.1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
-.greedy-nav .visible-links a:hover,
-.greedy-nav .visible-links a[aria-current="page"] {
+.greedy-nav .visible-links a:not(.masthead__brand):hover {
+  color: var(--text);
+  background: var(--nav-hover);
+}
+
+.greedy-nav .visible-links a[aria-current="page"],
+.greedy-nav .visible-links a[aria-current="page"]:hover {
+  color: var(--chip-text);
+  background: var(--chip-bg);
+  font-weight: 600;
+}
+
+/* Overflow menu (phones): a rounded card, without the theme's white arrow */
+.greedy-nav .hidden-links {
+  min-width: 11rem;
+  margin-top: 0.6rem;
+  padding: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 12px 32px var(--card-shadow);
+}
+
+.greedy-nav .hidden-links::before,
+.greedy-nav .hidden-links::after {
+  display: none;
+}
+
+.greedy-nav .hidden-links li {
+  border-bottom: 0;
+}
+
+.greedy-nav .hidden-links a {
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
   color: var(--text);
 }
 
-.greedy-nav .visible-links a:not(.masthead__menu-item--lg a)::before {
-  height: 2px;
-  background: var(--accent, #2980b9);
-}
-
-.greedy-nav .visible-links a[aria-current="page"]::before {
-  transform: scaleX(1);
-}
-
-/* Masthead title */
-.greedy-nav .visible-links .masthead__menu-item--lg a {
-  letter-spacing: 0.3px;
+.greedy-nav .hidden-links a:hover {
   color: var(--text);
+  background: var(--nav-hover);
 }
 
-.masthead__inner-wrap  {
-  padding-right: 3.2rem;
+.greedy-nav .hidden-links a[aria-current="page"] {
+  color: var(--chip-text);
+  background: var(--chip-bg);
+  font-weight: 600;
 }
 
 /* Slightly bolder headings */
@@ -842,7 +910,42 @@ html[data-theme="dark"] {
 /* --------------------------------------------------------------------------
    Archive page text around the grids
    -------------------------------------------------------------------------- */
-.archive__lead {
+/* Publications: type filters on the left, Google Scholar on the right */
+.archive__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin: 1.25em 0 0;
+}
+
+.archive__toolbar .card-filters {
+  margin: 0;
+}
+
+/* Scoped under the toolbar to outrank the theme's link colour and underline */
+.archive__toolbar .archive__scholar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-left: auto;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--card-bg);
+  text-decoration: none;
+}
+
+.archive__toolbar .archive__scholar:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.archive__toolbar .archive__scholar span {
   color: var(--text-muted);
 }
 
@@ -1501,13 +1604,94 @@ a.page-nav__link:hover .page-nav__title {
 }
 
 /* --------------------------------------------------------------------------
-   Author sidebar: one muted icon colour instead of each brand's own
+   Author sidebar (_includes/author-profile.html): name and bio, then
+   location and employer as muted facts, a rule, and the links as rows.
+   Icons share one muted colour instead of each brand's own.
    -------------------------------------------------------------------------- */
-.author__urls.social-icons li > i,
-.author__urls.social-icons a > i {
+.sidebar .author__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.sidebar .author__bio {
+  font-size: 0.8rem;
+  line-height: 1.55;
   color: var(--text-muted);
 }
 
-.author__urls.social-icons a:hover > i {
+.author__avatar img {
+  border-color: var(--border);
+}
+
+.sidebar .author__urls.social-icons li > i,
+.sidebar .author__urls.social-icons a > i {
+  color: var(--text-muted);
+}
+
+.sidebar .author__urls.social-icons a:hover > i {
   color: var(--accent);
+}
+
+.author__urls .author__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  white-space: normal;
+  color: var(--text-muted);
+}
+
+.author__urls li:not(.author__meta) a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1px;
+  padding: 0.28rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.author__urls li:not(.author__meta) a:hover {
+  background: var(--nav-hover);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.author__urls .author__meta + li:not(.author__meta) {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Desktop: pull the rows' padding into the gutter so icons line up with the name */
+@media (min-width: 57.8125em) {
+  .author__urls {
+    margin-left: -0.6rem;
+  }
+}
+
+/* Phones: the list is the "Follow" dropdown; theme it and drop the white arrow */
+@media (max-width: 57.8em) {
+  .author__urls {
+    min-width: 13rem;
+    padding: 0.4rem;
+    border-color: var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: 0 12px 32px var(--card-shadow);
+  }
+
+  .author__urls::before,
+  .author__urls::after {
+    display: none;
+  }
+
+  .author__urls-wrapper .btn--inverse {
+    border-radius: 999px;
+  }
 }

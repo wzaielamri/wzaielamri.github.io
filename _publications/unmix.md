@@ -9,36 +9,22 @@ paperurl: 'https://link.springer.com/chapter/10.1007/978-3-031-08337-2_35'
 pub_type: 'full_paper'
 venue_short: 'IFIP AICT 2022'
 code: 'https://github.com/wzaielamri/unmix'
+pdf: '/assets/paper_files/unmix_zaielamri.pdf'
+topics: ['Machine Learning', 'Deep Learning', 'Audio Signal Processing', 'Transfer Learning']
 header:
   teaser: 'teasers/unmix.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Oliver Tautz, Helge Ritter, Andrew Melnik (2022). &quot;Transfer Learning with Jukebox for Music Source Separation.&quot; <i>Part of the IFIP Advances in Information and Communication Technology book series (IFIPAICT,volume 647)</i>.'
 ---
 
-Accepted to the IFIP Advances in Information and Communication Technology book series (IFIPAICT,volume 647).
-
-Authors: Wadhah Zai El Amri, Oliver Tautz, Helge Ritter, Andrew Melnik.
-
-Topics: Machine Learning, Deep Learning, Audio Signal Processing, Transfer Learning.
-
-## Abstract:
+## Abstract
 
 In this work, we demonstrate how a publicly available, pretrained Jukebox model can be adapted for the problem of audio source separation from a single mixed audio channel. Our neural network architecture, which is using transfer learning, is quick to train and the results demonstrate performance comparable to other state-of-the-art approaches that require a lot more compute resources, training data, and time. We provide an open-source code implementation of our architecture (https://github.com/wzaielamri/unmix)
 
+## Resources
 
-<p align="center">
-___________________________________________________________________
-</p>
-
-## Preprint:
-
-[Download paper here](/assets/paper_files/unmix_zaielamri.pdf)
-
-## Code: 
-
-Our code is published online, along with all necessary checkpoints and a detailed installation guide.
-
-[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/unmix)
-
+<ul class="resources">
+  <li><a href="https://github.com/wzaielamri/unmix"><i class="fab fa-github" aria-hidden="true"></i> Code</a> Our code is published online, along with all necessary checkpoints and a detailed installation guide.</li>
+</ul>
 
 ## Citation
 

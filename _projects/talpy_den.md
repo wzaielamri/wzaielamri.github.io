@@ -17,7 +17,6 @@ I usually have a handful of Claude Code chats running, on different accounts and
 
 <p align="center"><img src="/assets/images/projects/talpy_den/popup-light.png" alt="The Talpy Den popup: the big Talpy says one chat needs you; below, each account shows its chats as pets, plan usage bars, token totals and its sessions" width="48%">&nbsp;<img src="/assets/images/projects/talpy_den/popup-dark.png" alt="The same popup in a dark theme" width="48%"></p>
 
-**GitHub:** [wzaielamri/talpy-den](https://github.com/wzaielamri/talpy-den)
 
 ## What it does
 

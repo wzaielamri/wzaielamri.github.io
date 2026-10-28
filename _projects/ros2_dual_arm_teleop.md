@@ -15,7 +15,6 @@ A ROS 2 Humble workspace for markerless, real-time teleoperation of dual 6-DOF r
 <p align="center"><video src="/assets/images/projects/ros2_dual_arm_teleop/demo.mp4" width="600" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video></p>
 
 
-**GitHub:** [wzaielamri/ros2_dual_arm_teleop](https://github.com/wzaielamri/ros2_dual_arm_teleop)
 
 ## What it does
 

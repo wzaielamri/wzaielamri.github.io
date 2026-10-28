@@ -9,35 +9,22 @@ paperurl: 'https://ieeexplore.ieee.org/document/10650656'
 pub_type: 'full_paper'
 venue_short: 'IJCNN 2024'
 code: 'https://github.com/wzaielamri/Optimizing_BioTac_Simulation'
+pdf: '/assets/paper_files/optBioTac_zaielamri.pdf'
+topics: ['BioTac', 'XGBoost', 'Transformer', 'Tactile Perception']
 header:
   teaser: 'teasers/optBioTac.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2024). &quot;Optimizing BioTac Simulation for Realistic Tactile Perception.&quot; <i>International Joint Conference on Neural Networks (IJCNN), Yokohama, Japan, 2024, pp. 1-8, doi: 10.1109/IJCNN60899.2024.10650656</i>.'
 ---
-Accepted to the International Joint Conference on Neural Networks 2024 (IJCNN 2024)
 
-Authors: Wadhah Zai El Amri, Nicolás Navarro-Guerrero.
-
-Topics: BioTac, XGBoost, Transformer, Tactile Perception.
-
-## Abstract: 
+## Abstract
 
 Tactile sensing presents a promising opportunity for enhancing the interaction capabilities of today’s robots. BioTac is a commonly used tactile sensor that enables robots to perceive and respond to physical tactile stimuli. However, the sensor’s non-linearity poses challenges in simulating its behavior. In this paper, we first investigate a BioTac simulation that uses temperature, force, and contact point positions to predict the sensor outputs. We show that training with BioTac temperature readings does not yield accurate sensor output predictions during deployment. Consequently, we tested three alternative models, i.e., an XGBoost regressor, a neural network, and a transformer encoder. We train these models without temperature readings and provide a detailed investigation of the window size of the input vectors. We demonstrate that we achieve statistically significant improvements over the baseline network. Furthermore, our results reveal that the XGBoost regressor and transformer outperform traditional feed-forward neural networks in this task. We make all our code and results available online on https://github.com/wzaielamri/Optimizing_BioTac_Simulation.
 
-<p align="center">
-___________________________________________________________________
-</p>
+## Resources
 
-
-## Preprint: 
-
-[Download paper here](/assets/paper_files/optBioTac_zaielamri.pdf)
-
-## Code: 
-
-Our code is published online, along with all necessary checkpoints and a detailed installation guide.
-
-[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/Optimizing_BioTac_Simulation)
-
+<ul class="resources">
+  <li><a href="https://github.com/wzaielamri/Optimizing_BioTac_Simulation"><i class="fab fa-github" aria-hidden="true"></i> Code</a> Our code is published online, along with all necessary checkpoints and a detailed installation guide.</li>
+</ul>
 
 ## Citation
 

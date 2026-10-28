@@ -1,0 +1,16 @@
+{% include base_path %}
+{% comment %}
+  Link buttons for a publication or project, without a wrapper:
+  {% include item-links.html item=post %}. Front matter it reads: paperurl,
+  code, dataset, and with full=true (the page header) also pdf (a site path),
+  arxiv and checkpoints. dataset_pending: true shows the dataset muted and
+  unlinked until it is public.
+{% endcomment %}
+{% assign item = include.item %}
+{% if item.paperurl %}<a href="{{ item.paperurl }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+{% if include.full and item.pdf %}<a href="{{ base_path }}{{ item.pdf }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>{% endif %}
+{% if include.full and item.arxiv %}<a href="{{ item.arxiv }}"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>{% endif %}
+{% if item.code %}<a href="{{ item.code }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
+{% if include.full and item.checkpoints %}<a href="{{ item.checkpoints }}"><i class="fas fa-cube" aria-hidden="true"></i> Checkpoints</a>{% endif %}
+{% if item.dataset and item.dataset_pending %}<span class="is-pending" title="Not public yet"><i class="fas fa-database" aria-hidden="true"></i> Dataset · soon</span>
+{% elsif item.dataset %}<a href="{{ item.dataset }}"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}

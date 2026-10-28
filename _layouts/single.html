@@ -17,7 +17,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page{% if page.collection %} page--{{ page.collection }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -25,9 +25,30 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% include type-badge.html item=page %}
+        <header class="page__header">
+          {% capture badge %}{% include type-badge.html item=page %}{% endcapture %}
+          {% assign badge = badge | strip %}
+          {% if badge != "" or page.open_access or page.venue_short %}
+            <div class="page__kicker">
+              {{ badge }}
+              {% if page.open_access %}<span class="pub-badge pub-badge--open-access"><i class="fas fa-lock-open" aria-hidden="true"></i> Open Access{% if page.open_access != true %} · {{ page.open_access }}{% endif %}</span>{% endif %}
+              {% if page.venue_short %}<span class="page__kicker-venue">{{ page.venue_short }}</span>{% endif %}
+            </div>
+          {% endif %}
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+
+          {% if page.collection == 'publications' %}
+            {% if page.citation %}<p class="page__authors">{% include pub-authors.html item=page %}</p>{% endif %}
+            {% if page.author_note %}<p class="page__author-note">{{ page.author_note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+            {% if page.venue %}<p class="page__venue"><i>{{ page.venue }}</i>{% if page.date %} · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time>{% endif %}</p>{% endif %}
+          {% endif %}
+
+          {% capture links %}{% include item-links.html item=page full=true %}{% endcapture %}
+          {% assign links = links | strip %}
+          {% if links != "" %}<div class="page__links">{{ links }}</div>{% endif %}
+
+          {% assign chips = page.topics | default: page.stack %}
+          {% if chips %}<ul class="chips chips--small page__topics">{% for chip in chips %}<li>{{ chip }}</li>{% endfor %}</ul>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
@@ -37,19 +58,9 @@ layout: default
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
+        {% elsif page.date and page.collection != 'publications' %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-        
-             
-        {% if page.citation and page.paperurl %}
-          <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
-        {% elsif page.citation %}
-          <p>Recommended citation: {{ page.citation }} </p>
-        {% endif %}
-    
         </header>
       {% endunless %}
 

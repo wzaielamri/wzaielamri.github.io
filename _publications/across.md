@@ -10,28 +10,18 @@ pub_type: 'full_paper'
 venue_short: 'ICRA 2025'
 code: 'https://github.com/wzaielamri/across_framework'
 dataset: 'https://huggingface.co/datasets/wzaielamri/across_framework'
+pdf: '/assets/paper_files/across_zaielamri.pdf'
+topics: ['BioTac', 'DIGIT', 'Tactile sensors', 'Transfer learning']
 header:
   teaser: 'teasers/across.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Malte Kuhlmann, Nicolás Navarro-Guerrero (2025). &quot;ACROSS: A Deformation-Based Cross-Modal Representation for Robotic Tactile Perception.&quot; <i>IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025</i>.'
 ---
 
-Accepted to 2025 IEEE Conference on Robotics and Automation (ICRA 2025)
-
-Authors: Wadhah Zai El Amri, Malte Kuhlmann, Nicolás Navarro-Guerrero.
-
-Topics: BioTac, DIGIT, Tactile sensors, Transfer learning.
-
-## Abstract: 
+## Abstract
 
 Tactile perception is essential for human interaction with the environment and is becoming increasingly crucial in robotics. Tactile sensors like the BioTac mimic human fingertips and provide detailed interaction data. Despite its utility in applications like slip detection and object identification, this sensor is now deprecated, making many valuable datasets obsolete. However, recreating similar datasets with newer sensor technologies is both tedious and time-consuming. Therefore, adapting these existing datasets for use with new setups and modalities is crucial. In response, we introduce ACROSS, a novel framework for translating data between tactile sensors by exploiting sensor deformation information. We demonstrate the approach by translating BioTac signals into the DIGIT sensor. Our framework consists of first converting the input signals into 3D deformation meshes. We then transition from the 3D deformation mesh of one sensor to the mesh of another, and finally convert the generated 3D deformation mesh into the corresponding output space. We demonstrate our approach to the most challenging problem of going from a low-dimensional tactile representation to a high-dimensional one. In particular, we transfer the tactile signals of a BioTac sensor to DIGIT tactile images. Our approach enables the continued use of valuable datasets and data exchange between groups with different setups.
 
-<p align="center">
-___________________________________________________________________
-</p>
-
-
-## Pipeline:
-
+## Pipeline
 
 <p align="center">
   <img src="/assets/images/across/Pipeline.jpg" width="316" height="602" alt="ACROSS pipeline overview" />
@@ -39,18 +29,17 @@ ___________________________________________________________________
 
 The figure above outlines the three steps of our pipeline:
 
-### Step 1:
+### Step 1
 
 We first predict the BioTac surface deformation based on the input signals from the BioTac sensor.
 
-### Step 2:
+### Step 2
 
 Next, we translate the BioTac surface mesh deformation to the DIGIT sensor's surface mesh deformation. This is possible because the physical interaction between both sensors can be modeled through mesh deformation, regardless of their different sensor output modalities.
 
-### Step 3: 
+### Step 3
 
 Finally, we generate the DIGIT sensor image from the transformed deformation.
-
 
 The pipeline delivers results similar to the image below (Further results from the test set can be checked in the video below):
 
@@ -58,11 +47,7 @@ The pipeline delivers results similar to the image below (Further results from t
   <img src="/assets/images/across/figure_results_all_data.jpg" width="550" height="550" alt="ACROSS results across all data" />
 </p>
 
-<p align="center">
-___________________________________________________________________
-</p>
-
-## Demonstration Video:
+## Demonstration Video
 
 The following video demonstrates the pipeline in action, showing the BioTac sensor’s outputs (signals) and the corresponding generated DIGIT sensor images.
 
@@ -70,31 +55,12 @@ The following video demonstrates the pipeline in action, showing the BioTac sens
   <video src="/assets/images/across/video.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
+## Resources
 
-<p align="center">
-___________________________________________________________________
-</p>
-
-
-## Preprint: 
-
-Our paper preprint is published on arXiv.
-
-[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2411.08533)
-
-[Download paper here](/assets/paper_files/across_zaielamri.pdf)
-
-## Code: 
-
-Our code is published online, along with all necessary checkpoints and a detailed installation guide.
-
-[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/across_framework)
-
-## Dataset:
-
-Our dataset is available on Hugging Face, along with detailed documentation.
-
-[<img src="/assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/across_framework)
+<ul class="resources">
+  <li><a href="https://github.com/wzaielamri/across_framework"><i class="fab fa-github" aria-hidden="true"></i> Code</a> Our code is published online, along with all necessary checkpoints and a detailed installation guide.</li>
+  <li><a href="https://huggingface.co/datasets/wzaielamri/across_framework"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a> Our dataset is available on Hugging Face, along with detailed documentation.</li>
+</ul>
 
 ## Citation
 

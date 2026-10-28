@@ -10,31 +10,24 @@ pub_type: 'full_paper'
 venue_short: 'RAS 2026'
 code: 'https://github.com/wzaielamri/split_framework'
 dataset: 'https://huggingface.co/datasets/wzaielamri/split_framework'
+checkpoints: 'https://huggingface.co/wzaielamri/split_framework-checkpoints'
+dataset_pending: true  # private on Hugging Face for now; delete this line once it's public
+pdf: '/assets/paper_files/split_zaielamri.pdf'
+arxiv: 'https://arxiv.org/abs/2604.24449'
+topics: ['Tactile Sensing', 'Real2Sim', 'Robotic Perception', 'Image-Based Tactile Sensors']
 header:
   teaser: 'teasers/split.jpg'
 citation: '<b>Wadhah Zai El Amri</b>, Nicolás Navarro-Guerrero (2026). &quot;SPLIT: Separating Physical-Contact via Latent Arithmetic in Image-Based Tactile Sensors.&quot; <i>Robotics and Autonomous Systems, Volume 203, 2026, ISSN 0921-8890, 10.1016/j.robot.2026.105498</i>.'
 ---
 
-Accepted to Elsevier Robotics and Autonomous Systems Journal
-
-Authors: Wadhah Zai El Amri, Nicolás Navarro-Guerrero.
-
-Topics: Tactile Sensing, Real2Sim, Robotic Perception, Image-Based Tactile Sensors.
-
-## Abstract: 
+## Abstract
 
 Training machine learning models for robotic tactile sensing requires vast amounts of data, yet obtaining realistic interaction data remains a challenge due to physical complexity and variability. Simulating tactile sensors is thus a crucial step in accelerating progress. This paper presents SPLIT, a novel method for simulating image-based tactile sensors, with a primary focus on the DIGIT sensor. Central to our approach is a latent space arithmetic strategy that explicitly disentangles contact geometry from sensor-specific optical properties. Unlike methods that require recalibration for every new unit, this disentanglement allows SPLIT to adapt to diverse DIGIT backgrounds and even transfer data to distinct sensors like the GelSight R1.5 without full model retraining. Beyond this adaptability, our approach achieves faster inference speeds than existing alternatives. Furthermore, we provide a calibrated finite element method (FEM) soft-body mesh simulation with variable resolution, offering a tunable trade-off between speed and fidelity. Additionally, our algorithm supports bidirectional simulation, allowing for both the generation of realistic images from deformation meshes and the reconstruction of meshes from tactile images. This versatility makes SPLIT a valuable tool for accelerating progress in robotic tactile sensing research.
-
-<p align="center">
-___________________________________________________________________
-</p>
 
 ## Overview
 Training machine learning models for robotic tactile sensing requires massive amounts of data, but collecting real-world interaction data is physically complex and time-consuming. While simulation is a crucial workaround, existing methods often require tedious recalibration for every new sensor unit. 
 
 **SPLIT** is a novel simulation framework designed primarily for image-based tactile sensors like the DIGIT. By leveraging a latent space arithmetic strategy, SPLIT explicitly disentangles the physical contact geometry of an interaction from the sensor's specific optical properties. This allows the framework to generate highly realistic tactile images, adapt to diverse sensor backgrounds, and transfer data across distinct hardware, without needing to retrain the model.
-
----
 
 ## Key Features & Contributions
 
@@ -43,8 +36,6 @@ Training machine learning models for robotic tactile sensing requires massive am
 * **Fast Inference:** SPLIT generates high-fidelity tactile images from low-resolution geometric inputs (just 6,103 vertices), achieving an approximate 9x speedup over state-of-the-art geometric baselines like Taxim and FOTS.
 * **Downstream Utility:** The isolated latent representations are proven to be highly effective for real-world downstream tasks, such as robust 3-DoF force estimation on unseen sensors.
 * **Open-Source Resources:** The project provides a massive real-world dataset (>1 million contact images), a calibrated Isaac Gym soft-body FEM simulation, and the full codebase.
-
----
 
 ## How It Works: The SPLIT Pipeline
 
@@ -65,8 +56,6 @@ To teach the network to separate the physical touch from the sensor's lighting a
 ### 3. Flexible Image Generation (Inference)
 During inference, a highly realistic tactile image is reconstructed by simply predicting the deformation vector ($Z_{Deform}$) and adding a chosen background vector ($Z_{Base}$). By swapping the $Z_{Base}$ vector, you can simulate different DIGIT backgrounds or entirely different sensors.
 
----
-
 ## Evaluation & Results
 
 SPLIT was rigorously benchmarked against other state-of-the-art baselines (Taxim and FOTS).
@@ -76,17 +65,11 @@ SPLIT was rigorously benchmarked against other state-of-the-art baselines (Taxim
 * **3D Mesh Reconstruction:** In its reverse pipeline, SPLIT achieved the lowest geometric reconstruction error, significantly outperforming baseline direct mapping methods.
 * **Force Estimation:** By explicitly filtering out hardware-specific optical noise (like unique lighting gradients), SPLIT enables highly accurate normal and shear force estimation on completely unseen sensors where raw image methods typically fail.
 
-
 <p align="center">
   <img src="/assets/images/split/results.png" width="500" alt="SPLIT Results" />
 </p>
 
-
-<p align="center">
-___________________________________________________________________
-</p>
-
-## Demonstration Videos:
+## Demonstration Videos
 
 The following video shows the UR5e robot arm equipped with a DIGIT sensor collecting real-time tactile data. 
 
@@ -94,9 +77,7 @@ The following video shows the UR5e robot arm equipped with a DIGIT sensor collec
   <video src="/assets/images/split/data_collection.mp4" width="320" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
-
 ---
-
 
 This video demonstrates real-time inference using the SPLIT framework. The live input image is first encoded into the image latent space ($Z_{Image}$). To generate the multi-sensor outputs (bottom row), the reference background vector ($Z_{Base}$) is subtracted to isolate the pure deformation representation ($Z_{Deform}$), which is then combined with various target background vectors to synthesize the contact on different sensor units. Simultaneously, the system recovers the 3D geometry (top left) by mapping the image representation to the mesh latent space ($Z_{Mesh}$) via the reverse projection network and reconstructing the surface using the Mesh $\beta$-VAE decoder.
 
@@ -104,30 +85,13 @@ This video demonstrates real-time inference using the SPLIT framework. The live 
   <video src="/assets/images/split/touch.mp4" width="960" style="max-width:100%;height:auto" autoplay loop muted playsinline controls></video>
 </p>
 
+## Resources
 
-<p align="center">
-___________________________________________________________________
-</p>
-
-## Preprint: 
-
-Our paper preprint is published on arXiv.
-
-[<img src="/assets/images/ArXiv_logo.png" width="50" height="23" alt="arXiv" />](https://arxiv.org/abs/2604.24449)
-
-[Download paper here](/assets/paper_files/split_zaielamri.pdf)
-
-## Code: 
-
-Our code will be published online, along with all necessary checkpoints and a detailed installation guide.
-
-[<img src="/assets/images/GitHub-Mark.png" width="50" height="50" alt="GitHub" />](https://github.com/wzaielamri/split_framework)
-
-## Dataset:
-
-Our dataset will be available soon upon request.
-
-[<img src="/assets/images/hf-logo.png" width="50" height="50" alt="Hugging Face" />](https://huggingface.co/datasets/wzaielamri/split_framework)
+<ul class="resources">
+  <li><a href="https://github.com/wzaielamri/split_framework"><i class="fab fa-github" aria-hidden="true"></i> Code</a> Our code is published online, along with a detailed installation guide.</li>
+  <li><a href="https://huggingface.co/wzaielamri/split_framework-checkpoints"><i class="fas fa-cube" aria-hidden="true"></i> Checkpoints</a> Our pretrained Mesh VAE, Image VAE and projection MLP checkpoints are available on Hugging Face.</li>
+  <li><span class="is-pending"><i class="fas fa-database" aria-hidden="true"></i> Dataset</span> Our dataset will be available soon upon request.</li>
+</ul>
 
 ## Citation
 

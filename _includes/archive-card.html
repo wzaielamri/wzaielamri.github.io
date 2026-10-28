@@ -41,9 +41,7 @@
 
     {% if post.paperurl or post.code or post.dataset %}
       <div class="card__links">
-        {% if post.paperurl %}<a href="{{ post.paperurl }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
-        {% if post.code %}<a href="{{ post.code }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
-        {% if post.dataset %}<a href="{{ post.dataset }}"><i class="fas fa-database" aria-hidden="true"></i> Dataset</a>{% endif %}
+        {% include item-links.html item=post %}
       </div>
     {% endif %}
   </div>

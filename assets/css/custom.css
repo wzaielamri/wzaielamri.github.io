@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   --card-bg:          #ffffff;
   --chip-bg:          #eef4fa;
   --chip-text:        #1a5276;
+  --on-accent:        #ffffff;  /* text on an accent-filled button */
   --transition-speed: 0.25s;
   /* Measured at runtime in custom.js; this is the one-row no-JS fallback
      (1em wrapper padding + 0.5rem link padding + line-height, at 18px root). */
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   --card-bg:          #20252d;
   --chip-bg:          rgba(93, 173, 226, 0.12);
   --chip-text:        #a9d3f0;
+  --on-accent:        #10141a;
 }
 
 /* --------------------------------------------------------------------------
@@ -436,30 +438,27 @@ video,
   position: relative;
 }
 
+/* Always visible: touch screens have no hover, and on publication pages
+   copying the BibTeX is the point of the block. */
 .copy-code-btn {
   position: absolute;
-  top: 6px;
+  top: 8px;
   right: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 4px;
-  padding: 3px 9px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 11px;
   font-size: 0.72em;
+  font-weight: 600;
   cursor: pointer;
-  color: #abb2bf;
+  color: var(--text-muted);
   letter-spacing: 0.03em;
   transition: background 0.15s ease !important, color 0.15s ease !important;
-  opacity: 0;
-}
-
-.code-copy-wrapper:hover .copy-code-btn,
-.copy-code-btn:focus {
-  opacity: 1;
 }
 
 .copy-code-btn:hover {
   background: var(--accent, #2980b9);
-  color: #fff;
+  color: var(--on-accent);
   border-color: var(--accent, #2980b9);
 }
 
@@ -523,14 +522,30 @@ a {
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15);
 }
 
-/* Nav link underline hover indicator */
+/* Nav links: muted, with the current section (aria-current, set in
+   masthead.html) in full text colour and underlined like a hover. */
+.greedy-nav .visible-links a {
+  color: var(--text-muted);
+}
+
+.greedy-nav .visible-links a:hover,
+.greedy-nav .visible-links a[aria-current="page"] {
+  color: var(--text);
+}
+
 .greedy-nav .visible-links a:not(.masthead__menu-item--lg a)::before {
+  height: 2px;
   background: var(--accent, #2980b9);
 }
 
+.greedy-nav .visible-links a[aria-current="page"]::before {
+  transform: scaleX(1);
+}
+
 /* Masthead title */
-.masthead__menu-item--lg a {
+.greedy-nav .visible-links .masthead__menu-item--lg a {
   letter-spacing: 0.3px;
+  color: var(--text);
 }
 
 .masthead__inner-wrap  {
@@ -757,7 +772,8 @@ html[data-theme="dark"] {
   padding-top: 0.35rem;
 }
 
-.card .card__links a {
+.card .card__links a,
+.card .card__links .is-pending {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
@@ -1136,4 +1152,362 @@ ul.chips--small li {
   .skill-group__label {
     text-align: left;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Publication / project page header (_layouts/single.html)
+   badge and venue, title, authors and venue (publications), link buttons,
+   topic or stack chips
+   -------------------------------------------------------------------------- */
+.page__title {
+  line-height: 1.2;  /* the theme's 1 crowds titles that wrap */
+}
+
+.page--publications .page__header,
+.page--projects .page__header {
+  margin-bottom: 2em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px solid var(--border);
+}
+
+.page__kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.75rem;
+}
+
+.page__kicker .pub-badge {
+  margin: 0;
+  font-size: 1em;
+}
+
+.page__kicker-venue {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.pub-badge--open-access                         { background: #fdecea; color: #c2410c; }
+[data-theme="dark"] .pub-badge--open-access     { background: rgba(194, 65, 12, 0.22); color: #fdba8c; }
+
+.page__header .page__title {
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.page__header .page__authors {
+  margin: 0.8em 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.page__header .page__author-note,
+.page__header .page__venue {
+  margin: 0.3em 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2em;
+}
+
+.page__links a,
+.page__links .is-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--card-bg);
+  text-decoration: none;
+}
+
+.page__links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* The first link (the paper, or a project's repository) is the main action */
+.page__links a:first-child {
+  border-color: var(--accent);
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+.page__links a:first-child:hover {
+  border-color: var(--accent-hover);
+  color: var(--on-accent);
+  background: var(--accent-hover);
+}
+
+.page__header ul.page__topics {
+  margin: 1em 0 0;
+}
+
+/* The header's rule already separates it; no extra gap above the first heading */
+.page--publications .page__content > h2:first-child {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Page content: section headings, figures and videos
+   -------------------------------------------------------------------------- */
+.page__content h2 {
+  border-bottom-color: var(--border);
+}
+
+.page__content hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.page__content p[align="center"] img,
+.page__content p[align="center"] video {
+  border-radius: 10px;
+}
+
+.page__content p[align="center"] video {
+  background: #000;
+}
+
+/* Paper figures are drawn for white paper; transparent PNGs (pipeline
+   diagrams) lose their black labels on the dark page, so back them in white. */
+[data-theme="dark"] .page--publications .page__content img[src$=".png"] {
+  padding: 0.6rem;
+  background: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Resources list at the end of a publication: code, dataset, supplements
+   -------------------------------------------------------------------------- */
+.page__content ul.resources {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1em 0 1.75em;
+  padding: 0;
+  list-style: none;
+}
+
+.page__content ul.resources li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem 1rem;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.page__content ul.resources a,
+.page__content ul.resources .is-pending {
+  flex: 0 0 12rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0;
+  border-bottom: 0;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.page__content ul.resources a:hover {
+  color: var(--accent);
+}
+
+.page__content ul.resources a::after {
+  content: "↗";
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* A link that isn't public yet (dataset_pending): shown muted, not clickable */
+.card .card__links .is-pending,
+.page__links .is-pending,
+.page__content ul.resources .is-pending {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.card .card__links .is-pending,
+.page__links .is-pending {
+  border-style: dashed;
+}
+
+@media (max-width: 600px) {
+  .page__content ul.resources li {
+    flex-direction: column;
+  }
+
+  .page__content ul.resources a {
+    flex-basis: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Code blocks (the BibTeX citation)
+   -------------------------------------------------------------------------- */
+div.highlighter-rouge,
+figure.highlight {
+  border-color: var(--border);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/* The theme's corner label is a Font Awesome 4 glyph this build doesn't load,
+   so it drew an empty grey square; the copy button takes that corner now. */
+div.highlighter-rouge::before,
+figure.highlight::before {
+  display: none;
+}
+
+div.highlighter-rouge .highlight {
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+/* Wrap BibTeX rather than scroll it, clear of the copy button */
+div.language-bibtex pre {
+  padding-right: 4.5rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* --------------------------------------------------------------------------
+   Previous / next document (_includes/post_pagination.html)
+   -------------------------------------------------------------------------- */
+.page-nav {
+  clear: both;  /* the theme floats the blocks above it */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid var(--border);
+}
+
+.page-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.page-nav__link--next {
+  text-align: right;
+}
+
+.page-nav__link--empty {
+  border: 0;
+  background: none;
+}
+
+a.page-nav__link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px var(--card-shadow);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.page-nav__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.page-nav__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+a.page-nav__link:hover .page-nav__title {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .page-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .page-nav__link--empty {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Share buttons: outlined like the other link buttons, not brand-coloured
+   -------------------------------------------------------------------------- */
+.page__share {
+  border-top-color: var(--border);
+}
+
+.page__share-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* The theme's .btn sets colour and border with !important */
+.page__share .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border) !important;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text) !important;
+  background: var(--card-bg);
+}
+
+.page__share .btn:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: var(--card-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Author sidebar: one muted icon colour instead of each brand's own
+   -------------------------------------------------------------------------- */
+.author__urls.social-icons li > i,
+.author__urls.social-icons a > i {
+  color: var(--text-muted);
+}
+
+.author__urls.social-icons a:hover > i {
+  color: var(--accent);
 }

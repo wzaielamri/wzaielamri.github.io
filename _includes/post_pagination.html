@@ -1,16 +1,24 @@
 {% include base_path %}
+{% comment %}
+  Links to the neighbouring documents of the same collection, by date,
+  each showing its title. An empty cell keeps "Next" in the right column.
+{% endcomment %}
 
 {% if page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="page-nav" aria-label="More {{ page.collection | default: 'pages' }}">
     {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <a href="{{ base_path }}{{ page.previous.url }}" class="page-nav__link page-nav__link--prev" rel="prev">
+        <span class="page-nav__label"><span aria-hidden="true">←</span> {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
+        <span class="page-nav__title">{{ page.previous.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      <span class="page-nav__link page-nav__link--empty"></span>
     {% endif %}
     {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <a href="{{ base_path }}{{ page.next.url }}" class="page-nav__link page-nav__link--next" rel="next">
+        <span class="page-nav__label">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} <span aria-hidden="true">→</span></span>
+        <span class="page-nav__title">{{ page.next.title | markdownify | strip_html | strip }}</span>
+      </a>
     {% endif %}
   </nav>
 {% endif %}

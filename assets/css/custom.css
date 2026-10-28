@@ -35,9 +35,8 @@ h1, h2, h3, h4, h5, h6 {
   --nav-hover:        rgba(128, 128, 128, 0.12);
   --transition-speed: 0.25s;
   /* Measured at runtime in custom.js; this is the one-row no-JS fallback
-     (0.6em wrapper padding around the 2rem monogram and the nav pills, at
-     18px root). */
-  --masthead-height:  77px;
+     (0.6em wrapper padding around the nav pills, at 18px root). */
+  --masthead-height:  68px;
 }
 
 /* --------------------------------------------------------------------------
@@ -312,11 +311,8 @@ video,
 @media (max-width: 650px) {
   .greedy-nav .visible-links .masthead__brand {
     max-width: 58vw;
-    font-size: 0.9rem;
-  }
-
-  .masthead__name {
     overflow: hidden;
+    font-size: 0.9rem;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -347,7 +343,7 @@ video,
    -------------------------------------------------------------------------- */
 @media (min-width: 57.8125em) {
   .sidebar.sticky {
-    top: calc(var(--masthead-height, 77px) + 1em);
+    top: calc(var(--masthead-height, 68px) + 1em);
   }
 }
 
@@ -501,7 +497,7 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   Masthead: monogram and name, nav links as pills with the current section
+   Masthead: name, nav links as pills with the current section
    (aria-current, set in masthead.html) filled, on a translucent sticky bar
    -------------------------------------------------------------------------- */
 .masthead {
@@ -538,27 +534,9 @@ a {
 }
 
 .greedy-nav .visible-links .masthead__brand {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
   color: var(--text);
   font-weight: 700;
   letter-spacing: -0.01em;
-}
-
-.masthead__mark {
-  display: inline-flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-  color: var(--on-accent);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
 }
 
 .greedy-nav .visible-links a:not(.masthead__brand) {

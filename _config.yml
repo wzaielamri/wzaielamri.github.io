@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Wadhah Zai El Amri"
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"  # 360px wide: shown at most 175px
   bio              : "Research Associate and PhD Student 🎓 ML and Intelligent Systems Enthusiast 🧠🦾💻"
   location         : "Germany"
   employer         : "L3S Research Center" 

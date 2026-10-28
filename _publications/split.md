@@ -66,7 +66,7 @@ SPLIT was rigorously benchmarked against other state-of-the-art baselines (Taxim
 * **Force Estimation:** By explicitly filtering out hardware-specific optical noise (like unique lighting gradients), SPLIT enables highly accurate normal and shear force estimation on completely unseen sensors where raw image methods typically fail.
 
 <p align="center">
-  <img src="/assets/images/split/results.png" width="500" alt="SPLIT Results" />
+  <img src="/assets/images/split/results.webp" width="500" alt="SPLIT Results" />
 </p>
 
 ## Demonstration Videos

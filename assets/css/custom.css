@@ -336,6 +336,18 @@ video,
 
 
 /* --------------------------------------------------------------------------
+   No fade-in on page load
+   The theme fades the masthead, content and footer in after 0.15-0.45s
+   delays on every page, so a page that had loaded in ~0.25s showed at ~0.9s
+   and the header blinked on each click. Show them at once.
+   -------------------------------------------------------------------------- */
+.masthead,
+#main,
+.page__footer {
+  animation: none;
+}
+
+/* --------------------------------------------------------------------------
    Sticky author sidebar
    The theme pins it at `top: 2em`, which predates the masthead being
    position:sticky — so while scrolling the avatar slid underneath the header
@@ -1367,9 +1379,11 @@ ul.chips--small li {
   background: #000;
 }
 
-/* Paper figures are drawn for white paper; transparent PNGs (pipeline
-   diagrams) lose their black labels on the dark page, so back them in white. */
-[data-theme="dark"] .page--publications .page__content img[src$=".png"] {
+/* Paper figures are drawn for white paper; transparent PNGs and WebPs
+   (pipeline diagrams) lose their black labels on the dark page, so back them
+   in white. */
+[data-theme="dark"] .page--publications .page__content img[src$=".png"],
+[data-theme="dark"] .page--publications .page__content img[src$=".webp"] {
   padding: 0.6rem;
   background: #fff;
 }

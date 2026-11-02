@@ -5,6 +5,8 @@ collection: projects
 project_type: 'personal_project'
 order: 1
 code: 'https://github.com/wzaielamri/talpy-den'
+vscode: 'https://marketplace.visualstudio.com/items?itemName=wzaielamri.talpy-den'
+plasmoid: 'https://www.opendesktop.org/p/2380946/'
 stack: ['KDE Plasma', 'GNOME Shell', 'VS Code', 'Python']
 header:
   teaser: 'teasers/talpy_den.jpg'
@@ -20,21 +22,30 @@ I usually have a handful of Claude Code chats running, on different accounts and
 
 ## What it does
 
-- **Every chat in one place:** terminal chats, background jobs and VS Code's Claude tabs, on this computer and my SSH hosts, per account: which need me (and for what), which are working (and on what), which are done. Nothing is installed on the hosts.
+- **Every chat in one place:** terminal chats, background jobs and VS Code's Claude tabs, on this computer, my SSH hosts and my Docker or Podman containers, per account: which need me (and for what), which are working (and on what), which are done. Nothing is installed on the hosts or in the containers.
 - **Chat without switching:** click a chat and it opens beside the popup. I can reply, answer its permission prompts and questions, review what it changed and undo it, or commit only its files.
 - **Limits, handled:** the usage bars show where my pace ends up and warn me before I run out. If a chat gets stopped anyway, I continue it on my other account or let it go on by itself once the limit resets.
 - **Start chats from the popup:** in a terminal, in VS Code or in the background, with a task, later, or once a limit resets.
+- **Find and reuse:** any chat by its words, recent chats, plans and memories; hide what I don't need or delete it to the Trash.
 - **Recap and Permissions:** my day, week or everything with Claude (how long I was at it, how long Claude worked, what it would cost at API prices, tips to use less of the plan), and every permission I gave, to revoke.
 - **And more:** search across all chats, plans and memories I can read and edit, a warning when two chats edit the same files, notifications with one summary of what happened while I was away, and to my phone if I like.
 - **A pet for every chat:** Talpy lives in a burrow and acts its chat out. It types while the chat works, holds up a sign when it needs me and falls asleep once it's done.
 
 <p align="center"><img src="/assets/images/projects/talpy_den/pets.gif" alt="Pets reacting: a chat finishes and its pet celebrates, a new chat's pet digs up out of the ground, and the big Talpy cheers when a usage limit resets" width="500" style="max-width:100%;height:auto"></p>
 
-The GNOME version has the dashboard, notifications, pets and the Recap. The chat pane, limit handling, plans and queued tasks are Plasma-only for now.
+The GNOME version has the dashboard (accounts, chats, plan usage, SSH hosts and containers), notifications, pets and the Recap. The chat pane, limit handling, plans and queued tasks are Plasma-only for now.
+
+## Install
+
+- **KDE Plasma 6:** get the widget from [opendesktop.org](https://www.opendesktop.org/p/2380946/), or clone the repository and run `./install.sh`, then add **Talpy Den** to the panel.
+- **VS Code:** install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wzaielamri.talpy-den).
+- **GNOME Shell 49 or newer (43 and 44 too):** run `./install.sh` from the repository in a GNOME session, then log out and back in.
+
+Each [release](https://github.com/wzaielamri/talpy-den/releases/latest) also ships the widget as a `.plasmoid`, the GNOME extension as a `.zip` and the VS Code extension as a `.vsix`.
 
 ## In VS Code
 
-The same dashboard as a VS Code view, on the same backend. The extension runs on my own computer even in a Remote-SSH window, so one view shows my local chats and the server's side by side. It adds a few things of its own: plans in VS Code's Markdown preview where I comment on a line and send the feedback back to Claude, a status bar count of the chats that need me, and Ctrl+Alt+Shift+C to jump to the one that has waited longest.
+The same dashboard as a VS Code view, on the same backend. The extension runs on my own computer even in a Remote-SSH window, so one view shows my local chats and the server's side by side, and it lists my containers too. It adds a few things of its own: plans in VS Code's Markdown preview where I comment on a line and send the feedback back to Claude, a status bar count of the chats that need me, and Ctrl+Alt+Shift+C to jump to the one that has waited longest.
 
 <p align="center"><img src="/assets/images/projects/talpy_den/vscode-view-dark.png" alt="The Talpy Den view in a dark theme: Talpy under &quot;1 chat needs you&quot;, an account with three chats, their pets, plan usage bars and a queued task, and an SSH host with a chat a usage limit stopped" width="300">&nbsp;<img src="/assets/images/projects/talpy_den/vscode-view-light.png" alt="The same view in a light theme" width="300"></p>
 
@@ -42,7 +53,7 @@ It also opens as a wide editor tab:
 
 <p align="center"><img src="/assets/images/projects/talpy_den/vscode-editor-tab.png" alt="The view opened as a wide editor tab" width="640" style="max-width:100%;height:auto"></p>
 
-The extension used to have its own repository, [talpy-den-vscode](https://github.com/wzaielamri/talpy-den-vscode) (first called claude-status-vscode). That one is archived now: the extension lives in [talpy-den/vscode](https://github.com/wzaielamri/talpy-den/tree/main/vscode), and each [release](https://github.com/wzaielamri/talpy-den/releases/latest) ships it as a `.vsix` next to the widget and the GNOME extension.
+The extension used to have its own repository, [talpy-den-vscode](https://github.com/wzaielamri/talpy-den-vscode) (first called claude-status-vscode). That one is archived now: the extension lives in [talpy-den/vscode](https://github.com/wzaielamri/talpy-den/tree/main/vscode), and it is now on the [Marketplace](https://marketplace.visualstudio.com/items?itemName=wzaielamri.talpy-den).
 
 ## Stack
 
